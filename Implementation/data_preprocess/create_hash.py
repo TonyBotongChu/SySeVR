@@ -80,8 +80,8 @@ def is_number(s):
 
 if __name__ == '__main__':
     
-    SLICEPATH = './data_source/'
-    HASHPATH = './data_source/hash_slices/'
+    SLICEPATH = './data/data_source/'
+    HASHPATH = './data/hash_slices/'
 
     sentenceDict = get_hashs(SLICEPATH, HASHPATH)
 

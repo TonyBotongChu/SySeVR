@@ -162,10 +162,12 @@ def get_session():
         if _SESSION is None:
             if not os.environ.get('OMP_NUM_THREADS'):
                 config = tf.ConfigProto(allow_soft_placement=True)
+                config.gpu_options.allow_growth=True
             else:
                 num_thread = int(os.environ.get('OMP_NUM_THREADS'))
                 config = tf.ConfigProto(intra_op_parallelism_threads=num_thread,
                                         allow_soft_placement=True)
+                config.gpu_options.allow_growth=True
             _SESSION = tf.Session(config=config)
         session = _SESSION
     if not _MANUAL_VAR_INIT:

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 ## coding: utf-8
 '''
 This python file is used to precess the vulnerability slices, including read the pkl file and split codes into corpus.
@@ -26,7 +27,7 @@ This function is used to split the slice file and split codes into words
 def get_sentences(_path,labelpath,deletepath,corpuspath,maptype=True):
     FLAGMODE = False
     if "SARD" in _path:
-	FLAGMODE = True
+        FLAGMODE = True
 
     for filename in os.listdir(_path):
         if(filename.endswith(".txt") is False):
@@ -47,12 +48,12 @@ def get_sentences(_path,labelpath,deletepath,corpuspath,maptype=True):
         f1 = open(filepath, 'rb')
         labellists = pickle.load(f1)
         f1.close()
-	
-	filepath = os.path.join(deletepath,filename)
-	f = open(filepath,'rb')
-	list_delete = pickle.load(f)
-	f.close()
-	
+        
+        filepath = os.path.join(deletepath,filename[:-4]+".pkl")
+        f = open(filepath,'rb')
+        list_delete = pickle.load(f)
+        f.close()
+        
         lastprogram_id = 0
         program_id = 0
         index = -1
@@ -82,7 +83,7 @@ def get_sentences(_path,labelpath,deletepath,corpuspath,maptype=True):
             focuspointer = sentences[0].split(" ")[-2:]
             sliceid = index
             if sliceid in list_delete:
-		continue
+                continue
             file_name = sentences[0]
  
             if FLAGMODE:    
@@ -162,7 +163,7 @@ def get_sentences(_path,labelpath,deletepath,corpuspath,maptype=True):
                 else:
                     slice_corpus = slice_corpus + list_tokens
 
-	    if flag_focus == 0:
+            if flag_focus == 0:
                 continue
             slicefile_labels.append(labellists[file_name])
             slicefile_filenames.append(file_name)
@@ -198,9 +199,15 @@ def get_sentences(_path,labelpath,deletepath,corpuspath,maptype=True):
 
 if __name__ == '__main__':
     
-    SLICEPATH = './data/data_source/SARD/'
-    LABELPATH = './data/label_source/SARD/'
-    DELETEPATH = './data/delete_list/SARD/'
+#     SLICEPATH = './data/data_source/SARD/'
+#     LABELPATH = './data/label_source/SARD/'
+#     DELETEPATH = './data/delete_list/SARD/'
+#     CORPUSPATH = './data/corpus/'
+#     MAPTYPE = True
+        
+    SLICEPATH = './data/data_source/'
+    LABELPATH = './data/label_source/'
+    DELETEPATH = './data/delete_list/'
     CORPUSPATH = './data/corpus/'
     MAPTYPE = True
 

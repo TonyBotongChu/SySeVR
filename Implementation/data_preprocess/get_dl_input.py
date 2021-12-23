@@ -107,9 +107,9 @@ def get_dldata(filepath, dlTrainCorpusPath, dlTestCorpusPath, split=0.8, seed=11
                         shutil.copyfile(filepath + folder_test + '/'+filename , dlTestCorpusPath + folder_test + '/'+filename) 
                         f = open(filepath + folder_test + '/' + filename, 'rb')
                         data = pickle.load(f)
-			id_length = len(data[1])
-			for j in range(id_length):
-			    ids.append(folder_test)
+                        id_length = len(data[1])
+                        for j in range(id_length):
+                            ids.append(folder_test)
                         for n in range(5):
                             test_set[n] = test_set[n] + data[n]
                         test_set[-1] = ids
@@ -147,6 +147,10 @@ if __name__ == "__main__":
     print("spliting the train set and test set...")
     dlTrainCorpusPath = "./dl_input/cdg_ddg/train/"
     dlTestCorpusPath = "./dl_input/cdg_ddg/test/"
+    if not os.path.exists(dlTrainCorpusPath):
+        os.makedirs(dlTrainCorpusPath)
+    if not os.path.exists(dlTestCorpusPath):
+        os.makedirs(dlTestCorpusPath) 
     get_dldata(VECTORPATH, dlTrainCorpusPath, dlTestCorpusPath)
     
     print("success!")

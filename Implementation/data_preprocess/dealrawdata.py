@@ -6,16 +6,16 @@ This python file is used to train data in CNN model
 from __future__ import absolute_import
 from __future__ import print_function
 import pickle
-import cPickle
+# import cPickle
 import numpy as np
 import random
 import time
 import math
 import os
 from collections import Counter
-from imblearn.ensemble import BalanceCascade
-from imblearn.over_sampling import ADASYN
-from imblearn.over_sampling import SMOTE
+# from imblearn.ensemble import BalanceCascade
+# from imblearn.over_sampling import ADASYN
+# from imblearn.over_sampling import SMOTE
 
 
 np.random.seed(1337)  # for reproducibility
@@ -110,4 +110,8 @@ if __name__ == "__main__":
     raw_testdataSetPath = "./dl_input/cdg_ddg/test/"
     traindataSetPath = "./dl_input_shuffle/cdg_ddg/train/"
     testdataSetPath = "./dl_input_shuffle/cdg_ddg/test/"
+    if not os.path.exists(traindataSetPath):
+        os.makedirs(traindataSetPath)
+    if not os.path.exists(testdataSetPath):
+        os.makedirs(testdataSetPath)
     dealrawdata(raw_traindataSetPath, raw_testdataSetPath, traindataSetPath, testdataSetPath, batchSize, maxLen, vectorDim)

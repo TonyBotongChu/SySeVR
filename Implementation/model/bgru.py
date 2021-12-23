@@ -58,14 +58,14 @@ def main(traindataSet_path, testdataSet_path, realtestpath, weightpath, resultpa
     labels = []
     testcases = []
     for filename in os.listdir(traindataSet_path):
-        if(filename.endswith(".pkl") is True):
+        if not filename.endswith(".pkl"):
             continue
         print(filename)
         f = open(os.path.join(traindataSet_path, filename),"rb")
         dataset_file,labels_file,funcs_file,filenames_file,testcases_file = pickle.load(f)
         f.close()
         dataset += dataset_file
-        labels += labels_file			
+        labels += labels_file                        
     print(len(dataset), len(labels))
 
     bin_labels = []
@@ -131,9 +131,9 @@ def main(traindataSet_path, testdataSet_path, realtestpath, weightpath, resultpa
 
     f_TP = open("./result_analyze/BGRU/TP_filenames.txt","ab+")
     for i in range(len(result[1])):
-	TP_index = result[1][i]
-	f_TP.write(str(filenames[TP_index])+'\n')
-		
+        TP_index = result[1][i]
+        f_TP.write(str(filenames[TP_index])+'\n')
+                
     f_FP = open("./result_analyze/BGRU/FP_filenames.txt","ab+")
     for j in range(len(result[2])):
         FP_index = result[2][j]
@@ -207,7 +207,7 @@ def testrealdata(realtestpath, weightpath, batch_size, maxlen, vector_dim, layer
                 print(realdata[1][i])
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":    
     batchSize = 32
     vectorDim = 40
     maxLen = 500

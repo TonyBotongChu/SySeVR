@@ -23,7 +23,9 @@ def dedouble(Hashpath,Deletepath):
         f.close()
 
 if __name__ == '__main__':
-    hashpath = './data/hash_slices/SARD/'
-    deletepath = './data/delete_list/SARD/'
+#     hashpath = './data/hash_slices/SARD/'
+#     deletepath = './data/delete_list/SARD/'
+    hashpath = './data_source/hash_slices/'
+    deletepath = './data_source/delete_list/'
 
     dedouble(hashpath,deletepath)
