@@ -8,6 +8,8 @@ def make_label(data_path,label_path,_dict):
 	for filename in os.listdir(data_path):
 		filepath = os.path.join(data_path,filename)
 		_labels = {}
+		if not os.path.isfile(filepath):
+			continue
 		f = open(filepath,'r')
 		slicelists = f.read().split('------------------------------')
 		f.close()
@@ -74,12 +76,16 @@ def is_number(s):
 	
 if __name__ == '__main__':
 
-	with open('./vul_context_linux_kernel.pkl','rb') as f:
+	with open('./dict_call2cfgNodeID_funcID/NVD/dict.pkl','rb') as f:
+# 	with open('./vul_context_linux_kernel.pkl','rb') as f:
 		_dict = pickle.load(f)
 	f.close()
 	#print(_dict)
 
-	code_path = './data_source/linux_kernel/'  #slice code of software
-	label_path = './C/label_source/linux_kernel/'   #labels
+# 	code_path = './data_source/linux_kernel/'  #slice code of software
+# 	label_path = './C/label_source/linux_kernel/'   #labels
 	
+	code_path = './C/NVD/'  #slice code of software
+	label_path = './C/NVD_label/'   #labels
+    
 	make_label(code_path,label_path,_dict)	

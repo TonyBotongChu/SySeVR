@@ -226,7 +226,8 @@ def get_slice_file_sequence(store_filepath, list_result, count, func_name, start
                 list_write2file.append(node['code'] + ' ' + str(row+1) + '\n')
                 #list_line.append(str(row+1))
 
-    f = open(store_filepath, 'a')
+    file_mode = 'a' if os.path.exists(store_filepath) else 'w'
+    f = open(store_filepath, file_mode)
     f.write(str(count) + ' ' + filepath_all + ' ' + func_name + ' ' + startline + '\n')
     for wb in list_write2file:
         f.write(wb)

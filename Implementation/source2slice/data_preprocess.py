@@ -3,9 +3,12 @@
 import pickle
 import os
 
-slice_path = './slices/'
-label_path = './label_source/'
-folder_path = './slice_label/'
+# slice_path = './slices/'
+# label_path = './label_source/'
+# folder_path = './slice_label/'
+slice_path = './C/NVD/'
+label_path = './C/NVD_label/'
+folder_path = './C/NVD_slice_with_label/'
 for filename in os.listdir(slice_path):
     if filename.endswith('.txt') is False:
         continue
@@ -14,7 +17,8 @@ for filename in os.listdir(slice_path):
     f = open(filepath,'r')
     slicelists = f.read().split('------------------------------')
     f.close()
-    labelpath = os.path.join(label_path,filename[:-4]+'.pkl')
+#     labelpath = os.path.join(label_path,filename[:-4]+'.pkl')
+    labelpath = os.path.join(label_path,filename[:-4]+'_label.pkl')
     f = open(labelpath,'rb')
     labellists = pickle.load(f)
     f.close()
