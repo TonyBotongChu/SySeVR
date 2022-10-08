@@ -6,7 +6,7 @@
 
 The docker_build folder is the working folder where the image is created.
 
-Enter docker_ Build folder, execute command:
+_**AFTER entering docker\_ build folder**_, execute command:
 
 ```bash
 docker build -t sysevr:v1.0 .
