@@ -1,0 +1,11 @@
+Gremlin extension for py2neo
+============================
+
+from py2neo import neo4j
+from py2neo_gremlin import Gremlin
+
+graph_db = neo4j.GraphDatabaseService()
+gremlin = Gremlin(graph_db)
+
+node_0 = gremlin.execute_script("g.v(0)")
+
