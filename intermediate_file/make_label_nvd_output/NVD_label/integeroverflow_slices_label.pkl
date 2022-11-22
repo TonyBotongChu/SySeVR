@@ -1,0 +1,710 @@
+(dp0
+S'4 ../data/NVD/CVE_2012_4287_VULN_dissect_bson_document.c final_offset = offset + document_length 22'
+p1
+I0
+sS'86 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c returned_length = g_snprintf ( & szInfo [ str_index ] , SZINFO_SIZE - str_index , " Class %d" , clsTransaction ) 106'
+p2
+I0
+sS'188 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c src_pr = src_px + w 14'
+p3
+I0
+sS'133 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c srcLength = inStringLength - pos1 54'
+p4
+I0
+sS'106 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c size = reg -> memory_size - addr + reg -> guest_phys_addr 25'
+p5
+I0
+sS'181 ../data/NVD/CVE_2013_0859_PATCHED_add_doubles_metadata.c dp = av_malloc ( count * sizeof ( double ) ) 14'
+p6
+I0
+sS'39 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c glyph -> bbx . ascent = ( short ) ( glyph -> bbx . height + glyph -> bbx . y_offset ) 387'
+p7
+I0
+sS'87 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c wtp_tvb = tvb_new_subset ( tvb , offCur + c_fieldlen , c_pdulen , c_pdulen ) 73'
+p8
+I0
+sS'176 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1 356'
+p9
+I0
+sS'85 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c returned_length = g_snprintf ( & szInfo [ str_index ] , SZINFO_SIZE - str_index , " (%u)" , psn ) 118'
+p10
+I0
+sS'60 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c block_item = proto_tree_add_text ( chunk_tree , chunk_tvb , gap_block_offset , SACK_CHUNK_GAP_BLOCK_LENGTH , "Gap Acknowledgement for TSN %u to %u" , cum_tsn_ack + start , cum_tsn_ack + end ) 48'
+p11
+I0
+sS'89 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c packet_len = packet_len - item_len - 1 246'
+p12
+I0
+sS'95 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c end = ptr + FFMAX ( 2 + AV_RB16 ( ptr ) , avpkt -> size ) 28'
+p13
+I0
+sS'25 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c latency = ( guint32 ) ( s_time - sig_ts ) 121'
+p14
+I0
+sS'35 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c offset = offset2 + len + 2 274'
+p15
+I0
+sS'195 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ) 211'
+p16
+I0
+sS'214 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c uint8_t * rowend = mImageData + ( bpr * mGIFStruct . irow ) + mGIFStruct . width ; 29'
+p17
+I0
+sS'7 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c anItem = proto_tree_add_item ( ecat_fraghead_tree , hf_ecat_mailbox_eoe_macfilter , tvb , offset , MIN ( eoe_length - offset , ETHERCAT_EOE_MACFILTER_LEN ) , ENC_NA ) 134'
+p18
+I0
+sS'123 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c limitLength = forceBreak - offset 241'
+p19
+I0
+sS'37 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c glyph -> bpr = ( glyph -> bbx . width * p -> font -> bpp + 7 ) >> 3 454'
+p20
+I0
+sS'141 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c dstLength = bufferLength - pos2 25'
+p21
+I0
+sS'3 ../data/NVD/CVE_2012_4287_PATCHED_dissect_bson_document.c final_offset = offset + document_length 38'
+p22
+I0
+sS'149 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor - c -> status [ 1 ] . predictor 254'
+p23
+I0
+sS'40 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c glyph -> swidth = ( unsigned short ) FT_MulDiv ( glyph -> dwidth , 72000L , ( FT_Long ) ( font -> point_size * font -> resolution_x ) ) 361'
+p24
+I0
+sS'224 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c int diff = predictor - cs -> predictor ; 56'
+p25
+I0
+sS'204 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c const jschar * end = vchars + vlength ; 160'
+p26
+I0
+sS'184 ../data/NVD/CVE_2013_0862_VULN_process_frame_obj.c ctx -> avctx -> width = FFMAX ( left + w , ctx -> width ) 12'
+p27
+I0
+sS'83 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c tByte = tvb_get_guint8 ( tvb , offCur + cbHeader + vHeader ) 317'
+p28
+I0
+sS'192 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c tmp = h -> pps . init_qp + get_se_golomb ( & s -> gb ) 547'
+p29
+I0
+sS'68 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c tsn_start = cum_tsn_ack + start 46'
+p30
+I0
+sS'166 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor + c -> status [ 1 ] . predictor 244'
+p31
+I0
+sS'118 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c forceBreakAfter = forceBreak == offset + length 243'
+p32
+I0
+sS'200 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c guint end_offset = offset + tvb_length_remaining ( tvb , offset ) ; 9'
+p33
+I0
+sS'76 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c returned_length = g_snprintf ( & szInfo [ str_index ] , SZINFO_SIZE - str_index , " R" ) 150'
+p34
+I0
+sS'182 ../data/NVD/CVE_2013_0859_VULN_add_doubles_metadata.c dp = av_malloc ( count * sizeof ( double ) ) 14'
+p35
+I0
+sS'216 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c uint8_t * rowp = mImageData + ( mGIFStruct . irow * bpr ) ; 40'
+p36
+I0
+sS'102 ../data/NVD/CVE_2013_0310_VULN_cipso_v4_validate.c * option = opt + err_offset 134'
+p37
+I0
+sS'177 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ) 327'
+p38
+I0
+sS'104 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c _iov -> iov_base = ( void __user * ) ( unsigned long ) ( reg -> userspace_addr + addr - reg -> guest_phys_addr ) 27'
+p39
+I0
+sS'14 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c delta_b = sig_ts - s_time 125'
+p40
+I0
+sS'156 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c s2 [ 0 ] = av_clip_int16 ( ( level + pred + 0x80 ) >> 8 ) 543'
+p41
+I0
+sS'125 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c rowend = rowp + mGIFStruct . width 36'
+p42
+I0
+sS'56 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c dup_tsn_offset = SACK_CHUNK_GAP_BLOCK_OFFSET + number_of_gap_blocks * SACK_CHUNK_GAP_BLOCK_LENGTH 95'
+p43
+I0
+sS'148 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c next_left_sample = ( next_left_sample + ( current_left_sample * coeff1l ) + ( previous_left_sample * coeff2l ) + 0x80 ) >> 8 386'
+p44
+I0
+sS'63 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c dup_tsn_offset = SACK_CHUNK_GAP_BLOCK_OFFSET + number_of_gap_blocks * SACK_CHUNK_GAP_BLOCK_LENGTH 95'
+p45
+I0
+sS'111 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c vlength = end - vchars - parenChomp 144'
+p46
+I0
+sS'74 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c tpiLen = 2 + tvb_get_guint8 ( tvb , offCur + cbHeader + vHeader + 1 ) 320'
+p47
+I0
+sS'117 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c limitLength = forceBreak - offset 248'
+p48
+I0
+sS'55 ../data/NVD/CVE_2012_6055_PATCHED_dissect_3gpp2_service_option_profile.c offset = offset + sub_type_length - 2 32'
+p49
+I0
+sS'170 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE 517'
+p50
+I0
+sS'128 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c rowend = rowp + mGIFStruct . width 36'
+p51
+I0
+sS'172 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ) 327'
+p52
+I0
+sS'88 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c packet_len = packet_len - item_len - 1 277'
+p53
+I0
+sS'161 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c next_left_sample = ( next_left_sample + ( current_left_sample * coeff1l ) + ( previous_left_sample * coeff2l ) + 0x80 ) >> 8 386'
+p54
+I0
+sS'61 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c tsn_start = cum_tsn_ack + start 46'
+p55
+I0
+sS'198 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c unsigned short sw = ( unsigned short ) FT_MulDiv ( glyph -> dwidth , 72000L , ( FT_Long ) ( font -> point_size * font -> resolution_x ) ) ; 414'
+p56
+I0
+sS'75 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c tByte = tvb_get_guint8 ( tvb , offCur + cbHeader + vHeader ) 317'
+p57
+I0
+sS'119 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c aMetrics . height = aMetrics . ascent + descent 395'
+p58
+I0
+sS'41 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c mask_index = ( glyph -> bbx . width * p -> font -> bpp ) & 7 309'
+p59
+I0
+sS'174 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c tmp = h -> pps . init_qp + get_se_golomb ( & s -> gb ) 646'
+p60
+I0
+sS'109 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c size = reg -> memory_size - addr + reg -> guest_phys_addr 25'
+p61
+I0
+sS'34 ../data/NVD/CVE_2012_4530_VULN_load_script.c cp = bprm -> buf + BINPRM_BUF_SIZE - 1 23'
+p62
+I0
+sS'47 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c p -> rbearing = ( short ) ( glyph -> bbx . width + glyph -> bbx . x_offset ) 394'
+p63
+I0
+sS'173 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c id_list [ i ] = h -> short_ref_count + k 750'
+p64
+I0
+sS'49 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c glyph -> swidth = ( unsigned short ) FT_MulDiv ( glyph -> dwidth , 72000L , ( FT_Long ) ( font -> point_size * font -> resolution_x ) ) 360'
+p65
+I0
+sS'36 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c bitmap_size = glyph -> bpr * glyph -> bbx . height 456'
+p66
+I0
+sS'69 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c end = tvb_get_ntohs ( chunk_tvb , gap_block_offset + SACK_CHUNK_GAP_BLOCK_START_LENGTH ) 45'
+p67
+I0
+sS'207 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c TrackTicks inputStartTicks = inputEndTicks - ticks ; 58'
+p68
+I0
+sS'97 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c buftmp = av_realloc ( buf , probe_size + AVPROBE_PADDING_SIZE ) 32'
+p69
+I0
+sS'175 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE 517'
+p70
+I0
+sS'23 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c e_hdr_len = STATS_COMMON_FIELDS_LEN + STATS_ETHERNETTAP_FIELDS_LEN 138'
+p71
+I0
+sS'143 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c s2 [ 0 ] = av_clip_int16 ( ( level + pred + 0x80 ) >> 8 ) 543'
+p72
+I0
+sS'9 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c next_tvb = tvb_new_subset ( tvb , offset , eoe_length - offset , eoe_length - offset ) 79'
+p73
+I0
+sS'65 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c pi = proto_tree_add_item ( block_tree , hf_sack_chunk_gap_block_end , chunk_tvb , gap_block_offset + SACK_CHUNK_GAP_BLOCK_START_LENGTH , SACK_CHUNK_GAP_BLOCK_END_LENGTH , ENC_BIG_ENDIAN ) 57'
+p74
+I0
+sS'73 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c tmp_tvb = tvb_new_subset ( tvb , offCur + cbHeader + vHeader , tpiLen , tpiLen ) 326'
+p75
+I0
+sS'215 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c uint8_t * from = rowp + mGIFStruct . width ; 43'
+p76
+I0
+sS'50 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c mask_index = ( glyph -> bbx . width * p -> font -> bpp ) & 7 308'
+p77
+I0
+sS'219 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c char * temp = ( char * ) PR_Realloc ( * outString , * bufferLength + addLength + 1 ) ; 18'
+p78
+I0
+sS'201 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c guint end_offset = offset + tvb_length_remaining ( tvb , offset ) ; 9'
+p79
+I0
+sS'6 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c len = len + XTP_HEADER_LEN - offset 41'
+p80
+I0
+sS'158 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c samplesC = samples + channel 459'
+p81
+I0
+sS'169 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c tmp = h -> pps . init_qp + get_se_golomb ( & s -> gb ) 646'
+p82
+I0
+sS'12 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c next_tvb = tvb_new_subset ( tvb , offset , eoe_length - offset , eoe_length - offset ) 79'
+p83
+I0
+sS'236 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c const int y_start = t * linesize ; 4'
+p84
+I0
+sS'136 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c bufferLength = dstLength + RESERVE_FALLBACK_BYTES 20'
+p85
+I0
+sS'81 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c tmp_tvb = tvb_new_subset ( tvb , offCur + cbHeader + vHeader , tpiLen , tpiLen ) 326'
+p86
+I0
+sS'213 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c uint8_t * rowp = mImageData + ( mGIFStruct . irow * bpr ) ; 40'
+p87
+I0
+sS'57 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c pi = proto_tree_add_uint ( pt , hf_sack_chunk_gap_block_end_tsn , chunk_tvb , gap_block_offset + SACK_CHUNK_GAP_BLOCK_START_LENGTH , SACK_CHUNK_GAP_BLOCK_END_LENGTH , cum_tsn_ack + end ) 59'
+p88
+I0
+sS'150 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor + c -> status [ 1 ] . predictor 253'
+p89
+I0
+sS'212 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c uint8_t * from = rowp + mGIFStruct . width ; 43'
+p90
+I0
+sS'29 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c start_time = s_time / NS_IN_US 84'
+p91
+I0
+sS'90 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c ascii_name [ counter ] = tvb_get_guint8 ( tvb , offset + counter ) 25'
+p92
+I0
+sS'54 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c offset = old_offset + len 75'
+p93
+I0
+sS'43 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c glyph = font -> unencoded + font -> unencoded_used 239'
+p94
+I0
+sS'21 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c tsid = ( tsid << 8 ) | s_ptr [ vwr -> LATVAL_OFF + i ] 70'
+p95
+I0
+sS'70 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c immediate_data_length = offset - immediate_data_offset 298'
+p96
+I0
+sS'11 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c anItem = proto_tree_add_item ( ecat_fraghead_tree , hf_ecat_mailbox_eoe_init , tvb , offset , MIN ( eoe_length - offset , ETHERCAT_EOE_INIT_LEN ) , ENC_NA ) 95'
+p97
+I0
+sS'228 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c const uint8_t * buf_end = buf + buf_size ; 7'
+p98
+I0
+sS'185 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c src_pr = src_px + w 14'
+p99
+I0
+sS'159 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c sample = ( sample + c -> status [ channel ] . sample1 * coeff [ channel ] [ 0 ] + c -> status [ channel ] . sample2 * coeff [ channel ] [ 1 ] + 0x80 ) >> 8 424'
+p100
+I0
+sS'151 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c diff_channel = ( diff_channel + c -> status [ 1 ] . predictor ) / 2 252'
+p101
+I0
+sS'120 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c aMetrics . height = aMetrics . ascent + NSToCoordCeil ( textMetrics . mDescent ) 385'
+p102
+I0
+sS'157 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c s = & samples [ m * avctx -> channels + channel ] 536'
+p103
+I0
+sS'112 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c vlength = end - vchars - parenChomp 182'
+p104
+I0
+sS'134 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c dstLength = bufferLength - pos2 47'
+p105
+I0
+sS'202 ../data/NVD/CVE_2013_0750_VULN_ReplaceRegExpCallback.c size_t growth = leftlen + replen ; 15'
+p106
+I0
+sS'232 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c const uint32_t * src_px , * src_pr , * src_py = src + y_start , * dst_py = dst + y_start ; 5'
+p107
+I0
+sS'222 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c int16_t * smp = samples + channel ; 295'
+p108
+I0
+sS'233 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c const int y_start = t * linesize ; 4'
+p109
+I0
+sS'26 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c end_time = e_time / NS_IN_US 89'
+p110
+I0
+sS'183 ../data/NVD/CVE_2013_0862_VULN_process_frame_obj.c ctx -> avctx -> height = FFMAX ( top + h , ctx -> height ) 13'
+p111
+I0
+sS'121 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c lastBreak = end . ConvertSkippedToOriginal ( transformedOffset + transformedLastBreak ) 309'
+p112
+I0
+sS'46 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c glyph -> bpr = ( glyph -> bbx . width * p -> font -> bpp + 7 ) >> 3 453'
+p113
+I0
+sS'31 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c tsid = ( tsid << 8 ) | s_ptr [ vwr -> LATVAL_OFF + i ] 70'
+p114
+I0
+sS'155 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c sampledat = ( ( prev [ ch ] [ 0 ] * factor1 + prev [ ch ] [ 1 ] * factor2 ) >> 11 ) + ( sampledat << exp ) 679'
+p115
+I0
+sS'199 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c unsigned short sw = ( unsigned short ) FT_MulDiv ( glyph -> dwidth , 72000L , ( FT_Long ) ( font -> point_size * font -> resolution_x ) ) ; 413'
+p116
+I0
+sS'197 ../data/NVD/CVE_2012_4190_VULN_ft_module_get_service.c FT_Module * limit = cur + library -> num_modules ; 21'
+p117
+I0
+sS'167 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c diff_channel = ( diff_channel + c -> status [ 1 ] . predictor ) / 2 243'
+p118
+I0
+sS'189 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c dst_px = ( uint32_t * ) dst_py + l 13'
+p119
+I0
+sS'139 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c srcLength = inStringLength - pos1 47'
+p120
+I0
+sS'142 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c sampledat = ( ( prev [ ch ] [ 0 ] * factor1 + prev [ ch ] [ 1 ] * factor2 ) >> 11 ) + ( sampledat << exp ) 679'
+p121
+I0
+sS'203 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c const jschar * end = vchars + vlength ; 122'
+p122
+I0
+sS'124 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c forceBreakAfter = forceBreak == offset + length 236'
+p123
+I0
+sS'196 ../data/NVD/CVE_2012_4190_PATCHED_ft_module_get_service.c FT_Module * limit = cur + library -> num_modules ; 21'
+p124
+I0
+sS'130 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c drow_end = drow_start + row_dup 25'
+p125
+I0
+sS'235 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c const uint32_t * src_px , * src_pr , * src_py = src + y_start , * dst_py = dst + y_start ; 5'
+p126
+I0
+sS'221 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__HandleFallBack.c char * temp = ( char * ) PR_Realloc ( * outString , * bufferLength + tempLen ) ; 16'
+p127
+I0
+sS'64 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c pi = proto_tree_add_uint ( pt , hf_sack_chunk_gap_block_end_tsn , chunk_tvb , gap_block_offset + SACK_CHUNK_GAP_BLOCK_START_LENGTH , SACK_CHUNK_GAP_BLOCK_END_LENGTH , cum_tsn_ack + end ) 59'
+p128
+I0
+sS'171 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1 356'
+p129
+I0
+sS'79 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c wtp_tvb = tvb_new_subset ( tvb , offCur + c_fieldlen , c_pdulen , c_pdulen ) 73'
+p130
+I0
+sS'30 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c d_time = ( guint32 ) ( ( e_time - s_time ) ) 81'
+p131
+I0
+sS'17 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c s_usec = start_time - ( s_sec * US_IN_SEC ) 86'
+p132
+I0
+sS'1 ../data/NVD/CVE_2012_4186_PATCHED_nsWaveReader__LoadFormatChunk.c PR_STATIC_ASSERT ( PR_UINT16_MAX + ( PR_UINT16_MAX % 2 ) < UINT_MAX / sizeof ( char ) ) 65'
+p133
+I0
+sS'187 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c src_px = src_py + l 12'
+p134
+I0
+sS'48 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c glyph -> bbx . ascent = ( short ) ( glyph -> bbx . height + glyph -> bbx . y_offset ) 386'
+p135
+I0
+sS'15 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c latency = ( guint32 ) ( s_time - sig_ts ) 121'
+p136
+I0
+sS'100 ../data/NVD/CVE_2013_0310_PATCHED_cipso_v4_validate.c * option = opt + err_offset 136'
+p137
+I0
+sS'186 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c dst_px = ( uint32_t * ) dst_py + l 13'
+p138
+I0
+sS'38 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c p -> rbearing = ( short ) ( glyph -> bbx . width + glyph -> bbx . x_offset ) 395'
+p139
+I0
+sS'80 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c dataOffset = offCur + cbHeader + vHeader 359'
+p140
+I0
+sS'71 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c immediate_data_length = offset - immediate_data_offset 298'
+p141
+I0
+sS'105 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c _iov -> iov_len = min ( ( u64 ) len - s , size ) 26'
+p142
+I0
+sS'210 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c int32_t contentLength = offset + charsFit - GetContentOffset ( ) ; 362'
+p143
+I0
+sS'231 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c const uint32_t * src_pb = src_py + h * linesize ; 8'
+p144
+I0
+sS'94 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c end = ptr + FFMIN ( 2 + AV_RB16 ( ptr ) , avpkt -> size ) 28'
+p145
+I0
+sS'20 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c d_time = ( guint32 ) ( ( e_time - s_time ) ) 81'
+p146
+I0
+sS'179 ../data/NVD/CVE_2013_0856_PATCHED_lpc_prediction.c val = d - pred [ j ] 54'
+p147
+I0
+sS'10 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c anItem = proto_tree_add_item ( ecat_fraghead_tree , hf_ecat_mailbox_eoe_macfilter , tvb , offset , MIN ( eoe_length - offset , ETHERCAT_EOE_MACFILTER_LEN ) , ENC_NA ) 134'
+p148
+I0
+sS'160 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c next_right_sample = ( next_right_sample + ( current_right_sample * coeff1r ) + ( previous_right_sample * coeff2r ) + 0x80 ) >> 8 389'
+p149
+I0
+sS'152 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor - c -> status [ 1 ] . predictor 245'
+p150
+I0
+sS'226 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c const int16_t * samples_end = samples + avctx -> channels * nb_samples ; 203'
+p151
+I0
+sS'53 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c glyph = font -> glyphs + font -> glyphs_used ++ 214'
+p152
+I0
+sS'206 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c TrackTicks ticks = endTicks - startTicks ; 31'
+p153
+I0
+sS'131 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c dstLength = bufferLength - pos2 80'
+p154
+I0
+sS'145 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c samplesC = samples + channel 459'
+p155
+I0
+sS'45 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c bitmap_size = glyph -> bpr * glyph -> bbx . height 455'
+p156
+I0
+sS'168 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c id_list [ i ] = h -> short_ref_count + k 750'
+p157
+I0
+sS'28 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c s_sec = ( start_time / US_IN_SEC ) 85'
+p158
+I0
+sS'127 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c drow_end = drow_start + row_dup 25'
+p159
+I0
+sS'67 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c block_item = proto_tree_add_text ( chunk_tree , chunk_tvb , gap_block_offset , SACK_CHUNK_GAP_BLOCK_LENGTH , "Gap Acknowledgement for TSN %u to %u" , cum_tsn_ack + start , cum_tsn_ack + end ) 48'
+p160
+I0
+sS'110 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c _iov = iov + ret 24'
+p161
+I0
+sS'16 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c end_time = e_time / NS_IN_US 89'
+p162
+I0
+sS'99 ../data/NVD/CVE_2012_6657_VULN_sock_setsockopt.c sk -> sk_lingertime = ( unsigned int ) ling . l_linger * HZ 156'
+p163
+I0
+sS'32 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c s_ptr = & ( rec [ rec_size - vwr -> STATS_LEN ] ) 30'
+p164
+I0
+sS'91 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c packet_len = packet_len - item_len - 1 277'
+p165
+I0
+sS'193 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE 408'
+p166
+I0
+sS'225 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c int16_t * smp = samples + channel ; 295'
+p167
+I0
+sS'132 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c rv = mEncoder -> GetMaxLength ( inString + pos1 , inStringLength - pos1 , & dstLength ) 67'
+p168
+I0
+sS'122 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c transformedLength = flowEndInTextRun - transformedOffset 252'
+p169
+I0
+sS'229 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c const uint8_t * buf_end = buf + buf_size ; 7'
+p170
+I0
+sS'62 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c end = tvb_get_ntohs ( chunk_tvb , gap_block_offset + SACK_CHUNK_GAP_BLOCK_START_LENGTH ) 45'
+p171
+I0
+sS'190 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c src_px = src_py + l 12'
+p172
+I0
+sS'144 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c s = & samples [ m * avctx -> channels + channel ] 536'
+p173
+I0
+sS'180 ../data/NVD/CVE_2013_0856_VULN_lpc_prediction.c val = d - pred [ j ] 54'
+p174
+I0
+sS'234 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c const uint32_t * src_pb = src_py + t * linesize ; 8'
+p175
+I0
+sS'8 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c anItem = proto_tree_add_item ( ecat_fraghead_tree , hf_ecat_mailbox_eoe_init , tvb , offset , MIN ( eoe_length - offset , ETHERCAT_EOE_INIT_LEN ) , ENC_NA ) 95'
+p176
+I0
+sS'164 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c diff_channel = ( diff_channel + c -> status [ 1 ] . predictor ) / 2 252'
+p177
+I0
+sS'96 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c buftmp = av_realloc ( buf , probe_size + AVPROBE_PADDING_SIZE ) 32'
+p178
+I0
+sS'138 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c rv = mEncoder -> GetMaxLength ( inString + pos1 , inStringLength - pos1 , & dstLength ) 60'
+p179
+I0
+sS'82 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c tpiLen = 2 + tvb_get_guint8 ( tvb , offCur + cbHeader + vHeader + 1 ) 320'
+p180
+I0
+sS'107 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c _iov = iov + ret 24'
+p181
+I0
+sS'27 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c s_usec = start_time - ( s_sec * US_IN_SEC ) 86'
+p182
+I0
+sS'84 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c returned_length = g_snprintf ( & szInfo [ str_index ] , SZINFO_SIZE - str_index , " R" ) 150'
+p183
+I0
+sS'137 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c dstLength = bufferLength - pos2 73'
+p184
+I0
+sS'19 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c start_time = s_time / NS_IN_US 84'
+p185
+I0
+sS'165 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor - c -> status [ 1 ] . predictor 245'
+p186
+I0
+sS'191 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c id_list [ i ] = h -> short_ref_count + k 651'
+p187
+I0
+sS'217 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c gfxFloat spreadDistance = shadowItem -> mSpread / twipsPerPixel ; 157'
+p188
+I0
+sS'227 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c int diff = predictor - cs -> predictor ; 56'
+p189
+I0
+sS'13 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c e_hdr_len = STATS_COMMON_FIELDS_LEN + STATS_ETHERNETTAP_FIELDS_LEN 138'
+p190
+I0
+sS'22 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c s_ptr = & ( rec [ rec_size - vwr -> STATS_LEN ] ) 30'
+p191
+I0
+sS'42 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c bp = glyph -> bitmap + p -> row * glyph -> bpr 286'
+p192
+I0
+sS'98 ../data/NVD/CVE_2012_6657_PATCHED_sock_setsockopt.c sk -> sk_lingertime = ( unsigned int ) ling . l_linger * HZ 157'
+p193
+I0
+sS'153 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor + c -> status [ 1 ] . predictor 244'
+p194
+I0
+sS'5 ../data/NVD/CVE_2012_4288_PATCHED_dissect_xtp_ecntl.c len = len + XTP_HEADER_LEN - offset 40'
+p195
+I0
+sS'58 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c pi = proto_tree_add_item ( block_tree , hf_sack_chunk_gap_block_end , chunk_tvb , gap_block_offset + SACK_CHUNK_GAP_BLOCK_START_LENGTH , SACK_CHUNK_GAP_BLOCK_END_LENGTH , ENC_BIG_ENDIAN ) 57'
+p196
+I0
+sS'51 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c bp = glyph -> bitmap + p -> row * glyph -> bpr 285'
+p197
+I0
+sS'140 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c dstLength = bufferLength - pos2 40'
+p198
+I0
+sS'77 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c returned_length = g_snprintf ( & szInfo [ str_index ] , SZINFO_SIZE - str_index , " (%u)" , psn ) 118'
+p199
+I0
+sS'115 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c lastBreak = end . ConvertSkippedToOriginal ( transformedOffset + transformedLastBreak ) 316'
+p200
+I0
+sS'205 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c TrackTicks inputStartTicks = inputEndTicks - ticks ; 58'
+p201
+I0
+sS'135 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c dstLength = bufferLength - pos2 31'
+p202
+I0
+sS'154 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c diff_channel = ( diff_channel + c -> status [ 1 ] . predictor ) / 2 243'
+p203
+I0
+sS'116 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c transformedLength = flowEndInTextRun - transformedOffset 259'
+p204
+I0
+sS'223 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c const int16_t * samples_end = samples + avctx -> channels * nb_samples ; 203'
+p205
+I0
+sS'147 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c next_right_sample = ( next_right_sample + ( current_right_sample * coeff1r ) + ( previous_right_sample * coeff2r ) + 0x80 ) >> 8 389'
+p206
+I0
+sS'44 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c glyph = font -> glyphs + font -> glyphs_used ++ 215'
+p207
+I0
+sS'103 ../data/NVD/CVE_2013_0310_VULN_cipso_v4_validate.c tag = opt + opt_iter 27'
+p208
+I0
+sS'24 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c delta_b = sig_ts - s_time 125'
+p209
+I0
+sS'72 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c dataOffset = offCur + cbHeader + vHeader 359'
+p210
+I0
+sS'52 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c glyph = font -> unencoded + font -> unencoded_used 238'
+p211
+I0
+sS'114 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c aMetrics . height = aMetrics . ascent + NSToCoordCeil ( textMetrics . mDescent ) 392'
+p212
+I0
+sS'33 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c cp = bprm -> buf + BINPRM_BUF_SIZE - 1 23'
+p213
+I0
+sS'162 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor - c -> status [ 1 ] . predictor 254'
+p214
+I0
+sS'108 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c _iov -> iov_base = ( void __user * ) ( unsigned long ) ( reg -> userspace_addr + addr - reg -> guest_phys_addr ) 27'
+p215
+I0
+sS'129 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c rowp = mImageData + mGIFStruct . irow * bpr 35'
+p216
+I0
+sS'146 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c sample = ( sample + c -> status [ channel ] . sample1 * coeff [ channel ] [ 0 ] + c -> status [ channel ] . sample2 * coeff [ channel ] [ 1 ] + 0x80 ) >> 8 424'
+p217
+I0
+sS'220 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c int32_t addLength = tempLen + RESERVE_FALLBACK_BYTES ; 16'
+p218
+I0
+sS'209 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c int32_t contentLength = offset + charsFit - GetContentOffset ( ) ; 369'
+p219
+I0
+sS'211 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c uint8_t * rowend = mImageData + ( bpr * mGIFStruct . irow ) + mGIFStruct . width ; 29'
+p220
+I0
+sS'59 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c pi = proto_tree_add_uint ( pt , hf_sack_chunk_gap_block_start_tsn , chunk_tvb , gap_block_offset , SACK_CHUNK_GAP_BLOCK_START_LENGTH , cum_tsn_ack + start ) 53'
+p221
+I0
+sS'178 ../data/NVD/CVE_2013_0855_PATCHED_allocate_buffers.c buf_size = alac -> max_samples_per_frame * sizeof ( int32_t ) 8'
+p222
+I0
+sS'126 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c rowp = mImageData + mGIFStruct . irow * bpr 35'
+p223
+I0
+sS'218 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c gfxFloat spreadDistance = shadowItem -> mSpread / twipsPerPixel ; 154'
+p224
+I0
+sS'208 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c TrackTicks ticks = endTicks - startTicks ; 31'
+p225
+I0
+sS'230 ../data/NVD/CVE_2013_0855_VULN_allocate_buffers.c int buf_size = alac -> max_samples_per_frame * sizeof ( int32_t ) ; 4'
+p226
+I0
+sS'163 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c * samples ++ = c -> status [ 0 ] . predictor + c -> status [ 1 ] . predictor 253'
+p227
+I0
+sS'66 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c pi = proto_tree_add_uint ( pt , hf_sack_chunk_gap_block_start_tsn , chunk_tvb , gap_block_offset , SACK_CHUNK_GAP_BLOCK_START_LENGTH , cum_tsn_ack + start ) 53'
+p228
+I0
+sS'78 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c returned_length = g_snprintf ( & szInfo [ str_index ] , SZINFO_SIZE - str_index , " Class %d" , clsTransaction ) 106'
+p229
+I0
+sS'93 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c ascii_name [ counter ] = tvb_get_guint8 ( tvb , offset + counter ) 25'
+p230
+I0
+sS'18 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c s_sec = ( start_time / US_IN_SEC ) 85'
+p231
+I0
+sS'101 ../data/NVD/CVE_2013_0310_PATCHED_cipso_v4_validate.c tag = opt + opt_iter 27'
+p232
+I0
+sS'113 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c aMetrics . height = aMetrics . ascent + descent 402'
+p233
+I0
+sS'92 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c packet_len = packet_len - item_len - 1 246'
+p234
+I0
+sS'2 ../data/NVD/CVE_2012_4186_VULN_nsWaveReader__LoadFormatChunk.c PR_STATIC_ASSERT ( PR_UINT16_MAX + ( PR_UINT16_MAX % 2 ) < UINT_MAX / sizeof ( char ) ) 65'
+p235
+I0
+sS'194 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1 245'
+p236
+I0
+s.

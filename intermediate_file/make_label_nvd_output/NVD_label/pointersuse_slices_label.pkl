@@ -1,0 +1,2954 @@
+(dp0
+S"790 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c [u'fmt'] 1"
+p1
+I0
+sS"423 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c [u'rowend'] 29"
+p2
+I0
+sS"687 ../data/NVD/CVE_2012_5240_PATCHED_dissect_tlv.c [u'tvb'] 2"
+p3
+I0
+sS"612 ../data/NVD/CVE_2012_4287_VULN_dissect_bson_document.c [u'tvb'] 2"
+p4
+I0
+sS"152 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'a_rwnd_item'] 12"
+p5
+I0
+sS"435 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c [u'rowp'] 24"
+p6
+I0
+sS"446 ../data/NVD/CVE_2013_0774_PATCHED_CreateDedicatedWorkerGlobalScope.c [u'dedicatedScopeProto'] 43"
+p7
+I0
+sS"785 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c [u'stream'] 1"
+p8
+I0
+sS"867 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c [u'q'] 2"
+p9
+I0
+sS"796 ../data/NVD/CVE_2012_6657_PATCHED_sock_setsockopt.c [u'optval'] 2"
+p10
+I0
+sS"71 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'ecat_eoe_macfilter_filtermask_tree'] 137"
+p11
+I0
+sS"224 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 761"
+p12
+I0
+sS"609 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_update.c [u'pinfo'] 2"
+p13
+I0
+sS"194 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 585"
+p14
+I0
+sS"271 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'ti'] 447"
+p15
+I0
+sS"276 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'PoC1_item'] 11"
+p16
+I0
+sS"979 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c [u'dst'] 1"
+p17
+I0
+sS"691 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u'call_data'] 5"
+p18
+I0
+sS"904 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c [u'out'] 3"
+p19
+I0
+sS"110 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'addr_p'] 72"
+p20
+I0
+sS"448 ../data/NVD/CVE_2013_0774_PATCHED_CreateDedicatedWorkerGlobalScope.c [u'eventTargetProto'] 31"
+p21
+I0
+sS"167 ../data/NVD/CVE_2012_6057_PATCHED_dissect_eigrp_wide_metric_attr.c [u'sub_tree'] 6"
+p22
+I0
+sS"277 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'PoC1_tree'] 10"
+p23
+I0
+sS"984 /home/SySeVR/data/NVD/CVE_2009_1336_PATCHED_nfs_init_server.c [u'pid'] 1"
+p24
+I0
+sS"136 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u'glyph'] 14"
+p25
+I0
+sS"617 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_pdu.c [u'tree'] 2"
+p26
+I0
+sS"519 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'samples_end'] 203"
+p27
+I0
+sS"257 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'ti'] 19"
+p28
+I0
+sS"560 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c [u'dst_px'] 9"
+p29
+I0
+sS"397 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c [u'segment'] 8"
+p30
+I0
+sS"929 ../data/NVD/CVE_2013_0845_VULN_read_const_block_data.c [u'bd'] 1"
+p31
+I0
+sS"731 ../data/NVD/CVE_2012_6057_PATCHED_dissect_eigrp_wide_metric_attr.c [u'tree'] 2"
+p32
+I0
+sS"813 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c [u'dev'] 1"
+p33
+I0
+sS"32 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_pdu.c [u'ti'] 5"
+p34
+I0
+sS"328 ../data/NVD/CVE_2013_0310_VULN_cipso_v4_validate.c [u'doi_def'] 9"
+p35
+I0
+sS"157 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'pi'] 79"
+p36
+I0
+sS"699 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'parent_tree'] 2"
+p37
+I0
+sS"147 ../data/NVD/CVE_2012_6055_PATCHED_dissect_3gpp2_service_option_profile.c [u'pi'] 6"
+p38
+I0
+sS"902 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'arg'] 5"
+p39
+I0
+sS"613 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_delete.c [u'tree'] 2"
+p40
+I0
+sS"594 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_delete.c [u'pinfo'] 2"
+p41
+I0
+sS"248 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tp'] 168"
+p42
+I0
+sS"969 ../data/NVD/CVE_2013_0861_PATCHED_avcodec_decode_audio4.c [u'frame'] 2"
+p43
+I0
+sS"728 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'chunk_tvb'] 2"
+p44
+I0
+sS"811 ../data/NVD/CVE_2013_0310_VULN_cipso_v4_validate.c [u'skb'] 1"
+p45
+I0
+sS"506 ../data/NVD/CVE_2013_0795_VULN_nsXPCComponents_Utils__LookupMethod.c [u'xray'] 39"
+p46
+I0
+sS"34 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_query.c [u'ti'] 4"
+p47
+I0
+sS"165 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'block_item'] 8"
+p48
+I0
+sS"888 ../data/NVD/CVE_2013_0787_PATCHED_nsEditor__IsPreformatted.c [u'aResult'] 2"
+p49
+I0
+sS"225 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'data_tvb'] 739"
+p50
+I0
+sS"596 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_insert.c [u'tree'] 2"
+p51
+I0
+sS"624 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_update.c [u'tree'] 2"
+p52
+I0
+sS"282 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'content'] 478"
+p53
+I0
+sS"16 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'ci'] 66"
+p54
+I0
+sS"698 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'tvb'] 2"
+p55
+I0
+sS"385 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c [u'outputTrack'] 6"
+p56
+I0
+sS"893 ../data/NVD/CVE_2013_0790_PATCHED_nsPluginByteRangeStreamListener__OnStartRequest.c [u'request'] 2"
+p57
+I0
+sS"338 ../data/NVD/CVE_2013_0313_VULN_evm_update_evmxattr.c [u'inode'] 4"
+p58
+I0
+sS"968 ../data/NVD/CVE_2013_0861_PATCHED_avcodec_decode_audio4.c [u'got_frame_ptr'] 3"
+p59
+I0
+sS"77 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c [u'vwr'] 3"
+p60
+I0
+sS"593 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_delete.c [u'tree'] 2"
+p61
+I0
+sS"815 ../data/NVD/CVE_2013_0313_PATCHED_evm_update_evmxattr.c [u'xattr_name'] 1"
+p62
+I0
+sS"605 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_reply.c [u'tree'] 2"
+p63
+I0
+sS"894 ../data/NVD/CVE_2013_0790_PATCHED_nsPluginStreamListenerPeer__OnStartRequest.c [u'aContext'] 3"
+p64
+I0
+sS"607 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_reply.c [u'tvb'] 2"
+p65
+I0
+sS"932 ../data/NVD/CVE_2013_0848_VULN_decode_init.c [u'avctx'] 1"
+p66
+I0
+sS"383 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c [u'source'] 11"
+p67
+I0
+sS"146 ../data/NVD/CVE_2012_6054_PATCHED_dissect_sflow_245_address_type.c [u'pi'] 8"
+p68
+I0
+sS"231 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 559"
+p69
+I0
+sS"348 ../data/NVD/CVE_2013_0750_VULN_ReplaceRegExpCallback.c [u'left'] 20"
+p70
+I0
+sS"971 ../data/NVD/CVE_2013_0861_VULN_avcodec_decode_audio4.c [u'avpkt'] 4"
+p71
+I0
+sS"850 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'cx'] 2"
+p72
+I0
+sS"676 ../data/NVD/CVE_2012_4565_PATCHED_tcp_illinois_info.c [u'skb'] 2"
+p73
+I0
+sS"718 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'ha'] 2"
+p74
+I0
+sS"695 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u'line'] 2"
+p75
+I0
+sS"363 ../data/NVD/CVE_2013_0756_VULN_js_EnterSharpObject.c [u'ida'] 16"
+p76
+I0
+sS"733 ../data/NVD/CVE_2012_6057_VULN_dissect_eigrp_wide_metric_attr.c [u'tree'] 2"
+p77
+I0
+sS"854 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c [u'aInputTrack'] 1"
+p78
+I0
+sS"135 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u'font'] 15"
+p79
+I0
+sS"553 ../data/NVD/CVE_2013_0856_VULN_lpc_prediction.c [u'pred'] 6"
+p80
+I0
+sS"935 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'h0'] 1"
+p81
+I0
+sS"362 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'ida'] 6"
+p82
+I0
+sS"778 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c [u'data'] 2"
+p83
+I0
+sS"393 ../data/NVD/CVE_2013_0761_VULN_AddTrack.c [u'track'] 24"
+p84
+I0
+sS"381 ../data/NVD/CVE_2013_0761_PATCHED_AddTrack.c [u'l'] 18"
+p85
+I0
+sS"604 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_query.c [u'tvb'] 2"
+p86
+I0
+sS"601 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_pdu.c [u'tvb'] 2"
+p87
+I0
+sS"569 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'new_sps'] 89"
+p88
+I0
+sS"494 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'pcertitem'] 21"
+p89
+I0
+sS"123 ../data/NVD/CVE_2012_5532_VULN_main.c [u'key_name'] 12"
+p90
+I0
+sS"382 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c [u'l'] 67"
+p91
+I0
+sS"490 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'pc'] 122"
+p92
+I0
+sS"14 ../data/NVD/CVE_2012_4204_VULN_str_unescape.c [u'str'] 7"
+p93
+I0
+sS"752 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'tree'] 2"
+p94
+I0
+sS"597 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_insert.c [u'pinfo'] 2"
+p95
+I0
+sS"9 ../data/NVD/CVE_2012_4204_PATCHED_str_unescape.c [u'result'] 36"
+p96
+I0
+sS"128 ../data/NVD/CVE_2012_5532_VULN_main.c [u'incoming_msg'] 7"
+p97
+I0
+sS"806 ../data/NVD/CVE_2013_0290_VULN___skb_recv_datagram.c [u'peeked'] 2"
+p98
+I0
+sS"140 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'conversation'] 39"
+p99
+I0
+sS"544 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c [u'buf'] 5"
+p100
+I0
+sS"117 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'incoming_cn_msg'] 8"
+p101
+I0
+sS"833 ../data/NVD/CVE_2013_0753_VULN_nsDocumentEncoder__EncodeToStream.c [u'aStream'] 2"
+p102
+I0
+sS"774 ../data/NVD/CVE_2012_6547_PATCHED___tun_chr_ioctl.c [u'file'] 1"
+p103
+I0
+sS"965 ../data/NVD/CVE_2013_0859_VULN_add_doubles_metadata.c [u'sep'] 2"
+p104
+I0
+sS"415 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'fm'] 390"
+p105
+I0
+sS"848 ../data/NVD/CVE_2013_0756_VULN_js_TraceSharpMap.c [u'trc'] 2"
+p106
+I0
+sS"175 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'code_name'] 6"
+p107
+I0
+sS"39 ../data/NVD/CVE_2012_4287_VULN_dissect_bson_document.c [u'doc_tree', u'js_code_sub_tree', u'js_scope_sub_tree', u'element_sub_tree', u'objectid_sub_tree', u'elements_tree'] 7"
+p108
+I0
+sS"964 ../data/NVD/CVE_2013_0859_VULN_add_doubles_metadata.c [u's'] 3"
+p109
+I0
+sS"662 ../data/NVD/CVE_2012_4467_PATCHED_do_siocgstamp.c [u'net'] 1"
+p110
+I0
+sS"436 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c [u'stack'] 23"
+p111
+I0
+sS"606 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_reply.c [u'pinfo'] 2"
+p112
+I0
+sS"674 ../data/NVD/CVE_2012_4530_VULN_load_script.c [u'regs'] 1"
+p113
+I0
+sS"29 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_insert.c [u'flags_tree'] 5"
+p114
+I0
+sS"922 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'avctx'] 1"
+p115
+I0
+sS"970 ../data/NVD/CVE_2013_0861_PATCHED_avcodec_decode_audio4.c [u'avctx'] 1"
+p116
+I0
+sS"547 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c [u'buf'] 5"
+p117
+I0
+sS"563 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c [u'dst_px'] 9"
+p118
+I0
+sS"689 ../data/NVD/CVE_2012_5240_VULN_dissect_tlv.c [u'tvb'] 2"
+p119
+I0
+sS"406 ../data/NVD/CVE_2013_0764_VULN_nsSOCKSIOLayerClose.c [u'info'] 4"
+p120
+I0
+sS"675 ../data/NVD/CVE_2012_4530_VULN_load_script.c [u'bprm'] 1"
+p121
+I0
+sS"584 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'tree'] 2"
+p122
+I0
+sS"515 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'buf'] 4"
+p123
+I0
+sS"402 ../data/NVD/CVE_2013_0761_VULN_EndTrack.c [u'outputTrack'] 3"
+p124
+I0
+sS"377 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'val'] 9"
+p125
+I0
+sS"670 ../data/NVD/CVE_2012_4467_VULN_do_siocgstampns.c [u'sock'] 1"
+p126
+I0
+sS"862 ../data/NVD/CVE_2013_0764_VULN_nsSOCKSSocketInfo__OnLookupComplete.c [u'aRecord'] 3"
+p127
+I0
+sS"105 ../data/NVD/CVE_2012_5240_PATCHED_dissect_tlv.c [u'ti', u'tlv_tree'] 25"
+p128
+I0
+sS"615 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_insert.c [u'tree'] 2"
+p129
+I0
+sS"371 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'shape'] 100"
+p130
+I0
+sS"667 ../data/NVD/CVE_2012_4467_VULN_do_siocgstamp.c [u'sock'] 1"
+p131
+I0
+sS"91 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'ti'] 45"
+p132
+I0
+sS"489 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'cp'] 7"
+p133
+I0
+sS"47 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_query.c [u'flags_tree'] 5"
+p134
+I0
+sS"303 ../data/NVD/CVE_2012_6547_VULN___tun_chr_ioctl.c [u'tfile'] 4"
+p135
+I0
+sS"344 ../data/NVD/CVE_2013_0750_VULN_FindReplaceLength.c [u'repstr'] 97"
+p136
+I0
+sS"306 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c [u'sub'] 4"
+p137
+I0
+sS"510 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'smp'] 295"
+p138
+I0
+sS"557 ../data/NVD/CVE_2013_0859_VULN_add_doubles_metadata.c [u'ap'] 5"
+p139
+I0
+sS"256 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'wtp_tree'] 20"
+p140
+I0
+sS"738 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'pinfo'] 2"
+p141
+I0
+sS"608 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_update.c [u'tree'] 2"
+p142
+I0
+sS"573 ../data/NVD/CVE_2012_4204_PATCHED_str_unescape.c [u'cx'] 2"
+p143
+I0
+sS"159 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'pi'] 40"
+p144
+I0
+sS"926 ../data/NVD/CVE_2013_0845_PATCHED_read_const_block_data.c [u'ctx'] 1"
+p145
+I0
+sS"865 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'aRenderingContext'] 3"
+p146
+I0
+sS"591 ../data/NVD/CVE_2012_4287_PATCHED_dissect_bson_document.c [u'pinfo'] 2"
+p147
+I0
+sS"883 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c [u'outString'] 2"
+p148
+I0
+sS"886 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__HandleFallBack.c [u'bufferLength'] 2"
+p149
+I0
+sS"933 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'h0'] 1"
+p150
+I0
+sS"102 ../data/NVD/CVE_2012_5238_PATCHED_proto_register_lcp.c [u'ett'] 247"
+p151
+I0
+sS"471 ../data/NVD/CVE_2013_0778_VULN_nsFrame__SelectByTypeAtPoint.c [u'theFrame'] 18"
+p152
+I0
+sS"319 ../data/NVD/CVE_2012_6657_PATCHED_sock_setsockopt.c [u'sk'] 4"
+p153
+I0
+sS"484 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'certbegin'] 136"
+p154
+I0
+sS"289 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'PoC1_tree'] 10"
+p155
+I0
+sS"36 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_reply.c [u'ti'] 4"
+p156
+I0
+sS"244 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 304"
+p157
+I0
+sS"772 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c [u'uaddr'] 1"
+p158
+I0
+sS"876 ../data/NVD/CVE_2013_0780_PATCHED_nsOverflowContinuationTracker__Insert.c [u'aOverflowCont'] 2"
+p159
+I0
+sS"660 ../data/NVD/CVE_2012_4467_PATCHED_do_siocgstamp.c [u'up'] 2"
+p160
+I0
+sS"161 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'a_rwnd_item'] 12"
+p161
+I0
+sS"630 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c [u'pinfo'] 2"
+p162
+I0
+sS"500 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c [u'result'] 31"
+p163
+I0
+sS"52 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_update.c [u'ti'] 4"
+p164
+I0
+sS"83 ../data/NVD/CVE_2012_4565_VULN_tcp_illinois_info.c [u'ca'] 4"
+p165
+I0
+sS"974 ../data/NVD/CVE_2013_0861_VULN_avcodec_decode_audio4.c [u'avctx'] 1"
+p166
+I0
+sS"729 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'pinfo'] 2"
+p167
+I0
+sS"322 ../data/NVD/CVE_2013_0290_PATCHED___skb_recv_datagram.c [u'skb'] 4"
+p168
+I0
+sS"936 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'h'] 1"
+p169
+I0
+sS"120 ../data/NVD/CVE_2012_5532_VULN_main.c [u'addr_p'] 72"
+p170
+I0
+sS"835 ../data/NVD/CVE_2013_0755_VULN_Navigator__Vibrate.c [u'cx'] 2"
+p171
+I0
+sS"262 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'wsp_tvb'] 26"
+p172
+I0
+sS"347 ../data/NVD/CVE_2013_0750_VULN_FindReplaceLength.c [u'str'] 19"
+p173
+I0
+sS"21 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'ci'] 66"
+p174
+I0
+sS"59 ../data/NVD/CVE_2012_4289_PATCHED_decode_kauth_acl.c [u'ace_tree'] 7"
+p175
+I0
+sS"542 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c [u's'] 8"
+p176
+I0
+sS"757 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'tvb'] 2"
+p177
+I0
+sS"940 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c [u'avctx'] 1"
+p178
+I0
+sS"807 ../data/NVD/CVE_2013_0290_VULN___skb_recv_datagram.c [u'sk'] 1"
+p179
+I0
+sS"945 ../data/NVD/CVE_2013_0853_PATCHED_wavpack_decode_frame.c [u'avpkt'] 2"
+p180
+I0
+sS"642 ../data/NVD/CVE_2012_4289_VULN_decode_kauth_acl.c [u'tvb'] 2"
+p181
+I0
+sS"717 ../data/NVD/CVE_2012_6055_PATCHED_dissect_3gpp2_service_option_profile.c [u'tree'] 2"
+p182
+I0
+sS"23 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'li', u'ti'] 9"
+p183
+I0
+sS"860 ../data/NVD/CVE_2013_0764_PATCHED_nsSOCKSSocketInfo__OnLookupComplete.c [u'aRequest'] 2"
+p184
+I0
+sS"341 ../data/NVD/CVE_2013_0750_PATCHED_FindReplaceLength.c [u'atom'] 21"
+p185
+I0
+sS"694 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u'call_data'] 5"
+p186
+I0
+sS"520 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'samples'] 9"
+p187
+I0
+sS"512 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'samples'] 9"
+p188
+I0
+sS"65 ../data/NVD/CVE_2012_4289_VULN_proto_register_afp.c [u'ett'] 1504"
+p189
+I0
+sS"219 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'data_tvb'] 924"
+p190
+I0
+sS"633 ../data/NVD/CVE_2012_4289_PATCHED_decode_kauth_acl.c [u'pinfo'] 2"
+p191
+I0
+sS"258 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'szInfo'] 4"
+p192
+I0
+sS"172 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'flags_strbuf'] 340"
+p193
+I0
+sS"480 ../data/NVD/CVE_2013_0787_PATCHED_nsEditor__IsPreformatted.c [u'styleText'] 31"
+p194
+I0
+sS"826 ../data/NVD/CVE_2013_0750_VULN_FindReplaceLength.c [u'sizep'] 2"
+p195
+I0
+sS"600 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_pdu.c [u'pinfo'] 2"
+p196
+I0
+sS"315 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c [u'buftmp'] 25"
+p197
+I0
+sS"712 ../data/NVD/CVE_2012_6054_VULN_dissect_sflow_245_address_type.c [u'hf_type'] 3"
+p198
+I0
+sS"241 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 404"
+p199
+I0
+sS"139 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u's'] 9"
+p200
+I0
+sS"559 ../data/NVD/CVE_2013_0861_VULN_avcodec_decode_audio4.c [u'side'] 21"
+p201
+I0
+sS"486 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'pcertitem'] 29"
+p202
+I0
+sS"170 ../data/NVD/CVE_2012_6057_VULN_dissect_eigrp_wide_metric_attr.c [u'sub_tree'] 6"
+p203
+I0
+sS"171 ../data/NVD/CVE_2012_6057_VULN_dissect_eigrp_wide_metric_attr.c [u'sub_ti'] 5"
+p204
+I0
+sS"481 ../data/NVD/CVE_2013_0787_VULN_nsEditor__IsPreformatted.c [u'styleText'] 31"
+p205
+I0
+sS"404 ../data/NVD/CVE_2013_0761_VULN_ProduceOutput.c [u'stream'] 11"
+p206
+I0
+sS"870 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'aForFrame'] 4"
+p207
+I0
+sS"310 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c [u'rtp_format'] 6"
+p208
+I0
+sS"769 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c [u'uaddr'] 1"
+p209
+I0
+sS"211 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 303"
+p210
+I0
+sS"858 ../data/NVD/CVE_2013_0764_PATCHED_nsSOCKSIOLayerClose.c [u'fd'] 2"
+p211
+I0
+sS"399 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c [u'inputTrack'] 5"
+p212
+I0
+sS"37 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_update.c [u'flags_tree'] 5"
+p213
+I0
+sS"543 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c [u'buf_end'] 7"
+p214
+I0
+sS"649 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'pinfo'] 1"
+p215
+I0
+sS"751 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tvb'] 2"
+p216
+I0
+sS"735 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'pinfo'] 2"
+p217
+I0
+sS"353 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'start'] 121"
+p218
+I0
+sS"625 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_update.c [u'tvb'] 2"
+p219
+I0
+sS"247 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 225"
+p220
+I0
+sS"200 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 509"
+p221
+I0
+sS"365 ../data/NVD/CVE_2013_0756_VULN_js_LeaveSharpObject.c [u'map'] 4"
+p222
+I0
+sS"866 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c [u'q'] 2"
+p223
+I0
+sS"99 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'hsrp_tree'] 46"
+p224
+I0
+sS"551 ../data/NVD/CVE_2013_0853_VULN_wavpack_decode_frame.c [u's'] 4"
+p225
+I0
+sS"956 ../data/NVD/CVE_2013_0856_PATCHED_lpc_prediction.c [u'buffer_out'] 1"
+p226
+I0
+sS"195 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 584"
+p227
+I0
+sS"468 ../data/NVD/CVE_2013_0778_PATCHED_nsFrame__SelectByTypeAtPoint.c [u'theFrame'] 21"
+p228
+I0
+sS"8 ../data/NVD/CVE_2012_4190_VULN_ft_module_get_service.c [u'cur'] 20"
+p229
+I0
+sS"681 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'pinfo'] 2"
+p230
+I0
+sS"173 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'trans'] 14"
+p231
+I0
+sS"101 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'next_tvb'] 4"
+p232
+I0
+sS"291 ../data/NVD/CVE_2012_6538_PATCHED_copy_to_user_auth.c [u'algo'] 3"
+p233
+I0
+sS"881 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c [u'bufferLength'] 2"
+p234
+I0
+sS"437 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c [u'suffix'] 22"
+p235
+I0
+sS"492 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'certbegin'] 120"
+p236
+I0
+sS"253 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'tmp_tvb'] 312"
+p237
+I0
+sS"485 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'oiddata'] 95"
+p238
+I0
+sS"708 ../data/NVD/CVE_2012_6054_PATCHED_dissect_sflow_245_address_type.c [u'tree'] 3"
+p239
+I0
+sS"345 ../data/NVD/CVE_2013_0750_VULN_FindReplaceLength.c [u'repstr'] 87"
+p240
+I0
+sS"57 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c [u'top_ti'] 6"
+p241
+I0
+sS"795 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c [u'pb'] 1"
+p242
+I0
+sS"354 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'vchars'] 111"
+p243
+I0
+sS"851 ../data/NVD/CVE_2013_0761_PATCHED_AddTrack.c [u'aTrack'] 1"
+p244
+I0
+sS"843 ../data/NVD/CVE_2013_0756_VULN_js_EnterSharpObject.c [u'idap'] 2"
+p245
+I0
+sS"389 ../data/NVD/CVE_2013_0761_PATCHED_ProduceOutput.c [u'outputTrack'] 22"
+p246
+I0
+sS"414 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'presContext'] 13"
+p247
+I0
+sS"26 ../data/NVD/CVE_2012_4287_PATCHED_dissect_bson_document.c [u'objectid', u'elements', u'ti', u'js_code', u'element', u'js_scope'] 6"
+p248
+I0
+sS"575 ../data/NVD/CVE_2012_4204_VULN_str_unescape.c [u'cx'] 2"
+p249
+I0
+sS"756 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'pinfo'] 2"
+p250
+I0
+sS"178 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'flags_strbuf'] 340"
+p251
+I0
+sS"472 ../data/NVD/CVE_2013_0780_PATCHED_nsOverflowContinuationTracker__Insert.c [u'f'] 63"
+p252
+I0
+sS"556 ../data/NVD/CVE_2013_0859_VULN_add_doubles_metadata.c [u'dp'] 7"
+p253
+I0
+sS"747 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'iscsi_session'] 2"
+p254
+I0
+sS"69 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'ecat_fraghead_tree', u'ecat_eoe_macfilter_filter_tree', u'ecat_eoe_tree', u'ecat_eoe_init_tree', u'ecat_eoe_macfilter_tree'] 3"
+p255
+I0
+sS"12 ../data/NVD/CVE_2012_4204_VULN_str_unescape.c [u'result'] 30"
+p256
+I0
+sS"980 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c [u'src'] 1"
+p257
+I0
+sS"912 ../data/NVD/CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand.c [u'argv'] 2"
+p258
+I0
+sS"201 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 508"
+p259
+I0
+sS"477 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c [u'temp'] 18"
+p260
+I0
+sS"799 ../data/NVD/CVE_2012_6657_VULN_sock_setsockopt.c [u'sock'] 1"
+p261
+I0
+sS"688 ../data/NVD/CVE_2012_5240_VULN_dissect_tlv.c [u'tree'] 2"
+p262
+I0
+sS"638 ../data/NVD/CVE_2012_4289_PATCHED_dissect_query_afp_set_acl.c [u'tree'] 2"
+p263
+I0
+sS"324 ../data/NVD/CVE_2013_0290_VULN___skb_recv_datagram.c [u'skb'] 4"
+p264
+I0
+sS"278 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'next_tvb'] 569"
+p265
+I0
+sS"96 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'group_state_tlv'] 130"
+p266
+I0
+sS"828 ../data/NVD/CVE_2013_0750_VULN_FindReplaceLength.c [u'cx'] 2"
+p267
+I0
+sS"372 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u's'] 92"
+p268
+I0
+sS"1 ../data/NVD/CVE_2012_4186_PATCHED_nsWaveReader__LoadFormatChunk.c [u'p'] 50"
+p269
+I0
+sS"64 ../data/NVD/CVE_2012_4289_VULN_decode_kauth_acl.c [u'sub_tree'] 6"
+p270
+I0
+sS"750 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'pinfo'] 2"
+p271
+I0
+sS"442 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c [u'to'] 44"
+p272
+I0
+sS"983 /home/SySeVR/data/NVD/CVE_2005_3848_PATCHED_icmp_push_reply.c [u's'] 2"
+p273
+I0
+sS"868 ../data/NVD/CVE_2013_0774_PATCHED_CreateDedicatedWorkerGlobalScope.c [u'aCx'] 4"
+p274
+I0
+sS"130 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u'font'] 15"
+p275
+I0
+sS"710 ../data/NVD/CVE_2012_6054_PATCHED_dissect_sflow_245_address_type.c [u'tvb'] 2"
+p276
+I0
+sS"872 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'aForFrame'] 4"
+p277
+I0
+sS"535 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'ref2frm'] 737"
+p278
+I0
+sS"317 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c [u'buftmp'] 25"
+p279
+I0
+sS"192 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 672"
+p280
+I0
+sS"889 ../data/NVD/CVE_2013_0787_PATCHED_nsEditor__IsPreformatted.c [u'aNode'] 2"
+p281
+I0
+sS"518 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'smp'] 295"
+p282
+I0
+sS"4 ../data/NVD/CVE_2012_4186_VULN_nsWaveReader__LoadFormatChunk.c [u'p'] 6"
+p283
+I0
+sS"897 ../data/NVD/CVE_2013_0790_VULN_nsPluginByteRangeStreamListener__OnStartRequest.c [u'request'] 2"
+p284
+I0
+sS"871 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'aPresContext'] 2"
+p285
+I0
+sS"663 ../data/NVD/CVE_2012_4467_PATCHED_do_siocgstampns.c [u'up'] 2"
+p286
+I0
+sS"462 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'styleBorder'] 8"
+p287
+I0
+sS"631 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c [u'tvb'] 2"
+p288
+I0
+sS"812 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c [u'dev'] 1"
+p289
+I0
+sS"497 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'cp'] 7"
+p290
+I0
+sS"342 ../data/NVD/CVE_2013_0750_PATCHED_FindReplaceLength.c [u'str'] 19"
+p291
+I0
+sS"907 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c [u'in'] 2"
+p292
+I0
+sS"915 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'avpkt'] 2"
+p293
+I0
+sS"430 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c [u'cmap'] 45"
+p294
+I0
+sS"90 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'hsrp_tree'] 46"
+p295
+I0
+sS"234 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 509"
+p296
+I0
+sS"222 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'next_opcode_str'] 764"
+p297
+I0
+sS"187 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'data_tvb', u'cdb_tvb'] 860"
+p298
+I0
+sS"524 ../data/NVD/CVE_2013_0845_PATCHED_read_block.c [u'gb'] 3"
+p299
+I0
+sS"905 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c [u'in'] 2"
+p300
+I0
+sS"715 ../data/NVD/CVE_2012_6055_PATCHED_dissect_3gpp2_service_option_profile.c [u'pinfo'] 2"
+p301
+I0
+sS"509 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'samplesC'] 448"
+p302
+I0
+sS"588 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'pinfo'] 2"
+p303
+I0
+sS"602 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_query.c [u'tree'] 2"
+p304
+I0
+sS"223 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 762"
+p305
+I0
+sS"571 ../data/NVD/CVE_2012_4190_VULN_ft_module_get_service.c [u'service_id'] 2"
+p306
+I0
+sS"295 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c [u'sk'] 5"
+p307
+I0
+sS"491 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'certend'] 121"
+p308
+I0
+sS"30 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_insert.c [u'ti'] 4"
+p309
+I0
+sS"62 ../data/NVD/CVE_2012_4289_VULN_decode_kauth_acl.c [u'item'] 8"
+p310
+I0
+sS"38 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_update.c [u'ti'] 4"
+p311
+I0
+sS"759 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'pinfo'] 2"
+p312
+I0
+sS"909 ../data/NVD/CVE_2013_0795_PATCHED_nsXPCComponents_Utils__LookupMethod.c [u'cx'] 4"
+p313
+I0
+sS"730 ../data/NVD/CVE_2012_6057_PATCHED_dissect_eigrp_wide_metric_attr.c [u'tvb'] 2"
+p314
+I0
+sS"599 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_pdu.c [u'tree'] 2"
+p315
+I0
+sS"742 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'opcode_str'] 2"
+p316
+I0
+sS"264 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'ti'] 19"
+p317
+I0
+sS"85 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'text_auth_tlv'] 224"
+p318
+I0
+sS"87 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'group_state_tlv'] 133"
+p319
+I0
+sS"978 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c [u'src'] 1"
+p320
+I0
+sS"5 ../data/NVD/CVE_2012_4190_PATCHED_ft_module_get_service.c [u'limit'] 21"
+p321
+I0
+sS"154 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'flags_tree'] 10"
+p322
+I0
+sS"89 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'ti'] 113"
+p323
+I0
+sS"975 ../data/NVD/CVE_2013_0862_PATCHED_process_frame_obj.c [u'ctx'] 1"
+p324
+I0
+sS"645 ../data/NVD/CVE_2012_4289_VULN_dissect_query_afp_set_acl.c [u'tree'] 2"
+p325
+I0
+sS"821 ../data/NVD/CVE_2013_0750_PATCHED_FindReplaceLength.c [u'res'] 2"
+p326
+I0
+sS"803 ../data/NVD/CVE_2013_0290_PATCHED___skb_recv_datagram.c [u'sk'] 1"
+p327
+I0
+sS"314 ../data/NVD/CVE_2012_6617_VULN_prepare_sdp_description.c [u'avc'] 4"
+p328
+I0
+sS"227 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 671"
+p329
+I0
+sS"74 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'ecat_fraghead_tree', u'ecat_eoe_macfilter_filter_tree', u'ecat_eoe_tree', u'ecat_eoe_init_tree', u'ecat_eoe_macfilter_tree'] 3"
+p330
+I0
+sS"67 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'aparent', u'anItem'] 6"
+p331
+I0
+sS"900 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'arg'] 5"
+p332
+I0
+sS"379 ../data/NVD/CVE_2013_0761_PATCHED_AddTrack.c [u'map'] 30"
+p333
+I0
+sS"766 ../data/NVD/CVE_2012_6538_VULN_copy_to_user_auth.c [u'skb'] 1"
+p334
+I0
+sS"63 ../data/NVD/CVE_2012_4289_VULN_decode_kauth_acl.c [u'ace_tree'] 7"
+p335
+I0
+sS"339 ../data/NVD/CVE_2013_0750_PATCHED_FindReplaceLength.c [u'repstr'] 97"
+p336
+I0
+sS"323 ../data/NVD/CVE_2013_0290_VULN___skb_recv_datagram.c [u'queue'] 24"
+p337
+I0
+sS"702 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'usb_trans_info'] 2"
+p338
+I0
+sS"164 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'block_tree'] 9"
+p339
+I0
+sS"103 ../data/NVD/CVE_2012_5238_VULN_proto_register_lcp.c [u'ett'] 247"
+p340
+I0
+sS"720 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'chunk_item'] 2"
+p341
+I0
+sS"882 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c [u'outString'] 2"
+p342
+I0
+sS"307 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c [u'end'] 8"
+p343
+I0
+sS"311 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c [u'avs'] 5"
+p344
+I0
+sS"913 ../data/NVD/CVE_2013_0799_VULN_GetInstallationDir.c [u'argvTmp'] 2"
+p345
+I0
+sS"950 ../data/NVD/CVE_2013_0853_VULN_wavpack_decode_frame.c [u'got_frame_ptr'] 2"
+p346
+I0
+sS"268 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'mux_item'] 551"
+p347
+I0
+sS"93 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'md5_auth_tlv'] 239"
+p348
+I0
+sS"417 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'cachedNewlineOffset'] 81"
+p349
+I0
+sS"696 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'usb_conv_info'] 2"
+p350
+I0
+sS"566 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'base'] 643"
+p351
+I0
+sS"683 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'tree'] 2"
+p352
+I0
+sS"185 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'data_tvb'] 924"
+p353
+I0
+sS"119 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'message'] 5"
+p354
+I0
+sS"86 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'interface_state_tlv'] 209"
+p355
+I0
+sS"286 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'buff'] 113"
+p356
+I0
+sS"308 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c [u'ptr'] 7"
+p357
+I0
+sS"498 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c [u'result'] 35"
+p358
+I0
+sS"677 ../data/NVD/CVE_2012_4565_PATCHED_tcp_illinois_info.c [u'sk'] 1"
+p359
+I0
+sS"541 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'c'] 285"
+p360
+I0
+sS"700 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'pinfo'] 2"
+p361
+I0
+sS"578 ../data/NVD/CVE_2012_4207_PATCHED_nsHZToUnicode__ConvertNoBuff.c [u'aSrcLength'] 3"
+p362
+I0
+sS"115 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'p'] 10"
+p363
+I0
+sS"927 ../data/NVD/CVE_2013_0845_VULN_read_block.c [u'bd'] 1"
+p364
+I0
+sS"800 ../data/NVD/CVE_2013_0290_PATCHED___skb_recv_datagram.c [u'err'] 2"
+p365
+I0
+sS"585 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'pinfo'] 2"
+p366
+I0
+sS"40 ../data/NVD/CVE_2012_4287_VULN_dissect_bson_document.c [u'objectid', u'elements', u'ti', u'js_code', u'element', u'js_scope'] 6"
+p367
+I0
+sS"743 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tree'] 2"
+p368
+I0
+sS"629 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c [u'tree'] 2"
+p369
+I0
+sS"279 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'mux_tree'] 551"
+p370
+I0
+sS"463 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'renderContext'] 91"
+p371
+I0
+sS"644 ../data/NVD/CVE_2012_4289_VULN_decode_uuid_acl.c [u'tvb'] 2"
+p372
+I0
+sS"290 ../data/NVD/CVE_2012_6538_PATCHED_copy_to_user_auth.c [u'nla'] 4"
+p373
+I0
+sS"709 ../data/NVD/CVE_2012_6054_PATCHED_dissect_sflow_245_address_type.c [u'pinfo'] 2"
+p374
+I0
+sS"937 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c [u'avpkt'] 3"
+p375
+I0
+sS"138 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u'bp'] 10"
+p376
+I0
+sS"48 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_query.c [u'ti'] 4"
+p377
+I0
+sS"844 ../data/NVD/CVE_2013_0756_VULN_js_EnterSharpObject.c [u'cx'] 2"
+p378
+I0
+sS"168 ../data/NVD/CVE_2012_6057_PATCHED_dissect_eigrp_wide_metric_attr.c [u'sub_ti'] 5"
+p379
+I0
+sS"716 ../data/NVD/CVE_2012_6055_PATCHED_dissect_3gpp2_service_option_profile.c [u'tvb'] 2"
+p380
+I0
+sS"586 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'tvb'] 2"
+p381
+I0
+sS"879 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c [u'inString'] 2"
+p382
+I0
+sS"228 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 585"
+p383
+I0
+sS"554 ../data/NVD/CVE_2013_0859_PATCHED_add_doubles_metadata.c [u'dp'] 7"
+p384
+I0
+sS"619 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_pdu.c [u'tvb'] 2"
+p385
+I0
+sS"574 ../data/NVD/CVE_2012_4204_VULN_str_unescape.c [u'vp'] 2"
+p386
+I0
+sS"545 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c [u's'] 8"
+p387
+I0
+sS"910 ../data/NVD/CVE_2013_0795_VULN_nsXPCComponents_Utils__LookupMethod.c [u'retval'] 5"
+p388
+I0
+sS"458 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'renderContext'] 91"
+p389
+I0
+sS"421 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'textStyle'] 59"
+p390
+I0
+sS"814 ../data/NVD/CVE_2013_0313_PATCHED_evm_update_evmxattr.c [u'xattr_value'] 2"
+p391
+I0
+sS"267 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'mux_tree'] 552"
+p392
+I0
+sS"42 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_delete.c [u'ti'] 4"
+p393
+I0
+sS"355 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'idstr'] 82"
+p394
+I0
+sS"719 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'flags_item'] 2"
+p395
+I0
+sS"567 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'ref2frm'] 638"
+p396
+I0
+sS"131 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u'glyph'] 14"
+p397
+I0
+sS"918 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'avctx'] 1"
+p398
+I0
+sS"939 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c [u'data'] 2"
+p399
+I0
+sS"50 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_reply.c [u'ti'] 4"
+p400
+I0
+sS"469 ../data/NVD/CVE_2013_0778_PATCHED_nsFrame__SelectByTypeAtPoint.c [u'frameSelection'] 19"
+p401
+I0
+sS"746 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'conversation'] 2"
+p402
+I0
+sS"726 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'chunk_item'] 2"
+p403
+I0
+sS"789 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c [u'filename'] 2"
+p404
+I0
+sS"447 ../data/NVD/CVE_2013_0774_PATCHED_CreateDedicatedWorkerGlobalScope.c [u'scopeProto'] 37"
+p405
+I0
+sS"3 ../data/NVD/CVE_2012_4186_VULN_nsWaveReader__LoadFormatChunk.c [u'p'] 50"
+p406
+I0
+sS"374 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'str'] 38"
+p407
+I0
+sS"70 ../data/NVD/CVE_2012_4293_PATCHED_proto_register_ecat_mailbox.c [u'ett'] 647"
+p408
+I0
+sS"827 ../data/NVD/CVE_2013_0750_VULN_FindReplaceLength.c [u'res'] 2"
+p409
+I0
+sS"66 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'ecat_eoe_macfilter_filtermask_tree'] 137"
+p410
+I0
+sS"908 ../data/NVD/CVE_2013_0795_PATCHED_nsXPCComponents_Utils__LookupMethod.c [u'retval'] 5"
+p411
+I0
+sS"561 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c [u'src_pb'] 8"
+p412
+I0
+sS"783 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c [u'avctx'] 1"
+p413
+I0
+sS"938 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c [u'data_size'] 2"
+p414
+I0
+sS"641 ../data/NVD/CVE_2012_4289_VULN_decode_kauth_acl.c [u'tree'] 2"
+p415
+I0
+sS"182 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'code_item', u'ti', u'checksum_item', u'hidden_item', u'ti_flag'] 5"
+p416
+I0
+sS"243 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 375"
+p417
+I0
+sS"831 ../data/NVD/CVE_2013_0750_VULN_ReplaceRegExpCallback.c [u'cx'] 2"
+p418
+I0
+sS"240 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 405"
+p419
+I0
+sS"816 ../data/NVD/CVE_2013_0313_PATCHED_evm_update_evmxattr.c [u'dentry'] 1"
+p420
+I0
+sS"72 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'aparent', u'anItem'] 6"
+p421
+I0
+sS"426 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c [u'suffix'] 22"
+p422
+I0
+sS"336 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c [u'reg'] 4"
+p423
+I0
+sS"616 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_insert.c [u'tvb'] 2"
+p424
+I0
+sS"706 ../data/NVD/CVE_2012_6054_PATCHED_dissect_sflow_245_address_type.c [u'addr_detail'] 5"
+p425
+I0
+sS"656 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c [u'wth'] 1"
+p426
+I0
+sS"495 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'ascCert'] 9"
+p427
+I0
+sS"873 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'aPresContext'] 2"
+p428
+I0
+sS"962 ../data/NVD/CVE_2013_0859_PATCHED_add_doubles_metadata.c [u'sep'] 2"
+p429
+I0
+sS"530 ../data/NVD/CVE_2013_0845_VULN_read_const_block_data.c [u'avctx'] 4"
+p430
+I0
+sS"296 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c [u'llc'] 6"
+p431
+I0
+sS"238 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 448"
+p432
+I0
+sS"760 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'tvb'] 2"
+p433
+I0
+sS"941 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c [u'avpkt'] 3"
+p434
+I0
+sS"208 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 376"
+p435
+I0
+sS"957 ../data/NVD/CVE_2013_0856_PATCHED_lpc_prediction.c [u'error_buffer'] 1"
+p436
+I0
+sS"546 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c [u'buf_end'] 7"
+p437
+I0
+sS"511 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'samples_end'] 203"
+p438
+I0
+sS"622 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_reply.c [u'tree'] 2"
+p439
+I0
+sS"349 ../data/NVD/CVE_2013_0755_PATCHED_Navigator__Vibrate.c [u'obj'] 34"
+p440
+I0
+sS"214 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tp'] 168"
+p441
+I0
+sS"188 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'next_opcode_str'] 764"
+p442
+I0
+sS"846 ../data/NVD/CVE_2013_0756_VULN_js_LeaveSharpObject.c [u'cx'] 2"
+p443
+I0
+sS"350 ../data/NVD/CVE_2013_0755_VULN_Navigator__Vibrate.c [u'obj'] 34"
+p444
+I0
+sS"655 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c [u'data_ptr'] 1"
+p445
+I0
+sS"433 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c [u'rowp'] 40"
+p446
+I0
+sS"226 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 672"
+p447
+I0
+sS"919 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'avpkt'] 2"
+p448
+I0
+sS"899 ../data/NVD/CVE_2013_0790_VULN_nsPluginStreamListenerPeer__OnStartRequest.c [u'request'] 2"
+p449
+I0
+sS"133 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u'bp'] 10"
+p450
+I0
+sS"416 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'fm'] 281"
+p451
+I0
+sS"255 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'wsp_tvb'] 26"
+p452
+I0
+sS"770 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c [u'sock'] 1"
+p453
+I0
+sS"75 ../data/NVD/CVE_2012_4293_VULN_proto_register_ecat_mailbox.c [u'ett'] 642"
+p454
+I0
+sS"473 ../data/NVD/CVE_2013_0780_PATCHED_nsOverflowContinuationTracker__Insert.c [u'presContext'] 13"
+p455
+I0
+sS"536 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'prev'] 432"
+p456
+I0
+sS"11 ../data/NVD/CVE_2012_4204_PATCHED_str_unescape.c [u'str'] 7"
+p457
+I0
+sS"408 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'fm'] 288"
+p458
+I0
+sS"351 ../data/NVD/CVE_2013_0755_VULN_Navigator__Vibrate.c [u'domDoc'] 7"
+p459
+I0
+sS"245 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 303"
+p460
+I0
+sS"555 ../data/NVD/CVE_2013_0859_PATCHED_add_doubles_metadata.c [u'ap'] 5"
+p461
+I0
+sS"568 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'prev'] 321"
+p462
+I0
+sS"517 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'samplesC'] 448"
+p463
+I0
+sS"31 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_pdu.c [u'mongo_tree'] 6"
+p464
+I0
+sS"401 ../data/NVD/CVE_2013_0761_VULN_EndTrack.c [u'l'] 7"
+p465
+I0
+sS"896 ../data/NVD/CVE_2013_0790_VULN_nsPluginByteRangeStreamListener__OnStartRequest.c [u'ctxt'] 2"
+p466
+I0
+sS"679 ../data/NVD/CVE_2012_4565_VULN_tcp_illinois_info.c [u'sk'] 1"
+p467
+I0
+sS"176 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'code_item', u'ti', u'checksum_item', u'hidden_item', u'ti_flag'] 5"
+p468
+I0
+sS"548 ../data/NVD/CVE_2013_0853_PATCHED_wavpack_decode_frame.c [u'buf'] 5"
+p469
+I0
+sS"487 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'ascCert'] 9"
+p470
+I0
+sS"623 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_reply.c [u'tvb'] 2"
+p471
+I0
+sS"332 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c [u'mem'] 5"
+p472
+I0
+sS"863 ../data/NVD/CVE_2013_0764_VULN_nsSOCKSSocketInfo__OnLookupComplete.c [u'aRequest'] 2"
+p473
+I0
+sS"229 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 584"
+p474
+I0
+sS"794 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c [u'fmt'] 1"
+p475
+I0
+sS"925 ../data/NVD/CVE_2013_0845_PATCHED_read_const_block_data.c [u'bd'] 1"
+p476
+I0
+sS"627 ../data/NVD/CVE_2012_4288_PATCHED_dissect_xtp_ecntl.c [u'pinfo'] 2"
+p477
+I0
+sS"132 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u'p'] 13"
+p478
+I0
+sS"41 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_delete.c [u'flags_tree'] 5"
+p479
+I0
+sS"503 ../data/NVD/CVE_2013_0795_PATCHED_nsXPCComponents_Utils__LookupMethod.c [u'xray'] 38"
+p480
+I0
+sS"805 ../data/NVD/CVE_2013_0290_VULN___skb_recv_datagram.c [u'off'] 2"
+p481
+I0
+sS"114 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'key_value'] 11"
+p482
+I0
+sS"713 ../data/NVD/CVE_2012_6054_VULN_dissect_sflow_245_address_type.c [u'tree'] 2"
+p483
+I0
+sS"193 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 671"
+p484
+I0
+sS"493 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'oiddata'] 83"
+p485
+I0
+sS"581 ../data/NVD/CVE_2012_4207_VULN_nsHZToUnicode__ConvertNoBuff.c [u'aDest'] 4"
+p486
+I0
+sS"412 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'lineContainer'] 67"
+p487
+I0
+sS"20 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'crc_buf'] 68"
+p488
+I0
+sS"502 ../data/NVD/CVE_2013_0795_PATCHED_nsXPCComponents_Utils__LookupMethod.c [u'methodObj'] 50"
+p489
+I0
+sS"804 ../data/NVD/CVE_2013_0290_VULN___skb_recv_datagram.c [u'err'] 2"
+p490
+I0
+sS"7 ../data/NVD/CVE_2012_4190_VULN_ft_module_get_service.c [u'limit'] 21"
+p491
+I0
+sS"453 ../data/NVD/CVE_2013_0774_VULN_CreateDedicatedWorkerGlobalScope.c [u'scopeProto'] 37"
+p492
+I0
+sS"973 ../data/NVD/CVE_2013_0861_VULN_avcodec_decode_audio4.c [u'frame'] 2"
+p493
+I0
+sS"122 ../data/NVD/CVE_2012_5532_VULN_main.c [u'if_name'] 15"
+p494
+I0
+sS"163 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'flags_tree'] 10"
+p495
+I0
+sS"635 ../data/NVD/CVE_2012_4289_PATCHED_decode_uuid_acl.c [u'tree'] 2"
+p496
+I0
+sS"221 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'data_tvb', u'cdb_tvb'] 860"
+p497
+I0
+sS"260 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'tmp_tvb'] 312"
+p498
+I0
+sS"875 ../data/NVD/CVE_2013_0778_VULN_nsFrame__SelectByTypeAtPoint.c [u'aPresContext'] 2"
+p499
+I0
+sS"92 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'next_tvb'] 4"
+p500
+I0
+sS"579 ../data/NVD/CVE_2012_4207_PATCHED_nsHZToUnicode__ConvertNoBuff.c [u'aSrc'] 2"
+p501
+I0
+sS"590 ../data/NVD/CVE_2012_4287_PATCHED_dissect_bson_document.c [u'tree'] 2"
+p502
+I0
+sS"452 ../data/NVD/CVE_2013_0774_VULN_CreateDedicatedWorkerGlobalScope.c [u'dedicatedScopeProto'] 43"
+p503
+I0
+sS"946 ../data/NVD/CVE_2013_0853_PATCHED_wavpack_decode_frame.c [u'got_frame_ptr'] 2"
+p504
+I0
+sS"911 ../data/NVD/CVE_2013_0795_VULN_nsXPCComponents_Utils__LookupMethod.c [u'cx'] 4"
+p505
+I0
+sS"842 ../data/NVD/CVE_2013_0756_VULN_js_EnterSharpObject.c [u'alreadySeen'] 2"
+p506
+I0
+sS"19 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'pft_tree'] 8"
+p507
+I0
+sS"527 ../data/NVD/CVE_2013_0845_PATCHED_read_const_block_data.c [u'sconf'] 3"
+p508
+I0
+sS"100 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'ti'] 45"
+p509
+I0
+sS"942 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c [u'data_size'] 2"
+p510
+I0
+sS"184 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'data_tvb'] 946"
+p511
+I0
+sS"230 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 560"
+p512
+I0
+sS"76 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c [u'vwr'] 3"
+p513
+I0
+sS"793 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c [u'filename'] 2"
+p514
+I0
+sS"204 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 448"
+p515
+I0
+sS"611 ../data/NVD/CVE_2012_4287_VULN_dissect_bson_document.c [u'tree'] 2"
+p516
+I0
+sS"312 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c [u'avc'] 4"
+p517
+I0
+sS"455 ../data/NVD/CVE_2013_0774_VULN_CreateDedicatedWorkerGlobalScope.c [u'global'] 11"
+p518
+I0
+sS"261 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'wtp_tvb'] 50"
+p519
+I0
+sS"565 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c [u'src_py', u'src_px', u'src_pr', u'dst_py'] 5"
+p520
+I0
+sS"737 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'tree'] 2"
+p521
+I0
+sS"771 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c [u'uaddrlen'] 2"
+p522
+I0
+sS"610 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_update.c [u'tvb'] 2"
+p523
+I0
+sS"137 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u'p'] 13"
+p524
+I0
+sS"150 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'pi'] 40"
+p525
+I0
+sS"304 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c [u'end'] 8"
+p526
+I0
+sS"450 ../data/NVD/CVE_2013_0774_PATCHED_CreateDedicatedWorkerGlobalScope.c [u'worker'] 8"
+p527
+I0
+sS"106 ../data/NVD/CVE_2012_5240_VULN_dissect_tlv.c [u'interface_params_header_fields'] 300"
+p528
+I0
+sS"281 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'content_tree'] 483"
+p529
+I0
+sS"951 ../data/NVD/CVE_2013_0853_VULN_wavpack_decode_frame.c [u'data'] 1"
+p530
+I0
+sS"507 ../data/NVD/CVE_2013_0795_VULN_nsXPCComponents_Utils__LookupMethod.c [u'methodName'] 17"
+p531
+I0
+sS"763 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'tvb'] 2"
+p532
+I0
+sS"570 ../data/NVD/CVE_2012_4190_PATCHED_ft_module_get_service.c [u'service_id'] 2"
+p533
+I0
+sS"88 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'hsrp_tree'] 114"
+p534
+I0
+sS"781 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c [u'got_sub_ptr'] 2"
+p535
+I0
+sS"782 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c [u'data'] 2"
+p536
+I0
+sS"109 ../data/NVD/CVE_2012_5354_VULN_nsComboboxControlFrame__SetFocus.c [u'vm'] 33"
+p537
+I0
+sS"798 ../data/NVD/CVE_2012_6657_VULN_sock_setsockopt.c [u'optval'] 2"
+p538
+I0
+sS"273 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'ti'] 135"
+p539
+I0
+sS"60 ../data/NVD/CVE_2012_4289_PATCHED_decode_kauth_acl.c [u'sub_tree'] 6"
+p540
+I0
+sS"740 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'conversation'] 2"
+p541
+I0
+sS"930 ../data/NVD/CVE_2013_0845_VULN_read_const_block_data.c [u'ctx'] 1"
+p542
+I0
+sS"207 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 404"
+p543
+I0
+sS"180 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'next_tvb'] 12"
+p544
+I0
+sS"917 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'data'] 1"
+p545
+I0
+sS"704 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'parent_tree'] 2"
+p546
+I0
+sS"903 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'certbuf'] 2"
+p547
+I0
+sS"784 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c [u'pbuffer'] 1"
+p548
+I0
+sS"409 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'cachedNewlineOffset'] 81"
+p549
+I0
+sS"847 ../data/NVD/CVE_2013_0756_VULN_js_TraceSharpMap.c [u'map'] 2"
+p550
+I0
+sS"368 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'end'] 160"
+p551
+I0
+sS"725 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'flags_item'] 2"
+p552
+I0
+sS"832 ../data/NVD/CVE_2013_0753_PATCHED_nsDocumentEncoder__EncodeToStream.c [u'aStream'] 2"
+p553
+I0
+sS"360 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'shape'] 34"
+p554
+I0
+sS"651 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'tree'] 1"
+p555
+I0
+sS"537 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'c'] 285"
+p556
+I0
+sS"10 ../data/NVD/CVE_2012_4204_PATCHED_str_unescape.c [u'chars'] 19"
+p557
+I0
+sS"174 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'next_tvb'] 12"
+p558
+I0
+sS"582 ../data/NVD/CVE_2012_4207_VULN_nsHZToUnicode__ConvertNoBuff.c [u'aSrcLength'] 3"
+p559
+I0
+sS"232 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 534"
+p560
+I0
+sS"15 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'crc_buf'] 68"
+p561
+I0
+sS"533 ../data/NVD/CVE_2013_0848_VULN_decode_init.c [u's'] 3"
+p562
+I0
+sS"859 ../data/NVD/CVE_2013_0764_PATCHED_nsSOCKSSocketInfo__OnLookupComplete.c [u'aRecord'] 3"
+p563
+I0
+sS"966 ../data/NVD/CVE_2013_0859_VULN_add_doubles_metadata.c [u'name'] 2"
+p564
+I0
+sS"27 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_delete.c [u'flags_tree'] 5"
+p565
+I0
+sS"787 ../data/NVD/CVE_2012_6617_VULN_prepare_sdp_description.c [u'stream'] 1"
+p566
+I0
+sS"213 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 225"
+p567
+I0
+sS"325 ../data/NVD/CVE_2013_0310_PATCHED_cipso_v4_validate.c [u'doi_def'] 9"
+p568
+I0
+sS"25 ../data/NVD/CVE_2012_4287_PATCHED_dissect_bson_document.c [u'doc_tree', u'js_code_sub_tree', u'js_scope_sub_tree', u'element_sub_tree', u'objectid_sub_tree', u'elements_tree'] 7"
+p569
+I0
+sS"741 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'iscsi_session'] 2"
+p570
+I0
+sS"727 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'chunk_tree'] 2"
+p571
+I0
+sS"959 ../data/NVD/CVE_2013_0856_VULN_lpc_prediction.c [u'buffer_out'] 1"
+p572
+I0
+sS"808 ../data/NVD/CVE_2013_0310_PATCHED_cipso_v4_validate.c [u'option'] 1"
+p573
+I0
+sS"84 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'md5_auth_tlv'] 245"
+p574
+I0
+sS"280 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'mux_item'] 550"
+p575
+I0
+sS"534 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'base'] 742"
+p576
+I0
+sS"269 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'content_tree'] 483"
+p577
+I0
+sS"836 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'vp'] 2"
+p578
+I0
+sS"418 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'frag'] 69"
+p579
+I0
+sS"466 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'shadows'] 9"
+p580
+I0
+sS"235 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 508"
+p581
+I0
+sS"465 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'styleDisplay'] 19"
+p582
+I0
+sS"953 ../data/NVD/CVE_2013_0855_PATCHED_allocate_buffers.c [u'alac'] 1"
+p583
+I0
+sS"43 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_insert.c [u'flags_tree'] 5"
+p584
+I0
+sS"265 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'szInfo'] 4"
+p585
+I0
+sS"456 ../data/NVD/CVE_2013_0774_VULN_CreateDedicatedWorkerGlobalScope.c [u'worker'] 8"
+p586
+I0
+sS"190 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 761"
+p587
+I0
+sS"118 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'incoming_msg'] 7"
+p588
+I0
+sS"852 ../data/NVD/CVE_2013_0761_PATCHED_AddTrack.c [u'aPort'] 1"
+p589
+I0
+sS"931 ../data/NVD/CVE_2013_0848_PATCHED_decode_init.c [u'avctx'] 1"
+p590
+I0
+sS"445 ../data/NVD/CVE_2013_0774_PATCHED_CreateDedicatedWorkerGlobalScope.c [u'workerProto'] 53"
+p591
+I0
+sS"143 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'conversation'] 39"
+p592
+I0
+sS"478 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c [u'dstPtr'] 21"
+p593
+I0
+sS"880 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c [u'currentPos'] 3"
+p594
+I0
+sS"711 ../data/NVD/CVE_2012_6054_VULN_dissect_sflow_245_address_type.c [u'addr_detail'] 4"
+p595
+I0
+sS"196 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 560"
+p596
+I0
+sS"209 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 375"
+p597
+I0
+sS"701 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'usb_conv_info'] 2"
+p598
+I0
+sS"460 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'styleDisplay'] 19"
+p599
+I0
+sS"634 ../data/NVD/CVE_2012_4289_PATCHED_decode_kauth_acl.c [u'tvb'] 2"
+p600
+I0
+sS"732 ../data/NVD/CVE_2012_6057_VULN_dissect_eigrp_wide_metric_attr.c [u'tvb'] 2"
+p601
+I0
+sS"514 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'c'] 6"
+p602
+I0
+sS"664 ../data/NVD/CVE_2012_4467_PATCHED_do_siocgstampns.c [u'sock'] 1"
+p603
+I0
+sS"330 ../data/NVD/CVE_2013_0310_VULN_cipso_v4_validate.c [u'opt'] 3"
+p604
+I0
+sS"283 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'ti'] 447"
+p605
+I0
+sS"817 ../data/NVD/CVE_2013_0313_VULN_evm_update_evmxattr.c [u'xattr_value'] 2"
+p606
+I0
+sS"967 ../data/NVD/CVE_2013_0861_PATCHED_avcodec_decode_audio4.c [u'avpkt'] 4"
+p607
+I0
+sS"451 ../data/NVD/CVE_2013_0774_VULN_CreateDedicatedWorkerGlobalScope.c [u'workerProto'] 53"
+p608
+I0
+sS"773 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c [u'sock'] 1"
+p609
+I0
+sS"461 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'shadows'] 9"
+p610
+I0
+sS"479 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__HandleFallBack.c [u'temp'] 16"
+p611
+I0
+sS"112 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'if_name'] 15"
+p612
+I0
+sS"885 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__HandleFallBack.c [u'currentPos'] 3"
+p613
+I0
+sS"673 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c [u'bprm'] 1"
+p614
+I0
+sS"762 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'pinfo'] 2"
+p615
+I0
+sS"464 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'shadowItem'] 63"
+p616
+I0
+sS"252 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'fd_wtp'] 376"
+p617
+I0
+sS"744 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'pinfo'] 2"
+p618
+I0
+sS"705 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'pinfo'] 2"
+p619
+I0
+sS"949 ../data/NVD/CVE_2013_0853_VULN_wavpack_decode_frame.c [u'avpkt'] 2"
+p620
+I0
+sS"620 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_query.c [u'tree'] 2"
+p621
+I0
+sS"529 ../data/NVD/CVE_2013_0845_VULN_read_const_block_data.c [u'gb'] 5"
+p622
+I0
+sS"589 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'tvb'] 2"
+p623
+I0
+sS"779 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c [u'avctx'] 1"
+p624
+I0
+sS"839 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'idap'] 2"
+p625
+I0
+sS"665 ../data/NVD/CVE_2012_4467_PATCHED_do_siocgstampns.c [u'net'] 1"
+p626
+I0
+sS"758 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'tree'] 2"
+p627
+I0
+sS"28 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_delete.c [u'ti'] 4"
+p628
+I0
+sS"572 ../data/NVD/CVE_2012_4204_PATCHED_str_unescape.c [u'vp'] 2"
+p629
+I0
+sS"337 ../data/NVD/CVE_2013_0313_PATCHED_evm_update_evmxattr.c [u'inode'] 4"
+p630
+I0
+sS"952 ../data/NVD/CVE_2013_0853_VULN_wavpack_decode_frame.c [u'avctx'] 1"
+p631
+I0
+sS"299 ../data/NVD/CVE_2012_6547_PATCHED___tun_chr_ioctl.c [u'tun'] 5"
+p632
+I0
+sS"309 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c [u'sub'] 4"
+p633
+I0
+sS"51 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_update.c [u'flags_tree'] 5"
+p634
+I0
+sS"403 ../data/NVD/CVE_2013_0761_VULN_ProduceOutput.c [u'map'] 19"
+p635
+I0
+sS"632 ../data/NVD/CVE_2012_4289_PATCHED_decode_kauth_acl.c [u'tree'] 2"
+p636
+I0
+sS"259 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'fd_wtp'] 376"
+p637
+I0
+sS"44 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_insert.c [u'ti'] 4"
+p638
+I0
+sS"658 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c [u'data_ptr'] 1"
+p639
+I0
+sS"288 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'PoC1_item'] 11"
+p640
+I0
+sS"346 ../data/NVD/CVE_2013_0750_VULN_FindReplaceLength.c [u'atom'] 21"
+p641
+I0
+sS"390 ../data/NVD/CVE_2013_0761_PATCHED_ProduceOutput.c [u'map'] 19"
+p642
+I0
+sS"78 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c [u'file'] 4"
+p643
+I0
+sS"98 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'ti'] 111"
+p644
+I0
+sS"745 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tvb'] 2"
+p645
+I0
+sS"878 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c [u'outString'] 2"
+p646
+I0
+sS"921 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'data'] 1"
+p647
+I0
+sS"668 ../data/NVD/CVE_2012_4467_VULN_do_siocgstamp.c [u'net'] 1"
+p648
+I0
+sS"864 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'aRenderingContext'] 3"
+p649
+I0
+sS"356 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'gsop'] 35"
+p650
+I0
+sS"637 ../data/NVD/CVE_2012_4289_PATCHED_decode_uuid_acl.c [u'tvb'] 2"
+p651
+I0
+sS"488 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'bincert'] 8"
+p652
+I0
+sS"297 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c [u'sk'] 5"
+p653
+I0
+sS"386 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c [u'map'] 5"
+p654
+I0
+sS"592 ../data/NVD/CVE_2012_4287_PATCHED_dissect_bson_document.c [u'tvb'] 2"
+p655
+I0
+sS"18 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'li', u'ti'] 9"
+p656
+I0
+sS"298 ../data/NVD/CVE_2012_6547_PATCHED___tun_chr_ioctl.c [u'argp'] 6"
+p657
+I0
+sS"316 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c [u'buf'] 6"
+p658
+I0
+sS"516 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u's', u's2'] 523"
+p659
+I0
+sS"764 ../data/NVD/CVE_2012_6538_PATCHED_copy_to_user_auth.c [u'skb'] 1"
+p660
+I0
+sS"179 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'trans'] 14"
+p661
+I0
+sS"475 ../data/NVD/CVE_2013_0780_VULN_nsOverflowContinuationTracker__Insert.c [u'presContext'] 13"
+p662
+I0
+sS"890 ../data/NVD/CVE_2013_0787_VULN_nsEditor__IsPreformatted.c [u'aResult'] 2"
+p663
+I0
+sS"707 ../data/NVD/CVE_2012_6054_PATCHED_dissect_sflow_245_address_type.c [u'hf_type'] 4"
+p664
+I0
+sS"2 ../data/NVD/CVE_2012_4186_PATCHED_nsWaveReader__LoadFormatChunk.c [u'p'] 6"
+p665
+I0
+sS"614 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_delete.c [u'tvb'] 2"
+p666
+I0
+sS"853 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c [u'aOutputTrackFinished'] 3"
+p667
+I0
+sS"285 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'ti'] 135"
+p668
+I0
+sS"657 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c [u'rec'] 1"
+p669
+I0
+sS"153 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'ctsa_item'] 11"
+p670
+I0
+sS"810 ../data/NVD/CVE_2013_0310_VULN_cipso_v4_validate.c [u'option'] 1"
+p671
+I0
+sS"58 ../data/NVD/CVE_2012_4289_PATCHED_decode_kauth_acl.c [u'item'] 8"
+p672
+I0
+sS"869 ../data/NVD/CVE_2013_0774_VULN_CreateDedicatedWorkerGlobalScope.c [u'aCx'] 4"
+p673
+I0
+sS"550 ../data/NVD/CVE_2013_0853_VULN_wavpack_decode_frame.c [u'buf'] 5"
+p674
+I0
+sS"53 ../data/NVD/CVE_2012_4288_PATCHED_dissect_xtp_ecntl.c [u'xtp_subtree'] 7"
+p675
+I0
+sS"508 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u's', u's2'] 523"
+p676
+I0
+sS"818 ../data/NVD/CVE_2013_0313_VULN_evm_update_evmxattr.c [u'xattr_name'] 1"
+p677
+I0
+sS"189 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 762"
+p678
+I0
+sS"284 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'ti'] 218"
+p679
+I0
+sS"396 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c [u'source'] 9"
+p680
+I0
+sS"155 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'block_tree'] 9"
+p681
+I0
+sS"73 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'next_tvb'] 5"
+p682
+I0
+sS"177 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'flag_tree', u'icmp6_tree'] 4"
+p683
+I0
+sS"768 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c [u'uaddrlen'] 2"
+p684
+I0
+sS"855 ../data/NVD/CVE_2013_0761_VULN_AddTrack.c [u'aTrack'] 1"
+p685
+I0
+sS"113 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'key_name'] 12"
+p686
+I0
+sS"845 ../data/NVD/CVE_2013_0756_VULN_js_LeaveSharpObject.c [u'idap'] 2"
+p687
+I0
+sS"340 ../data/NVD/CVE_2013_0750_PATCHED_FindReplaceLength.c [u'repstr'] 87"
+p688
+I0
+sS"577 ../data/NVD/CVE_2012_4207_PATCHED_nsHZToUnicode__ConvertNoBuff.c [u'aDest'] 4"
+p689
+I0
+sS"318 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c [u'buf'] 6"
+p690
+I0
+sS"887 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__HandleFallBack.c [u'outString'] 2"
+p691
+I0
+sS"823 ../data/NVD/CVE_2013_0750_PATCHED_ReplaceRegExpCallback.c [u'p'] 2"
+p692
+I0
+sS"220 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'cdb_buf'] 867"
+p693
+I0
+sS"246 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 226"
+p694
+I0
+sS"947 ../data/NVD/CVE_2013_0853_PATCHED_wavpack_decode_frame.c [u'data'] 1"
+p695
+I0
+sS"522 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'c'] 6"
+p696
+I0
+sS"739 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'tvb'] 2"
+p697
+I0
+sS"504 ../data/NVD/CVE_2013_0795_PATCHED_nsXPCComponents_Utils__LookupMethod.c [u'methodName'] 17"
+p698
+I0
+sS"457 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'shadowContext'] 98"
+p699
+I0
+sS"13 ../data/NVD/CVE_2012_4204_VULN_str_unescape.c [u'chars'] 13"
+p700
+I0
+sS"329 ../data/NVD/CVE_2013_0310_VULN_cipso_v4_validate.c [u'tag'] 4"
+p701
+I0
+sS"682 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'tvb'] 2"
+p702
+I0
+sS"326 ../data/NVD/CVE_2013_0310_PATCHED_cipso_v4_validate.c [u'tag'] 4"
+p703
+I0
+sS"359 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'vobj'] 47"
+p704
+I0
+sS"274 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'buff'] 113"
+p705
+I0
+sS"183 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'flag_tree', u'icmp6_tree'] 4"
+p706
+I0
+sS"126 ../data/NVD/CVE_2012_5532_VULN_main.c [u'hv_msg'] 9"
+p707
+I0
+sS"302 ../data/NVD/CVE_2012_6547_VULN___tun_chr_ioctl.c [u'tun'] 5"
+p708
+I0
+sS"425 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c [u'stack'] 23"
+p709
+I0
+sS"982 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'h'] 1"
+p710
+I0
+sS"331 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c [u'_iov'] 6"
+p711
+I0
+sS"407 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'fm'] 397"
+p712
+I0
+sS"203 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 472"
+p713
+I0
+sS"394 ../data/NVD/CVE_2013_0761_VULN_AddTrack.c [u'l'] 18"
+p714
+I0
+sS"788 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c [u'logctx'] 2"
+p715
+I0
+sS"217 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'ti'] 5"
+p716
+I0
+sS"856 ../data/NVD/CVE_2013_0761_VULN_AddTrack.c [u'aPort'] 1"
+p717
+I0
+sS"166 ../data/NVD/CVE_2012_6057_PATCHED_dissect_eigrp_wide_metric_attr.c [u'sub_tvb'] 7"
+p718
+I0
+sS"636 ../data/NVD/CVE_2012_4289_PATCHED_decode_uuid_acl.c [u'pinfo'] 2"
+p719
+I0
+sS"202 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 473"
+p720
+I0
+sS"734 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'tree'] 2"
+p721
+I0
+sS"874 ../data/NVD/CVE_2013_0778_PATCHED_nsFrame__SelectByTypeAtPoint.c [u'aPresContext'] 2"
+p722
+I0
+sS"358 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'vobj'] 59"
+p723
+I0
+sS"388 ../data/NVD/CVE_2013_0761_PATCHED_EndTrack.c [u'outputTrack'] 3"
+p724
+I0
+sS"380 ../data/NVD/CVE_2013_0761_PATCHED_AddTrack.c [u'track'] 24"
+p725
+I0
+sS"364 ../data/NVD/CVE_2013_0756_VULN_js_EnterSharpObject.c [u'map'] 9"
+p726
+I0
+sS"46 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_pdu.c [u'ti'] 5"
+p727
+I0
+sS"186 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'cdb_buf'] 867"
+p728
+I0
+sS"422 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'presContext'] 13"
+p729
+I0
+sS"357 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'str'] 18"
+p730
+I0
+sS"144 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'tree'] 5"
+p731
+I0
+sS"391 ../data/NVD/CVE_2013_0761_PATCHED_ProduceOutput.c [u'stream'] 11"
+p732
+I0
+sS"840 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'cx'] 2"
+p733
+I0
+sS"218 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'data_tvb'] 946"
+p734
+I0
+sS"976 ../data/NVD/CVE_2013_0862_VULN_process_frame_obj.c [u'ctx'] 1"
+p735
+I0
+sS"420 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'lineContainer'] 67"
+p736
+I0
+sS"838 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'value'] 2"
+p737
+I0
+sS"206 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 405"
+p738
+I0
+sS"449 ../data/NVD/CVE_2013_0774_PATCHED_CreateDedicatedWorkerGlobalScope.c [u'global'] 11"
+p739
+I0
+sS"521 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'cs'] 7"
+p740
+I0
+sS"94 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'text_auth_tlv'] 219"
+p741
+I0
+sS"820 ../data/NVD/CVE_2013_0750_PATCHED_FindReplaceLength.c [u'sizep'] 2"
+p742
+I0
+sS"722 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'chunk_tvb'] 2"
+p743
+I0
+sS"892 ../data/NVD/CVE_2013_0790_PATCHED_nsPluginByteRangeStreamListener__OnStartRequest.c [u'ctxt'] 2"
+p744
+I0
+sS"646 ../data/NVD/CVE_2012_4289_VULN_dissect_query_afp_set_acl.c [u'pinfo'] 2"
+p745
+I0
+sS"6 ../data/NVD/CVE_2012_4190_PATCHED_ft_module_get_service.c [u'cur'] 20"
+p746
+I0
+sS"145 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'item'] 4"
+p747
+I0
+sS"895 ../data/NVD/CVE_2013_0790_PATCHED_nsPluginStreamListenerPeer__OnStartRequest.c [u'request'] 2"
+p748
+I0
+sS"849 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'vp'] 2"
+p749
+I0
+sS"419 ../data/NVD/CVE_2013_0771_VULN_nsTextFrame__ReflowText.c [u'ctx'] 68"
+p750
+I0
+sS"251 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'ti'] 5"
+p751
+I0
+sS"659 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c [u'wth'] 1"
+p752
+I0
+sS"834 ../data/NVD/CVE_2013_0755_PATCHED_Navigator__Vibrate.c [u'cx'] 2"
+p753
+I0
+sS"275 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'item'] 36"
+p754
+I0
+sS"431 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c [u'to'] 44"
+p755
+I0
+sS"148 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'pi'] 79"
+p756
+I0
+sS"149 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'pt'] 41"
+p757
+I0
+sS"934 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'h'] 1"
+p758
+I0
+sS"786 ../data/NVD/CVE_2012_6617_VULN_prepare_sdp_description.c [u'pbuffer'] 1"
+p759
+I0
+sS"628 ../data/NVD/CVE_2012_4288_PATCHED_dissect_xtp_ecntl.c [u'tvb'] 2"
+p760
+I0
+sS"254 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'wtp_tvb'] 50"
+p761
+I0
+sS"595 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_delete.c [u'tvb'] 2"
+p762
+I0
+sS"626 ../data/NVD/CVE_2012_4288_PATCHED_dissect_xtp_ecntl.c [u'tree'] 2"
+p763
+I0
+sS"300 ../data/NVD/CVE_2012_6547_PATCHED___tun_chr_ioctl.c [u'tfile'] 4"
+p764
+I0
+sS"776 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c [u'avpkt'] 2"
+p765
+I0
+sS"672 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c [u'regs'] 1"
+p766
+I0
+sS"654 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c [u'rec'] 1"
+p767
+I0
+sS"400 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c [u'map'] 4"
+p768
+I0
+sS"352 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'end'] 122"
+p769
+I0
+sS"216 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'cdata'] 10"
+p770
+I0
+sS"650 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'tvb'] 1"
+p771
+I0
+sS"334 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c [u'_iov'] 6"
+p772
+I0
+sS"384 ../data/NVD/CVE_2013_0761_PATCHED_CopyTrackData.c [u'segment'] 10"
+p773
+I0
+sS"496 ../data/NVD/CVE_2013_0791_VULN_CERT_DecodeCertPackage.c [u'bincert'] 8"
+p774
+I0
+sS"753 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'pinfo'] 2"
+p775
+I0
+sS"981 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'h0'] 1"
+p776
+I0
+sS"305 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c [u'ptr'] 7"
+p777
+I0
+sS"398 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c [u'outputTrack'] 6"
+p778
+I0
+sS"181 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'code_name'] 6"
+p779
+I0
+sS"643 ../data/NVD/CVE_2012_4289_VULN_decode_uuid_acl.c [u'tree'] 2"
+p780
+I0
+sS"639 ../data/NVD/CVE_2012_4289_PATCHED_dissect_query_afp_set_acl.c [u'pinfo'] 2"
+p781
+I0
+sS"532 ../data/NVD/CVE_2013_0848_PATCHED_decode_init.c [u's'] 3"
+p782
+I0
+sS"116 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'hv_msg'] 9"
+p783
+I0
+sS"410 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'frag'] 69"
+p784
+I0
+sS"263 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'wtp_tree'] 20"
+p785
+I0
+sS"697 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'usb_trans_info'] 2"
+p786
+I0
+sS"108 ../data/NVD/CVE_2012_5354_PATCHED_nsComboboxControlFrame__SetFocus.c [u'vm'] 41"
+p787
+I0
+sS"963 ../data/NVD/CVE_2013_0859_PATCHED_add_doubles_metadata.c [u'name'] 2"
+p788
+I0
+sS"678 ../data/NVD/CVE_2012_4565_VULN_tcp_illinois_info.c [u'skb'] 2"
+p789
+I0
+sS"343 ../data/NVD/CVE_2013_0750_PATCHED_ReplaceRegExpCallback.c [u'left'] 26"
+p790
+I0
+sS"459 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'shadowItem'] 63"
+p791
+I0
+sS"68 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'next_tvb'] 5"
+p792
+I0
+sS"61 ../data/NVD/CVE_2012_4289_PATCHED_proto_register_afp.c [u'ett'] 1504"
+p793
+I0
+sS"943 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c [u'data'] 2"
+p794
+I0
+sS"81 ../data/NVD/CVE_2012_4530_VULN_load_script.c [u'i_name', u'i_arg', u'cp'] 3"
+p795
+I0
+sS"49 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_reply.c [u'flags_tree'] 5"
+p796
+I0
+sS"467 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'styleBorder'] 8"
+p797
+I0
+sS"944 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c [u'avctx'] 1"
+p798
+I0
+sS"378 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'vchars'] 7"
+p799
+I0
+sS"82 ../data/NVD/CVE_2012_4565_PATCHED_tcp_illinois_info.c [u'ca'] 4"
+p800
+I0
+sS"321 ../data/NVD/CVE_2013_0290_PATCHED___skb_recv_datagram.c [u'queue'] 24"
+p801
+I0
+sS"441 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c [u'cmap'] 45"
+p802
+I0
+sS"162 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'ctsa_item'] 11"
+p803
+I0
+sS"621 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_query.c [u'tvb'] 2"
+p804
+I0
+sS"666 ../data/NVD/CVE_2012_4467_VULN_do_siocgstamp.c [u'up'] 2"
+p805
+I0
+sS"780 ../data/NVD/CVE_2012_6616_VULN_mov_text_decode_frame.c [u'avpkt'] 2"
+p806
+I0
+sS"215 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'itl'] 15"
+p807
+I0
+sS"684 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'pinfo'] 2"
+p808
+I0
+sS"266 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'next_tvb'] 570"
+p809
+I0
+sS"199 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 533"
+p810
+I0
+sS"652 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'pinfo'] 1"
+p811
+I0
+sS"432 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c [u'from'] 43"
+p812
+I0
+sS"237 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 472"
+p813
+I0
+sS"210 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 304"
+p814
+I0
+sS"24 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'pft_tree'] 8"
+p815
+I0
+sS"525 ../data/NVD/CVE_2013_0845_PATCHED_read_const_block_data.c [u'gb'] 5"
+p816
+I0
+sS"111 ../data/NVD/CVE_2012_5532_PATCHED_main.c [u'kvp_ip_val'] 16"
+p817
+I0
+sS"270 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'content'] 478"
+p818
+I0
+sS"499 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c [u'transform'] 8"
+p819
+I0
+sS"690 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u'client_data'] 6"
+p820
+I0
+sS"413 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'textStyle'] 59"
+p821
+I0
+sS"127 ../data/NVD/CVE_2012_5532_VULN_main.c [u'incoming_cn_msg'] 8"
+p822
+I0
+sS"439 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c [u'prefix'] 20"
+p823
+I0
+sS"877 ../data/NVD/CVE_2013_0780_VULN_nsOverflowContinuationTracker__Insert.c [u'aOverflowCont'] 2"
+p824
+I0
+sS"470 ../data/NVD/CVE_2013_0778_VULN_nsFrame__SelectByTypeAtPoint.c [u'frameSelection'] 20"
+p825
+I0
+sS"125 ../data/NVD/CVE_2012_5532_VULN_main.c [u'p'] 10"
+p826
+I0
+sS"242 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 376"
+p827
+I0
+sS"618 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_pdu.c [u'pinfo'] 2"
+p828
+I0
+sS"809 ../data/NVD/CVE_2013_0310_PATCHED_cipso_v4_validate.c [u'skb'] 1"
+p829
+I0
+sS"239 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 447"
+p830
+I0
+sS"736 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'tvb'] 2"
+p831
+I0
+sS"801 ../data/NVD/CVE_2013_0290_PATCHED___skb_recv_datagram.c [u'off'] 2"
+p832
+I0
+sS"361 ../data/NVD/CVE_2013_0756_VULN_MarkSharpObjects.c [u'map'] 8"
+p833
+I0
+sS"576 ../data/NVD/CVE_2012_4207_PATCHED_nsHZToUnicode__ConvertNoBuff.c [u'aDestLength'] 5"
+p834
+I0
+sS"648 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'tree'] 1"
+p835
+I0
+sS"703 ../data/NVD/CVE_2012_6053_VULN_dissect_usb_interface_descriptor.c [u'tvb'] 2"
+p836
+I0
+sS"977 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c [u'dst'] 1"
+p837
+I0
+sS"523 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'buf'] 4"
+p838
+I0
+sS"212 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 226"
+p839
+I0
+sS"107 ../data/NVD/CVE_2012_5240_VULN_dissect_tlv.c [u'ti', u'tlv_tree'] 25"
+p840
+I0
+sS"797 ../data/NVD/CVE_2012_6657_PATCHED_sock_setsockopt.c [u'sock'] 1"
+p841
+I0
+sS"972 ../data/NVD/CVE_2013_0861_VULN_avcodec_decode_audio4.c [u'got_frame_ptr'] 3"
+p842
+I0
+sS"924 ../data/NVD/CVE_2013_0845_PATCHED_read_block.c [u'ctx'] 1"
+p843
+I0
+sS"767 ../data/NVD/CVE_2012_6538_VULN_copy_to_user_auth.c [u'auth'] 1"
+p844
+I0
+sS"370 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'valstr'] 145"
+p845
+I0
+sS"429 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c [u'rgb'] 52"
+p846
+I0
+sS"538 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'base'] 742"
+p847
+I0
+sS"427 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c [u'stackp'] 21"
+p848
+I0
+sS"33 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_query.c [u'flags_tree'] 5"
+p849
+I0
+sS"923 ../data/NVD/CVE_2013_0845_PATCHED_read_block.c [u'bd'] 1"
+p850
+I0
+sS"528 ../data/NVD/CVE_2013_0845_VULN_read_block.c [u'gb'] 3"
+p851
+I0
+sS"134 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u's'] 9"
+p852
+I0
+sS"549 ../data/NVD/CVE_2013_0853_PATCHED_wavpack_decode_frame.c [u's'] 4"
+p853
+I0
+sS"822 ../data/NVD/CVE_2013_0750_PATCHED_FindReplaceLength.c [u'cx'] 2"
+p854
+I0
+sS"526 ../data/NVD/CVE_2013_0845_PATCHED_read_const_block_data.c [u'avctx'] 4"
+p855
+I0
+sS"287 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'item'] 36"
+p856
+I0
+sS"777 ../data/NVD/CVE_2012_6616_PATCHED_mov_text_decode_frame.c [u'got_sub_ptr'] 2"
+p857
+I0
+sS"587 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'tree'] 2"
+p858
+I0
+sS"837 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'cx'] 2"
+p859
+I0
+sS"434 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c [u'rowend'] 29"
+p860
+I0
+sS"160 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'acks_tree'] 13"
+p861
+I0
+sS"95 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'interface_state_tlv'] 205"
+p862
+I0
+sS"428 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c [u'prefix'] 20"
+p863
+I0
+sS"169 ../data/NVD/CVE_2012_6057_VULN_dissect_eigrp_wide_metric_attr.c [u'sub_tvb'] 7"
+p864
+I0
+sS"671 ../data/NVD/CVE_2012_4467_VULN_do_siocgstampns.c [u'net'] 1"
+p865
+I0
+sS"916 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'got_frame_ptr'] 2"
+p866
+I0
+sS"272 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'ti'] 218"
+p867
+I0
+sS"392 ../data/NVD/CVE_2013_0761_VULN_AddTrack.c [u'map'] 30"
+p868
+I0
+sS"761 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'tree'] 2"
+p869
+I0
+sS"151 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'acks_tree'] 13"
+p870
+I0
+sS"792 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c [u'logctx'] 2"
+p871
+I0
+sS"891 ../data/NVD/CVE_2013_0787_VULN_nsEditor__IsPreformatted.c [u'aNode'] 2"
+p872
+I0
+sS"958 ../data/NVD/CVE_2013_0856_VULN_lpc_prediction.c [u'lpc_coefs'] 2"
+p873
+I0
+sS"598 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_insert.c [u'tvb'] 2"
+p874
+I0
+sS"294 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c [u'llc'] 6"
+p875
+I0
+sS"754 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c [u'tvb'] 2"
+p876
+I0
+sS"513 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'cs'] 7"
+p877
+I0
+sS"564 ../data/NVD/CVE_2013_0864_VULN_gif_copy_img_rect.c [u'src_pb'] 8"
+p878
+I0
+sS"129 ../data/NVD/CVE_2012_5532_VULN_main.c [u'message'] 5"
+p879
+I0
+sS"505 ../data/NVD/CVE_2013_0795_VULN_nsXPCComponents_Utils__LookupMethod.c [u'methodObj'] 51"
+p880
+I0
+sS"692 ../data/NVD/CVE_2012_5669_PATCHED__bdf_parse_glyphs.c [u'line'] 2"
+p881
+I0
+sS"411 ../data/NVD/CVE_2013_0771_PATCHED_nsTextFrame__ReflowText.c [u'ctx'] 68"
+p882
+I0
+sS"249 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'itl'] 15"
+p883
+I0
+sS"552 ../data/NVD/CVE_2013_0856_PATCHED_lpc_prediction.c [u'pred'] 6"
+p884
+I0
+sS"914 ../data/NVD/CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand.c [u'argv'] 2"
+p885
+I0
+sS"233 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tf'] 533"
+p886
+I0
+sS"367 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'str'] 212"
+p887
+I0
+sS"501 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c [u'transform'] 8"
+p888
+I0
+sS"56 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c [u'xtp_subtree'] 7"
+p889
+I0
+sS"748 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'opcode_str'] 2"
+p890
+I0
+sS"884 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__DoCharsetConversion.c [u'inString'] 2"
+p891
+I0
+sS"901 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'certbuf'] 2"
+p892
+I0
+sS"444 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c [u'rowp'] 40"
+p893
+I0
+sS"320 ../data/NVD/CVE_2012_6657_VULN_sock_setsockopt.c [u'sk'] 4"
+p894
+I0
+sS"79 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c [u'i_name', u'i_arg', u'cp'] 3"
+p895
+I0
+sS"906 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c [u'out'] 3"
+p896
+I0
+sS"438 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__DoLzw.c [u'stackp'] 21"
+p897
+I0
+sS"17 ../data/NVD/CVE_2012_4285_PATCHED_dissect_pft.c [u'next_tvb'] 10"
+p898
+I0
+sS"755 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c [u'tree'] 2"
+p899
+I0
+sS"366 ../data/NVD/CVE_2013_0756_VULN_js_TraceSharpMap.c [u'tmp'] 27"
+p900
+I0
+sS"898 ../data/NVD/CVE_2013_0790_VULN_nsPluginStreamListenerPeer__OnStartRequest.c [u'aContext'] 3"
+p901
+I0
+sS"653 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'tvb'] 1"
+p902
+I0
+sS"791 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c [u'pb'] 1"
+p903
+I0
+sS"375 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'ida'] 26"
+p904
+I0
+sS"721 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'chunk_tree'] 2"
+p905
+I0
+sS"686 ../data/NVD/CVE_2012_5240_PATCHED_dissect_tlv.c [u'tree'] 2"
+p906
+I0
+sS"603 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_query.c [u'pinfo'] 2"
+p907
+I0
+sS"920 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'got_frame_ptr'] 2"
+p908
+I0
+sS"474 ../data/NVD/CVE_2013_0780_VULN_nsOverflowContinuationTracker__Insert.c [u'f'] 63"
+p909
+I0
+sS"661 ../data/NVD/CVE_2012_4467_PATCHED_do_siocgstamp.c [u'sock'] 1"
+p910
+I0
+sS"440 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c [u'rgb'] 60"
+p911
+I0
+sS"539 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'ref2frm'] 737"
+p912
+I0
+sS"861 ../data/NVD/CVE_2013_0764_VULN_nsSOCKSIOLayerClose.c [u'fd'] 2"
+p913
+I0
+sS"960 ../data/NVD/CVE_2013_0856_VULN_lpc_prediction.c [u'error_buffer'] 1"
+p914
+I0
+sS"580 ../data/NVD/CVE_2012_4207_VULN_nsHZToUnicode__ConvertNoBuff.c [u'aDestLength'] 5"
+p915
+I0
+sS"301 ../data/NVD/CVE_2012_6547_VULN___tun_chr_ioctl.c [u'argp'] 6"
+p916
+I0
+sS"961 ../data/NVD/CVE_2013_0859_PATCHED_add_doubles_metadata.c [u's'] 3"
+p917
+I0
+sS"35 ../data/NVD/CVE_2012_4287_PATCHED_dissect_mongo_reply.c [u'flags_tree'] 5"
+p918
+I0
+sS"775 ../data/NVD/CVE_2012_6547_VULN___tun_chr_ioctl.c [u'file'] 1"
+p919
+I0
+sS"293 ../data/NVD/CVE_2012_6538_VULN_copy_to_user_auth.c [u'algo'] 3"
+p920
+I0
+sS"313 ../data/NVD/CVE_2012_6617_VULN_prepare_sdp_description.c [u'avs'] 5"
+p921
+I0
+sS"841 ../data/NVD/CVE_2013_0756_VULN_js_EnterSharpObject.c [u'isSharp'] 2"
+p922
+I0
+sS"558 ../data/NVD/CVE_2013_0861_PATCHED_avcodec_decode_audio4.c [u'side'] 21"
+p923
+I0
+sS"954 ../data/NVD/CVE_2013_0855_VULN_allocate_buffers.c [u'alac'] 1"
+p924
+I0
+sS"205 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 447"
+p925
+I0
+sS"749 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tree'] 2"
+p926
+I0
+sS"333 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c [u'reg'] 4"
+p927
+I0
+sS"156 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'block_item'] 8"
+p928
+I0
+sS"395 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c [u'l'] 67"
+p929
+I0
+sS"198 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tt'] 534"
+p930
+I0
+sS"825 ../data/NVD/CVE_2013_0750_PATCHED_ReplaceRegExpCallback.c [u'cx'] 2"
+p931
+I0
+sS"373 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'idstr'] 81"
+p932
+I0
+sS"376 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'gsop'] 10"
+p933
+I0
+sS"104 ../data/NVD/CVE_2012_5240_PATCHED_dissect_tlv.c [u'interface_params_header_fields'] 300"
+p934
+I0
+sS"714 ../data/NVD/CVE_2012_6054_VULN_dissect_sflow_245_address_type.c [u'tvb'] 2"
+p935
+I0
+sS"80 ../data/NVD/CVE_2012_4530_VULN_load_script.c [u'file'] 4"
+p936
+I0
+sS"680 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'tree'] 2"
+p937
+I0
+sS"97 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'hsrp_tree'] 112"
+p938
+I0
+sS"197 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'tf'] 559"
+p939
+I0
+sS"387 ../data/NVD/CVE_2013_0761_PATCHED_EndTrack.c [u'l'] 7"
+p940
+I0
+sS"948 ../data/NVD/CVE_2013_0853_PATCHED_wavpack_decode_frame.c [u'avctx'] 1"
+p941
+I0
+sS"830 ../data/NVD/CVE_2013_0750_VULN_ReplaceRegExpCallback.c [u'res'] 2"
+p942
+I0
+sS"45 ../data/NVD/CVE_2012_4287_VULN_dissect_mongo_pdu.c [u'mongo_tree'] 6"
+p943
+I0
+sS"443 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c [u'from'] 43"
+p944
+I0
+sS"482 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'pc'] 138"
+p945
+I0
+sS"141 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'tree'] 5"
+p946
+I0
+sS"158 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'pt'] 41"
+p947
+I0
+sS"292 ../data/NVD/CVE_2012_6538_VULN_copy_to_user_auth.c [u'nla'] 4"
+p948
+I0
+sS"583 ../data/NVD/CVE_2012_4207_VULN_nsHZToUnicode__ConvertNoBuff.c [u'aSrc'] 2"
+p949
+I0
+sS"142 ../data/NVD/CVE_2012_6053_PATCHED_dissect_usb_interface_descriptor.c [u'item'] 4"
+p950
+I0
+sS"191 ../data/NVD/CVE_2012_6060_PATCHED_dissect_iscsi_pdu.c [u'data_tvb'] 739"
+p951
+I0
+sS"857 ../data/NVD/CVE_2013_0761_VULN_CopyTrackData.c [u'aOutputTrackFinished'] 2"
+p952
+I0
+sS"829 ../data/NVD/CVE_2013_0750_VULN_ReplaceRegExpCallback.c [u'p'] 2"
+p953
+I0
+sS"454 ../data/NVD/CVE_2013_0774_VULN_CreateDedicatedWorkerGlobalScope.c [u'eventTargetProto'] 31"
+p954
+I0
+sS"723 ../data/NVD/CVE_2012_6056_PATCHED_dissect_sack_chunk.c [u'pinfo'] 2"
+p955
+I0
+sS"647 ../data/NVD/CVE_2012_4289_VULN_dissect_query_afp_set_acl.c [u'tvb'] 2"
+p956
+I0
+sS"483 ../data/NVD/CVE_2013_0791_PATCHED_CERT_DecodeCertPackage.c [u'certend'] 137"
+p957
+I0
+sS"369 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'start'] 159"
+p958
+I0
+sS"121 ../data/NVD/CVE_2012_5532_VULN_main.c [u'kvp_ip_val'] 16"
+p959
+I0
+sS"928 ../data/NVD/CVE_2013_0845_VULN_read_block.c [u'ctx'] 1"
+p960
+I0
+sS"693 ../data/NVD/CVE_2012_5669_VULN__bdf_parse_glyphs.c [u'client_data'] 6"
+p961
+I0
+sS"955 ../data/NVD/CVE_2013_0856_PATCHED_lpc_prediction.c [u'lpc_coefs'] 2"
+p962
+I0
+sS"236 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'tt'] 473"
+p963
+I0
+sS"405 ../data/NVD/CVE_2013_0764_PATCHED_nsSOCKSIOLayerClose.c [u'info'] 4"
+p964
+I0
+sS"531 ../data/NVD/CVE_2013_0845_VULN_read_const_block_data.c [u'sconf'] 3"
+p965
+I0
+sS"250 ../data/NVD/CVE_2012_6060_VULN_dissect_iscsi_pdu.c [u'cdata'] 10"
+p966
+I0
+sS"685 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'tvb'] 2"
+p967
+I0
+sS"424 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__DoLzw.c [u'rowp'] 24"
+p968
+I0
+sS"802 ../data/NVD/CVE_2013_0290_PATCHED___skb_recv_datagram.c [u'peeked'] 2"
+p969
+I0
+sS"335 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c [u'mem'] 5"
+p970
+I0
+sS"55 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c [u'p', u'spans'] 9"
+p971
+I0
+sS"640 ../data/NVD/CVE_2012_4289_PATCHED_dissect_query_afp_set_acl.c [u'tvb'] 2"
+p972
+I0
+sS"540 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'prev'] 432"
+p973
+I0
+sS"54 ../data/NVD/CVE_2012_4288_PATCHED_dissect_xtp_ecntl.c [u'top_ti'] 6"
+p974
+I0
+sS"819 ../data/NVD/CVE_2013_0313_VULN_evm_update_evmxattr.c [u'dentry'] 1"
+p975
+I0
+sS"562 ../data/NVD/CVE_2013_0864_PATCHED_gif_copy_img_rect.c [u'src_py', u'src_px', u'src_pr', u'dst_py'] 5"
+p976
+I0
+sS"327 ../data/NVD/CVE_2013_0310_PATCHED_cipso_v4_validate.c [u'opt'] 3"
+p977
+I0
+sS"476 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__DoCharsetConversion.c [u'dstPtr'] 24"
+p978
+I0
+sS"824 ../data/NVD/CVE_2013_0750_PATCHED_ReplaceRegExpCallback.c [u'res'] 2"
+p979
+I0
+sS"765 ../data/NVD/CVE_2012_6538_PATCHED_copy_to_user_auth.c [u'auth'] 1"
+p980
+I0
+sS"669 ../data/NVD/CVE_2012_4467_VULN_do_siocgstampns.c [u'up'] 2"
+p981
+I0
+sS"124 ../data/NVD/CVE_2012_5532_VULN_main.c [u'key_value'] 11"
+p982
+I0
+sS"724 ../data/NVD/CVE_2012_6056_VULN_dissect_sack_chunk.c [u'ha'] 2"
+p983
+I0
+sS"22 ../data/NVD/CVE_2012_4285_VULN_dissect_pft.c [u'next_tvb'] 10"
+p984
+I0
+s.

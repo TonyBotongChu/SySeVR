@@ -1,0 +1,3123 @@
+1 ../data/NVD/CVE_2012_4186_PATCHED_nsWaveReader__LoadFormatChunk.c [u'chunkExtension'] 66
+bool
+CVE_2012_4186_PATCHED_nsWaveReader::LoadFormatChunk() 2
+PRUint32 fmtSize , rate , channels , frameSize , sampleFormat ; 4
+char waveFormat [ WAVE_FORMAT_CHUNK_SIZE ] ; 5
+const char * p = waveFormat ; 6
+if ( ! ScanForwardUntil ( FRMT_CHUNK_MAGIC , & fmtSize ) )  14
+if ( ! ReadAll ( waveFormat , sizeof ( waveFormat ) ) )  18
+if ( ReadUint16LE ( & p ) != WAVE_FORMAT_ENCODING_PCM )  28
+p += 4; 37
+if ( fmtSize > WAVE_FORMAT_CHUNK_SIZE )  48
+char extLength [ 2 ] ; 49
+if ( ! ReadAll ( extLength , sizeof ( extLength ) ) )  52
+PRUint16 extra = ReadUint16LE ( & p ) ; 57
+if ( fmtSize - ( WAVE_FORMAT_CHUNK_SIZE + 2 ) != extra )  58
+extra += extra % 2; 62
+if ( extra > 0 )  64
+nsAutoArrayPtr < char > chunkExtension ( new char [ extra ] ) ; 66
+if ( ! ReadAll ( chunkExtension . get ( ) , extra ) )  67
+------------------------------
+2 ../data/NVD/CVE_2012_4186_PATCHED_nsWaveReader__LoadFormatChunk.c [u'extLength'] 49
+bool
+CVE_2012_4186_PATCHED_nsWaveReader::LoadFormatChunk() 2
+PRUint32 fmtSize , rate , channels , frameSize , sampleFormat ; 4
+char waveFormat [ WAVE_FORMAT_CHUNK_SIZE ] ; 5
+if ( ! ScanForwardUntil ( FRMT_CHUNK_MAGIC , & fmtSize ) )  14
+if ( ! ReadAll ( waveFormat , sizeof ( waveFormat ) ) )  18
+if ( ReadUint16LE ( & p ) != WAVE_FORMAT_ENCODING_PCM )  28
+if ( fmtSize > WAVE_FORMAT_CHUNK_SIZE )  48
+char extLength [ 2 ] ; 49
+const char * p = extLength ; 50
+if ( ! ReadAll ( extLength , sizeof ( extLength ) ) )  52
+------------------------------
+3 ../data/NVD/CVE_2012_4186_PATCHED_nsWaveReader__LoadFormatChunk.c [u'waveFormat'] 5
+bool
+CVE_2012_4186_PATCHED_nsWaveReader::LoadFormatChunk() 2
+char waveFormat [ WAVE_FORMAT_CHUNK_SIZE ] ; 5
+const char * p = waveFormat ; 6
+if ( ! ReadAll ( waveFormat , sizeof ( waveFormat ) ) )  18
+p += 4; 37
+frameSize = ReadUint16LE ( & p ); 39
+sampleFormat = ReadUint16LE ( & p ); 41
+PRUint16 extra = ReadUint16LE ( & p ) ; 57
+if ( fmtSize - ( WAVE_FORMAT_CHUNK_SIZE + 2 ) != extra )  58
+extra += extra % 2; 62
+if ( extra > 0 )  64
+if ( ! ReadAll ( chunkExtension . get ( ) , extra ) )  67
+unsigned int actualFrameSize = sampleFormat == 8 ? 1 : 2 * channels ; 80
+if ( rate < 100 || rate > 96000 || channels < 1 || channels > MAX_CHANNELS || ( frameSize != 1 && frameSize != 2 && frameSize != 4 ) || ( sampleFormat != 8 && sampleFormat != 16 ) || frameSize != actualFrameSize )  81
+mFrameSize = frameSize; 93
+if ( sampleFormat == 8 )  94
+------------------------------
+4 ../data/NVD/CVE_2012_4186_VULN_nsWaveReader__LoadFormatChunk.c [u'chunkExtension'] 66
+bool
+CVE_2012_4186_VULN_nsWaveReader::LoadFormatChunk() 2
+PRUint32 fmtSize , rate , channels , frameSize , sampleFormat ; 4
+char waveFormat [ WAVE_FORMAT_CHUNK_SIZE ] ; 5
+const char * p = waveFormat ; 6
+if ( ! ScanForwardUntil ( FRMT_CHUNK_MAGIC , & fmtSize ) )  14
+if ( ! ReadAll ( waveFormat , sizeof ( waveFormat ) ) )  18
+if ( ReadUint16LE ( & p ) != WAVE_FORMAT_ENCODING_PCM )  28
+p += 4; 37
+if ( fmtSize > WAVE_FORMAT_CHUNK_SIZE )  48
+char extLength [ 2 ] ; 49
+if ( ! ReadAll ( extLength , sizeof ( extLength ) ) )  52
+PRUint16 extra = ReadUint16LE ( & p ) ; 57
+if ( fmtSize - ( WAVE_FORMAT_CHUNK_SIZE + 2 ) != extra )  58
+extra += extra % 2; 62
+if ( extra > 0 )  64
+nsAutoArrayPtr < char > chunkExtension ( new char [ extra ] ) ; 66
+if ( ! ReadAll ( chunkExtension . get ( ) , extra ) )  67
+------------------------------
+5 ../data/NVD/CVE_2012_4186_VULN_nsWaveReader__LoadFormatChunk.c [u'extLength'] 49
+bool
+CVE_2012_4186_VULN_nsWaveReader::LoadFormatChunk() 2
+PRUint32 fmtSize , rate , channels , frameSize , sampleFormat ; 4
+char waveFormat [ WAVE_FORMAT_CHUNK_SIZE ] ; 5
+if ( ! ScanForwardUntil ( FRMT_CHUNK_MAGIC , & fmtSize ) )  14
+if ( ! ReadAll ( waveFormat , sizeof ( waveFormat ) ) )  18
+if ( ReadUint16LE ( & p ) != WAVE_FORMAT_ENCODING_PCM )  28
+if ( fmtSize > WAVE_FORMAT_CHUNK_SIZE )  48
+char extLength [ 2 ] ; 49
+const char * p = extLength ; 50
+if ( ! ReadAll ( extLength , sizeof ( extLength ) ) )  52
+------------------------------
+6 ../data/NVD/CVE_2012_4186_VULN_nsWaveReader__LoadFormatChunk.c [u'waveFormat'] 5
+bool
+CVE_2012_4186_VULN_nsWaveReader::LoadFormatChunk() 2
+char waveFormat [ WAVE_FORMAT_CHUNK_SIZE ] ; 5
+const char * p = waveFormat ; 6
+if ( ! ReadAll ( waveFormat , sizeof ( waveFormat ) ) )  18
+p += 4; 37
+frameSize = ReadUint16LE ( & p ); 39
+sampleFormat = ReadUint16LE ( & p ); 41
+PRUint16 extra = ReadUint16LE ( & p ) ; 57
+if ( fmtSize - ( WAVE_FORMAT_CHUNK_SIZE + 2 ) != extra )  58
+extra += extra % 2; 62
+if ( extra > 0 )  64
+if ( ! ReadAll ( chunkExtension . get ( ) , extra ) )  67
+if ( rate < 100 || rate > 96000 || channels < 1 || channels > MAX_CHANNELS || ( frameSize != 1 && frameSize != 2 && frameSize != 4 ) || ( sampleFormat != 8 && sampleFormat != 16 ) )  80
+mFrameSize = frameSize; 91
+if ( sampleFormat == 8 )  92
+------------------------------
+7 ../data/NVD/CVE_2012_4288_PATCHED_dissect_xtp_ecntl.c [u'ecntl'] 8
+static void
+CVE_2012_4288_PATCHED_dissect_xtp_ecntl(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree,
+guint32 offset) 3
+struct xtp_ecntl ecntl [ 1 ] ; 8
+ecntl -> rseq = tvb_get_ntohl ( tvb , offset ); 25
+ecntl -> rseq <<= 32; 26
+ecntl -> rseq += tvb_get_ntohl ( tvb , offset + 4 ); 27
+ecntl -> alloc = tvb_get_ntohl ( tvb , offset ); 30
+ecntl -> alloc <<= 32; 31
+ecntl -> alloc += tvb_get_ntohl ( tvb , offset + 4 ); 32
+ecntl -> echo = tvb_get_ntohl ( tvb , offset ); 35
+ecntl -> nspan = tvb_get_ntohl ( tvb , offset ); 38
+spans_len = 16 * ecntl -> nspan; 41
+if ( len != spans_len )  43
+expert_add_info_format ( pinfo , top_ti , PI_MALFORMED , PI_ERROR , "Number of spans (%u) incorrect. Should be %u." , ecntl -> nspan , len ); 44
+if ( ecntl -> nspan > XTP_MAX_NSPANS )  48
+expert_add_info_format ( pinfo , top_ti , PI_MALFORMED , PI_ERROR , "Too many spans: %u" , ecntl -> nspan ); 49
+col_append_fstr ( pinfo -> cinfo , COL_INFO ,
+" Recv-Seq=%" G_GINT64_MODIFIER "u" , ecntl -> rseq )
+col_append_fstr ( pinfo -> cinfo , COL_INFO ,
+" Alloc=%" G_GINT64_MODIFIER "u" , ecntl -> alloc ) 58
+proto_item_append_text ( top_ti ,
+", Recv-Seq: %" G_GINT64_MODIFIER "u" , ecntl -> rseq ) 61
+proto_tree_add_uint64 ( xtp_subtree , hf_xtp_ecntl_rseq , tvb , offset , 8 , ecntl -> rseq ); 66
+proto_tree_add_uint64 ( xtp_subtree , hf_xtp_ecntl_alloc , tvb , offset , 8 , ecntl -> alloc ); 70
+proto_tree_add_uint ( xtp_subtree , hf_xtp_ecntl_echo , tvb , offset , 4 , ecntl -> echo ); 74
+proto_tree_add_uint ( xtp_subtree , hf_xtp_ecntl_nspan , tvb , offset , 4 , ecntl -> nspan ); 78
+for (i = 0; i < ecntl->nspan; i++) 82
+------------------------------
+8 ../data/NVD/CVE_2012_4288_VULN_dissect_xtp_ecntl.c [u'ecntl'] 8
+static void
+CVE_2012_4288_VULN_dissect_xtp_ecntl(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree,
+guint32 offset) 3
+struct xtp_ecntl ecntl [ 1 ] ; 8
+ecntl -> rseq = tvb_get_ntohl ( tvb , offset ); 26
+ecntl -> rseq <<= 32; 27
+ecntl -> rseq += tvb_get_ntohl ( tvb , offset + 4 ); 28
+ecntl -> alloc = tvb_get_ntohl ( tvb , offset ); 31
+ecntl -> alloc <<= 32; 32
+ecntl -> alloc += tvb_get_ntohl ( tvb , offset + 4 ); 33
+ecntl -> echo = tvb_get_ntohl ( tvb , offset ); 36
+ecntl -> nspan = tvb_get_ntohl ( tvb , offset ); 39
+spans_len = 16 * ecntl -> nspan; 42
+if ( len != spans_len )  43
+proto_item_append_text ( top_ti , ", bogus spans field length (%u, must be %u)" , len , spans_len ); 44
+spans = ep_alloc0 ( spans_len ); 50
+p = spans; 51
+for (i = 0; i < ecntl->nspan*2; i++) 52
+* p ++ = span; 56
+col_append_fstr ( pinfo -> cinfo , COL_INFO ,
+" Recv-Seq=%" G_GINT64_MODIFIER "u" , ecntl -> rseq )
+col_append_fstr ( pinfo -> cinfo , COL_INFO ,
+" Alloc=%" G_GINT64_MODIFIER "u" , ecntl -> alloc ) 65
+proto_item_append_text ( top_ti ,
+", Recv-Seq: %" G_GINT64_MODIFIER "u" , ecntl -> rseq ) 68
+proto_tree_add_uint64 ( xtp_subtree , hf_xtp_ecntl_rseq , tvb , offset , 8 , ecntl -> rseq ); 73
+proto_tree_add_uint64 ( xtp_subtree , hf_xtp_ecntl_alloc , tvb , offset , 8 , ecntl -> alloc ); 77
+proto_tree_add_uint ( xtp_subtree , hf_xtp_ecntl_echo , tvb , offset , 4 , ecntl -> echo ); 81
+proto_tree_add_uint ( xtp_subtree , hf_xtp_ecntl_nspan , tvb , offset , 4 , ecntl -> nspan ); 85
+p = spans; 89
+for (i = 0; i < ecntl->nspan; i++) 90
+proto_tree_add_uint64 ( xtp_subtree , hf_xtp_ecntl_span_left , tvb , offset , 8 , * p ); 91
+p ++; 93
+proto_tree_add_uint64 ( xtp_subtree , hf_xtp_ecntl_span_right , tvb , offset , 8 , * p ); 95
+p ++; 97
+------------------------------
+9 ../data/NVD/CVE_2012_4289_PATCHED_proto_register_afp.c [u'ett'] 1504
+void
+CVE_2012_4289_PATCHED_proto_register_afp(void) 2
+static gint * ett [ ] = { & ett_afp , & ett_afp_server_vol , & ett_afp_vol_list , & ett_afp_vol_flag , & ett_afp_vol_bitmap , & ett_afp_vol_attribute , & ett_afp_dir_bitmap , & ett_afp_file_bitmap , & ett_afp_unix_privs , & ett_afp_enumerate , & ett_afp_enumerate_line , & ett_afp_access_mode , & ett_afp_dir_attribute , & ett_afp_file_attribute , & ett_afp_path_name , & ett_afp_lock_flags , & ett_afp_dir_ar , & ett_afp_cat_search , & ett_afp_cat_r_bitmap , & ett_afp_cat_spec , & ett_afp_vol_did , & ett_afp_user_bitmap , & ett_afp_message_bitmap , & ett_afp_extattr_bitmap , & ett_afp_extattr_names , & ett_afp_acl_list_bitmap , & ett_afp_acl_access_bitmap , & ett_afp_ace_entries , & ett_afp_ace_entry , & ett_afp_ace_flags , & ett_afp_spotlight_queries , & ett_afp_spotlight_query_line , & ett_afp_spotlight_query , & ett_afp_spotlight_data , & ett_afp_spotlight_toc } ; 1504
+proto_register_subtree_array ( ett , array_length ( ett ) ); 1544
+------------------------------
+10 ../data/NVD/CVE_2012_4289_VULN_proto_register_afp.c [u'ett'] 1504
+void
+CVE_2012_4289_VULN_proto_register_afp(void) 2
+static gint * ett [ ] = { & ett_afp , & ett_afp_server_vol , & ett_afp_vol_list , & ett_afp_vol_flag , & ett_afp_vol_bitmap , & ett_afp_vol_attribute , & ett_afp_dir_bitmap , & ett_afp_file_bitmap , & ett_afp_unix_privs , & ett_afp_enumerate , & ett_afp_enumerate_line , & ett_afp_access_mode , & ett_afp_dir_attribute , & ett_afp_file_attribute , & ett_afp_path_name , & ett_afp_lock_flags , & ett_afp_dir_ar , & ett_afp_cat_search , & ett_afp_cat_r_bitmap , & ett_afp_cat_spec , & ett_afp_vol_did , & ett_afp_user_bitmap , & ett_afp_message_bitmap , & ett_afp_extattr_bitmap , & ett_afp_extattr_names , & ett_afp_acl_list_bitmap , & ett_afp_acl_access_bitmap , & ett_afp_ace_entries , & ett_afp_ace_entry , & ett_afp_ace_flags , & ett_afp_spotlight_queries , & ett_afp_spotlight_query_line , & ett_afp_spotlight_query , & ett_afp_spotlight_data , & ett_afp_spotlight_toc } ; 1504
+proto_register_subtree_array ( ett , array_length ( ett ) ); 1544
+------------------------------
+11 ../data/NVD/CVE_2012_4293_PATCHED_dissect_ecat_eoe.c [u'szText'] 7
+static void CVE_2012_4293_PATCHED_dissect_ecat_eoe(tvbuff_t *tvb, gint offset, packet_info *pinfo, proto_tree *tree) 1
+char szText [ 200 ] ; 7
+g_snprintf ( szText , nMax , "EoE-Frag %d" , eoe . anEoeHeaderDataUnion . v . Fragment ); 27
+g_snprintf ( szText , nMax , "EoE" ); 29
+col_append_str ( pinfo -> cinfo , COL_INFO , szText ); 30
+EoETypeFormatter ( & eoe , szText , nMax ); 40
+proto_item_set_text ( anItem , "%s" , szText ); 41
+EoEFragNoFormatter ( & eoe , szText , nMax ); 47
+proto_item_set_text ( anItem , "%s" , szText ); 48
+EoEOffsetFormatter ( & eoe , szText , nMax ); 51
+proto_item_set_text ( anItem , "%s" , szText ); 52
+EoEFrameFormatter ( & eoe , szText , nMax ); 55
+proto_item_set_text ( anItem , "%s" , szText ); 56
+EoELastFormatter ( & eoe , szText , nMax ); 59
+proto_item_set_text ( anItem , "%s" , szText ); 60
+------------------------------
+12 ../data/NVD/CVE_2012_4293_PATCHED_proto_register_ecat_mailbox.c [u'ett'] 647
+void CVE_2012_4293_PATCHED_proto_register_ecat_mailbox(void) 1
+static gint * ett [ ] = { & ett_ecat_mailbox , & ett_ecat_mailbox_eoe , & ett_ecat_mailbox_eoe_init , & ett_ecat_mailbox_eoe_macfilter , & ett_ecat_mailbox_eoe_macfilter_filter , & ett_ecat_mailbox_eoe_macfilter_filtermask , & ett_ecat_mailbox_coe , & ett_ecat_mailbox_sdo , & ett_ecat_mailbox_coe_sdoccs , & ett_ecat_mailbox_coe_sdoscs , & ett_ecat_mailbox_foe , & ett_ecat_mailbox_foe_efw , & ett_ecat_mailbox_soeflag , & ett_ecat_mailbox_soe , & ett_ecat_mailbox_fraghead , & ett_ecat_mailbox_header } ; 647
+proto_register_subtree_array ( ett , array_length ( ett ) ); 670
+------------------------------
+13 ../data/NVD/CVE_2012_4293_VULN_dissect_ecat_eoe.c [u'szText'] 7
+static void CVE_2012_4293_VULN_dissect_ecat_eoe(tvbuff_t *tvb, gint offset, packet_info *pinfo, proto_tree *tree) 1
+char szText [ 200 ] ; 7
+g_snprintf ( szText , nMax , "EoE-Frag %d" , eoe . anEoeHeaderDataUnion . v . Fragment ); 27
+g_snprintf ( szText , nMax , "EoE" ); 29
+col_append_str ( pinfo -> cinfo , COL_INFO , szText ); 30
+EoETypeFormatter ( & eoe , szText , nMax ); 40
+proto_item_set_text ( anItem , "%s" , szText ); 41
+EoEFragNoFormatter ( & eoe , szText , nMax ); 47
+proto_item_set_text ( anItem , "%s" , szText ); 48
+EoEOffsetFormatter ( & eoe , szText , nMax ); 51
+proto_item_set_text ( anItem , "%s" , szText ); 52
+EoEFrameFormatter ( & eoe , szText , nMax ); 55
+proto_item_set_text ( anItem , "%s" , szText ); 56
+EoELastFormatter ( & eoe , szText , nMax ); 59
+proto_item_set_text ( anItem , "%s" , szText ); 60
+------------------------------
+14 ../data/NVD/CVE_2012_4293_VULN_proto_register_ecat_mailbox.c [u'ett'] 642
+void CVE_2012_4293_VULN_proto_register_ecat_mailbox(void) 1
+static gint * ett [ ] = { & ett_ecat_mailbox , & ett_ecat_mailbox_eoe , & ett_ecat_mailbox_eoe_init , & ett_ecat_mailbox_eoe_macfilter , & ett_ecat_mailbox_eoe_macfilter_filter , & ett_ecat_mailbox_eoe_macfilter_filtermask , & ett_ecat_mailbox_coe , & ett_ecat_mailbox_sdo , & ett_ecat_mailbox_coe_sdoccs , & ett_ecat_mailbox_coe_sdoscs , & ett_ecat_mailbox_foe , & ett_ecat_mailbox_foe_efw , & ett_ecat_mailbox_soeflag , & ett_ecat_mailbox_soe , & ett_ecat_mailbox_fraghead , & ett_ecat_mailbox_header } ; 642
+proto_register_subtree_array ( ett , array_length ( ett ) ); 665
+------------------------------
+15 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c [u'interp'] 5
+static int CVE_2012_4530_PATCHED_load_script(struct linux_binprm *bprm,struct pt_regs *regs) 1
+char interp [ BINPRM_BUF_SIZE ] ; 5
+strcpy ( interp , i_name ); 43
+retval = bprm_change_interp ( interp , bprm ); 68
+if ( retval < 0 )  69
+return retval ; 70
+file = open_exec ( interp ); 75
+if ( IS_ERR ( file ) )  76
+return PTR_ERR ( file ) ; 77
+bprm -> file = file; 79
+retval = prepare_binprm ( bprm ); 80
+if ( retval < 0 )  81
+return retval ; 82
+return search_binary_handler ( bprm , regs ) ; 83
+------------------------------
+16 ../data/NVD/CVE_2012_4530_VULN_load_script.c [u'interp'] 5
+static int CVE_2012_4530_VULN_load_script(struct linux_binprm *bprm,struct pt_regs *regs) 1
+char interp [ BINPRM_BUF_SIZE ] ; 5
+strcpy ( interp , i_name ); 43
+bprm -> interp = interp; 68
+file = open_exec ( interp ); 73
+if ( IS_ERR ( file ) )  74
+return PTR_ERR ( file ) ; 75
+bprm -> file = file; 77
+retval = prepare_binprm ( bprm ); 78
+if ( retval < 0 )  79
+return retval ; 80
+return search_binary_handler ( bprm , regs ) ; 81
+------------------------------
+17 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'auth_buf'] 225
+static int
+CVE_2012_5237_PATCHED_dissect_hsrp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+gchar dst [ 16 ] ; 5
+if ( pinfo -> destport != UDP_PORT_HSRP && pinfo -> destport != UDP_PORT_HSRP2_V6 )  11
+if ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP_DST_IP_ADDR ) == 0 )  19
+if ( ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP2_DST_IP_ADDR ) == 0 ) || ( pinfo -> dst . type == AT_IPv6 && pinfo -> destport == UDP_PORT_HSRP2_V6 ) )  109
+guint offset = 0 , offset2 ; 112
+guint8 type , len ; 115
+while ( tvb_reported_length_remaining ( tvb , offset ) > 0 )  124
+type = tvb_get_guint8 ( tvb , offset ); 125
+len = tvb_get_guint8 ( tvb , offset + 1 ); 126
+offset2 = offset; 128
+if ( type == 1 && len == 40 )  129
+offset += 2; 139
+if ( tree )  153
+offset ++; 157
+offset ++; 159
+offset ++; 161
+ipver = tvb_get_guint8 ( tvb , offset ); 162
+if ( ipver == 4 )  184
+if ( ipver == 6 )  187
+if ( type == 2 && len == 4 )  198
+if ( type == 3 && len == 8 )  221
+if ( tree )  223
+gchar auth_buf [ 8 + 1 ] ; 225
+tvb_memcpy ( tvb , auth_buf , offset , 8 ); 234
+auth_buf [ sizeof auth_buf - 1 ] = '\0'; 235
+proto_tree_add_string_format ( text_auth_tlv , hf_hsrp2_auth_data , tvb , offset , 8 , auth_buf , "Authentication Data: %sDefault (%s)" , ( tvb_strneql ( tvb , offset , "cisco" , strlen ( "cisco" ) ) ) == 0 ? "" : "Non-" , auth_buf ); 236
+if ( type == 4 && len == 28 )  242
+offset = offset2 + len + 2; 274
+------------------------------
+18 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'auth_buf'] 49
+static int
+CVE_2012_5237_PATCHED_dissect_hsrp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+gchar dst [ 16 ] ; 5
+if ( pinfo -> destport != UDP_PORT_HSRP && pinfo -> destport != UDP_PORT_HSRP2_V6 )  11
+if ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP_DST_IP_ADDR ) == 0 )  19
+if ( tree )  44
+gchar auth_buf [ 8 + 1 ] ; 49
+tvb_memcpy ( tvb , auth_buf , offset , 8 ); 80
+auth_buf [ sizeof auth_buf - 1 ] = '\0'; 81
+proto_tree_add_string_format ( hsrp_tree , hf_hsrp_auth_data , tvb , offset , 8 , auth_buf , "Authentication Data: %sDefault (%s)" , ( tvb_strneql ( tvb , offset , "cisco" , strlen ( "cisco" ) ) ) == 0 ? "" : "Non-" , auth_buf ); 82
+------------------------------
+19 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c [u'dst'] 5
+static int
+CVE_2012_5237_PATCHED_dissect_hsrp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+gchar dst [ 16 ] ; 5
+address_to_str_buf ( & ( pinfo -> dst ) , dst , sizeof dst ); 17
+if ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP_DST_IP_ADDR ) == 0 )  19
+if ( ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP2_DST_IP_ADDR ) == 0 ) || ( pinfo -> dst . type == AT_IPv6 && pinfo -> destport == UDP_PORT_HSRP2_V6 ) )  109
+------------------------------
+20 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'auth_buf'] 220
+static int
+CVE_2012_5237_VULN_dissect_hsrp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+gchar dst [ 16 ] ; 5
+if ( pinfo -> destport != UDP_PORT_HSRP && pinfo -> destport != UDP_PORT_HSRP2_V6 )  11
+if ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP_DST_IP_ADDR ) == 0 )  19
+if ( ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP2_DST_IP_ADDR ) == 0 ) || ( pinfo -> dst . type == AT_IPv6 && pinfo -> destport == UDP_PORT_HSRP2_V6 ) )  107
+guint offset = 0 ; 110
+guint8 type , len ; 113
+while ( tvb_reported_length_remaining ( tvb , offset ) > 0 )  122
+type = tvb_get_guint8 ( tvb , offset ); 123
+len = tvb_get_guint8 ( tvb , offset + 1 ); 124
+if ( type == 1 && len == 40 )  126
+offset += 2; 136
+if ( tree )  150
+offset ++; 154
+offset ++; 156
+offset ++; 158
+ipver = tvb_get_guint8 ( tvb , offset ); 159
+offset ++; 161
+offset += 2; 163
+offset += 6; 165
+offset += 4; 167
+offset += 4; 174
+offset += 4; 180
+if ( ipver == 4 )  181
+if ( ipver == 6 )  184
+if ( type == 2 && len == 4 )  194
+if ( tree )  204
+offset += 2; 208
+offset += 2; 213
+if ( type == 3 && len == 8 )  216
+if ( tree )  218
+gchar auth_buf [ 8 + 1 ] ; 220
+offset += 2; 224
+tvb_memcpy ( tvb , auth_buf , offset , 8 ); 229
+auth_buf [ sizeof auth_buf - 1 ] = '\0'; 230
+proto_tree_add_string_format ( text_auth_tlv , hf_hsrp2_auth_data , tvb , offset , 8 , auth_buf , "Authentication Data: %sDefault (%s)" , ( tvb_strneql ( tvb , offset , "cisco" , strlen ( "cisco" ) ) ) == 0 ? "" : "Non-" , auth_buf ); 231
+if ( type == 4 && len == 28 )  236
+if ( tree )  238
+offset += 2; 243
+offset ++; 248
+offset ++; 250
+offset += 2; 252
+offset += 4; 254
+offset += 4; 256
+------------------------------
+21 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'auth_buf'] 49
+static int
+CVE_2012_5237_VULN_dissect_hsrp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+gchar dst [ 16 ] ; 5
+if ( pinfo -> destport != UDP_PORT_HSRP && pinfo -> destport != UDP_PORT_HSRP2_V6 )  11
+if ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP_DST_IP_ADDR ) == 0 )  19
+if ( tree )  44
+gchar auth_buf [ 8 + 1 ] ; 49
+tvb_memcpy ( tvb , auth_buf , offset , 8 ); 80
+auth_buf [ sizeof auth_buf - 1 ] = '\0'; 81
+proto_tree_add_string_format ( hsrp_tree , hf_hsrp_auth_data , tvb , offset , 8 , auth_buf , "Authentication Data: %sDefault (%s)" , ( tvb_strneql ( tvb , offset , "cisco" , strlen ( "cisco" ) ) ) == 0 ? "" : "Non-" , auth_buf ); 82
+------------------------------
+22 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c [u'dst'] 5
+static int
+CVE_2012_5237_VULN_dissect_hsrp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+gchar dst [ 16 ] ; 5
+address_to_str_buf ( & ( pinfo -> dst ) , dst , sizeof dst ); 17
+if ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP_DST_IP_ADDR ) == 0 )  19
+if ( ( pinfo -> dst . type == AT_IPv4 && strcmp ( dst , HSRP2_DST_IP_ADDR ) == 0 ) || ( pinfo -> dst . type == AT_IPv6 && pinfo -> destport == UDP_PORT_HSRP2_V6 ) )  107
+------------------------------
+23 ../data/NVD/CVE_2012_5238_PATCHED_proto_register_lcp.c [u'ett'] 247
+void
+CVE_2012_5238_PATCHED_proto_register_lcp(void) 2
+static gint * ett [ ] = { & ett_lcp , & ett_lcp_options , & ett_lcp_vendor_opt , & ett_lcp_mru_opt , & ett_lcp_asyncmap_opt , & ett_lcp_authprot_opt , & ett_lcp_qualprot_opt , & ett_lcp_magicnumber_opt , & ett_lcp_linkqualmon_opt , & ett_lcp_pcomp_opt , & ett_lcp_acccomp_opt , & ett_lcp_fcs_alternatives_opt , & ett_lcp_self_desc_pad_opt , & ett_lcp_numbered_mode_opt , & ett_lcp_callback_opt , & ett_lcp_compound_frames_opt , & ett_lcp_nomdataencap_opt , & ett_lcp_multilink_mrru_opt , & ett_lcp_multilink_ssnh_opt , & ett_lcp_multilink_ep_disc_opt , & ett_lcp_magic_block , & ett_lcp_dce_identifier_opt , & ett_lcp_multilink_pp_opt , & ett_lcp_bacp_link_discrim_opt , & ett_lcp_auth_opt , & ett_lcp_cobs_opt , & ett_lcp_prefix_elision_opt , & ett_multilink_hdr_fmt_opt , & ett_lcp_internationalization_opt , & ett_lcp_simple_opt } ; 247
+proto_register_subtree_array ( ett , array_length ( ett ) ); 283
+------------------------------
+24 ../data/NVD/CVE_2012_5238_VULN_proto_register_lcp.c [u'ett'] 247
+void
+CVE_2012_5238_VULN_proto_register_lcp(void) 2
+static gint * ett [ ] = { & ett_lcp , & ett_lcp_options , & ett_lcp_vendor_opt , & ett_lcp_mru_opt , & ett_lcp_asyncmap_opt , & ett_lcp_authprot_opt , & ett_lcp_qualprot_opt , & ett_lcp_magicnumber_opt , & ett_lcp_linkqualmon_opt , & ett_lcp_pcomp_opt , & ett_lcp_acccomp_opt , & ett_lcp_fcs_alternatives_opt , & ett_lcp_self_desc_pad_opt , & ett_lcp_numbered_mode_opt , & ett_lcp_callback_opt , & ett_lcp_compound_frames_opt , & ett_lcp_nomdataencap_opt , & ett_lcp_multilink_mrru_opt , & ett_lcp_multilink_ssnh_opt , & ett_lcp_multilink_ep_disc_opt , & ett_lcp_magic_block , & ett_lcp_dce_identifier_opt , & ett_lcp_multilink_pp_opt , & ett_lcp_bacp_link_discrim_opt , & ett_lcp_auth_opt , & ett_lcp_cobs_opt , & ett_lcp_prefix_elision_opt , & ett_multilink_hdr_fmt_opt , & ett_lcp_internationalization_opt , & ett_lcp_simple_opt } ; 247
+proto_register_subtree_array ( ett , array_length ( ett ) ); 283
+------------------------------
+25 ../data/NVD/CVE_2012_5240_PATCHED_dissect_tlv.c [u'interface_params_header_fields'] 300
+static int
+CVE_2012_5240_PATCHED_dissect_tlv(tvbuff_t *tvb, guint offset, proto_tree *tree, int rem) 2
+guint16 type , typebak ; 4
+int length ; 5
+length = tvb_reported_length_remaining ( tvb , offset ); 7
+rem = MIN ( rem , length ); 8
+if ( rem < 4 )  10
+type = tvb_get_ntohs ( tvb , offset ) & 0x3FFF; 18
+if ( tree )  24
+if ( type >= TLV_VENDOR_PRIVATE_START && type <= TLV_VENDOR_PRIVATE_END )  27
+type = TLV_VENDOR_PRIVATE_START; 29
+if ( type >= TLV_EXPERIMENTAL_START && type <= TLV_EXPERIMENTAL_END )  32
+type = TLV_EXPERIMENTAL_START; 34
+switch ( type )  62
+static int * interface_params_header_fields [ ] = { & hf_ldp_tlv_intparam_length , & hf_ldp_tlv_intparam_mtu , & hf_ldp_tlv_intparam_tdmbps , & hf_ldp_tlv_intparam_id , & hf_ldp_tlv_intparam_maxcatmcells , & hf_ldp_tlv_intparam_desc , & hf_ldp_tlv_intparam_cepbytes , & hf_ldp_tlv_intparam_cepopt_ais , & hf_ldp_tlv_intparam_cepopt_une , & hf_ldp_tlv_intparam_cepopt_rtp , & hf_ldp_tlv_intparam_cepopt_ebm , & hf_ldp_tlv_intparam_cepopt_mah , & hf_ldp_tlv_intparam_cepopt_res , & hf_ldp_tlv_intparam_cepopt_ceptype , & hf_ldp_tlv_intparam_cepopt_t3 , & hf_ldp_tlv_intparam_cepopt_e3 , & hf_ldp_tlv_intparam_vlanid , & hf_ldp_tlv_intparam_dlcilen , & hf_ldp_tlv_intparam_fcslen , & hf_ldp_tlv_intparam_tdmopt_r , & hf_ldp_tlv_intparam_tdmopt_d , & hf_ldp_tlv_intparam_tdmopt_f , & hf_ldp_tlv_intparam_tdmopt_res1 , & hf_ldp_tlv_intparam_tdmopt_pt , & hf_ldp_tlv_intparam_tdmopt_res2 , & hf_ldp_tlv_intparam_tdmopt_freq , & hf_ldp_tlv_intparam_tdmopt_ssrc , & hf_ldp_tlv_intparam_vccv_cctype_cw , & hf_ldp_tlv_intparam_vccv_cctype_mplsra , & hf_ldp_tlv_intparam_vccv_cctype_ttl1 , & hf_ldp_tlv_intparam_vccv_cvtype_icmpping , & hf_ldp_tlv_intparam_vccv_cvtype_lspping , & hf_ldp_tlv_intparam_vccv_cvtype_bfd , & hf_ldp_tlv_fec_vc_intparam_vccv_cvtype_bfd2 , & hf_ldp_tlv_fec_vc_intparam_vccv_cvtype_bfd3 , & hf_ldp_tlv_fec_vc_intparam_vccv_cvtype_bfd4 , & hf_ldp_tlv_fec_vc_intparam_flowlabel_t , & hf_ldp_tlv_fec_vc_intparam_flowlabel_r , & hf_ldp_tlv_fec_vc_intparam_flowlabel_res } ; 300
+dissect_subtlv_interface_parameters ( tvb , offset , tlv_tree , intparam_len , interface_params_header_fields ); 354
+------------------------------
+26 ../data/NVD/CVE_2012_5240_VULN_dissect_tlv.c [u'interface_params_header_fields'] 300
+static int
+CVE_2012_5240_VULN_dissect_tlv(tvbuff_t *tvb, guint offset, proto_tree *tree, int rem) 2
+guint16 type , typebak ; 4
+int length ; 5
+length = tvb_reported_length_remaining ( tvb , offset ); 7
+rem = MIN ( rem , length ); 8
+if ( rem < 4 )  10
+type = tvb_get_ntohs ( tvb , offset ) & 0x3FFF; 18
+if ( tree )  24
+if ( type >= TLV_VENDOR_PRIVATE_START && type <= TLV_VENDOR_PRIVATE_END )  27
+type = TLV_VENDOR_PRIVATE_START; 29
+if ( type >= TLV_EXPERIMENTAL_START && type <= TLV_EXPERIMENTAL_END )  32
+type = TLV_EXPERIMENTAL_START; 34
+switch ( type )  62
+static int * interface_params_header_fields [ ] = { & hf_ldp_tlv_intparam_length , & hf_ldp_tlv_intparam_mtu , & hf_ldp_tlv_intparam_tdmbps , & hf_ldp_tlv_intparam_id , & hf_ldp_tlv_intparam_maxcatmcells , & hf_ldp_tlv_intparam_desc , & hf_ldp_tlv_intparam_cepbytes , & hf_ldp_tlv_intparam_cepopt_ais , & hf_ldp_tlv_intparam_cepopt_une , & hf_ldp_tlv_intparam_cepopt_rtp , & hf_ldp_tlv_intparam_cepopt_ebm , & hf_ldp_tlv_intparam_cepopt_mah , & hf_ldp_tlv_intparam_cepopt_res , & hf_ldp_tlv_intparam_cepopt_ceptype , & hf_ldp_tlv_intparam_cepopt_t3 , & hf_ldp_tlv_intparam_cepopt_e3 , & hf_ldp_tlv_intparam_vlanid , & hf_ldp_tlv_intparam_dlcilen , & hf_ldp_tlv_intparam_fcslen , & hf_ldp_tlv_intparam_tdmopt_r , & hf_ldp_tlv_intparam_tdmopt_d , & hf_ldp_tlv_intparam_tdmopt_f , & hf_ldp_tlv_intparam_tdmopt_res1 , & hf_ldp_tlv_intparam_tdmopt_pt , & hf_ldp_tlv_intparam_tdmopt_res2 , & hf_ldp_tlv_intparam_tdmopt_freq , & hf_ldp_tlv_intparam_tdmopt_ssrc , & hf_ldp_tlv_intparam_vccv_cctype_cw , & hf_ldp_tlv_intparam_vccv_cctype_mplsra , & hf_ldp_tlv_intparam_vccv_cctype_ttl1 , & hf_ldp_tlv_intparam_vccv_cvtype_icmpping , & hf_ldp_tlv_intparam_vccv_cvtype_lspping , & hf_ldp_tlv_intparam_vccv_cvtype_bfd } ; 300
+dissect_subtlv_interface_parameters ( tvb , offset , tlv_tree , intparam_len , interface_params_header_fields ); 348
+------------------------------
+27 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'tmp'] 159
+static int
+CVE_2012_6058_PATCHED_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+int offset ; 11
+guint8 icmp6_type , icmp6_code ; 13
+offset = 0; 19
+icmp6_type = tvb_get_guint8 ( tvb , offset ); 28
+if ( icmp6_type == ICMP6_ECHO_REQUEST || icmp6_type == ICMP6_ECHO_REPLY )  116
+if ( pinfo -> destport == 3544 && icmp6_type == ICMP6_ECHO_REQUEST )  133
+if ( ! pinfo -> flags . in_error_pkt )  148
+if ( icmp6_type == ICMP6_ECHO_REQUEST )  153
+guint16 tmp [ 2 ] ; 159
+tmp [ 0 ] = ~cksum; 161
+tmp [ 1 ] = ~0x0100; 162
+cksum_vec [ 0 ] . ptr = ( guint8 * ) tmp; 164
+conv_key [ 0 ] = in_cksum ( cksum_vec , 1 ); 165
+if ( conv_key [ 0 ] == 0 )  166
+conv_key [ 0 ] = 0xffff; 167
+conv_key [ 0 ] |= 0x00010000; 169
+trans = transaction_end ( pinfo , icmp6_tree , conv_key ); 170
+if ( trans )  632
+tap_queue_packet ( icmpv6_tap , pinfo , trans ); 633
+------------------------------
+28 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'conv_key'] 149
+static int
+CVE_2012_6058_PATCHED_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+int offset ; 11
+guint8 icmp6_type , icmp6_code ; 13
+offset = 0; 19
+icmp6_type = tvb_get_guint8 ( tvb , offset ); 28
+if ( icmp6_type == ICMP6_ECHO_REQUEST || icmp6_type == ICMP6_ECHO_REPLY )  116
+if ( pinfo -> destport == 3544 && icmp6_type == ICMP6_ECHO_REQUEST )  133
+if ( ! pinfo -> flags . in_error_pkt )  148
+guint32 conv_key [ 2 ] ; 149
+conv_key [ 1 ] = ( guint32 ) ( ( identifier << 16 ) | sequence ); 151
+conv_key [ 0 ] = ( guint32 ) cksum; 154
+conv_key [ 0 ] |= 0x00010000; 156
+trans = transaction_start ( pinfo , icmp6_tree , conv_key ); 157
+conv_key [ 0 ] = in_cksum ( cksum_vec , 1 ); 165
+if ( conv_key [ 0 ] == 0 )  166
+conv_key [ 0 ] = 0xffff; 167
+conv_key [ 0 ] |= 0x00010000; 169
+trans = transaction_end ( pinfo , icmp6_tree , conv_key ); 170
+if ( trans )  632
+tap_queue_packet ( icmpv6_tap , pinfo , trans ); 633
+------------------------------
+29 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'phdr'] 9
+static int
+CVE_2012_6058_PATCHED_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+guint32 phdr [ 2 ] ; 9
+phdr [ 0 ] = g_htonl ( reported_length ); 95
+phdr [ 1 ] = g_htonl ( IP_PROTO_ICMPV6 ); 96
+------------------------------
+30 ../data/NVD/CVE_2012_6058_PATCHED_dissect_icmpv6.c [u'cksum_vec'] 8
+static int
+CVE_2012_6058_PATCHED_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+vec_t cksum_vec [ 4 ] ; 8
+cksum_vec [ 0 ] . ptr = pinfo -> src . data; 90
+cksum_vec [ 0 ] . len = pinfo -> src . len; 91
+cksum_vec [ 1 ] . ptr = pinfo -> dst . data; 92
+cksum_vec [ 1 ] . len = pinfo -> dst . len; 93
+cksum_vec [ 2 ] . ptr = ( const guint8 * ) & phdr; 94
+cksum_vec [ 2 ] . len = 8; 97
+cksum_vec [ 3 ] . len = reported_length; 98
+cksum_vec [ 3 ] . ptr = tvb_get_ptr ( tvb , 0 , cksum_vec [ 3 ] . len ); 99
+computed_cksum = in_cksum ( cksum_vec , 4 ); 100
+if ( computed_cksum == 0 )  102
+proto_item_append_text ( checksum_item , " [incorrect, should be 0x%04x]" , in_cksum_shouldbe ( cksum , computed_cksum ) ); 108
+expert_add_info_format ( pinfo , checksum_item , PI_CHECKSUM , PI_WARN , "ICMPv6 Checksum Incorrect, should be 0x%04x" , in_cksum_shouldbe ( cksum , computed_cksum ) ); 109
+cksum_vec [ 0 ] . len = sizeof ( tmp ); 163
+cksum_vec [ 0 ] . ptr = ( guint8 * ) tmp; 164
+conv_key [ 0 ] = in_cksum ( cksum_vec , 1 ); 165
+if ( conv_key [ 0 ] == 0 )  166
+conv_key [ 0 ] = 0xffff; 167
+conv_key [ 0 ] |= 0x00010000; 169
+trans = transaction_end ( pinfo , icmp6_tree , conv_key ); 170
+if ( trans )  632
+tap_queue_packet ( icmpv6_tap , pinfo , trans ); 633
+------------------------------
+31 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'tmp'] 159
+static int
+CVE_2012_6058_VULN_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+int offset ; 11
+guint8 icmp6_type , icmp6_code ; 13
+offset = 0; 19
+icmp6_type = tvb_get_guint8 ( tvb , offset ); 28
+if ( icmp6_type == ICMP6_ECHO_REQUEST || icmp6_type == ICMP6_ECHO_REPLY )  116
+if ( pinfo -> destport == 3544 && icmp6_type == ICMP6_ECHO_REQUEST )  133
+if ( ! pinfo -> flags . in_error_pkt )  148
+if ( icmp6_type == ICMP6_ECHO_REQUEST )  153
+guint16 tmp [ 2 ] ; 159
+tmp [ 0 ] = ~cksum; 161
+tmp [ 1 ] = ~0x0100; 162
+cksum_vec [ 0 ] . ptr = ( guint8 * ) tmp; 164
+conv_key [ 0 ] = in_cksum ( cksum_vec , 1 ); 165
+if ( conv_key [ 0 ] == 0 )  166
+conv_key [ 0 ] = 0xffff; 167
+conv_key [ 0 ] |= 0x00010000; 169
+trans = transaction_end ( pinfo , icmp6_tree , conv_key ); 170
+if ( trans )  632
+tap_queue_packet ( icmpv6_tap , pinfo , trans ); 633
+------------------------------
+32 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'conv_key'] 149
+static int
+CVE_2012_6058_VULN_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+int offset ; 11
+guint8 icmp6_type , icmp6_code ; 13
+offset = 0; 19
+icmp6_type = tvb_get_guint8 ( tvb , offset ); 28
+if ( icmp6_type == ICMP6_ECHO_REQUEST || icmp6_type == ICMP6_ECHO_REPLY )  116
+if ( pinfo -> destport == 3544 && icmp6_type == ICMP6_ECHO_REQUEST )  133
+if ( ! pinfo -> flags . in_error_pkt )  148
+guint32 conv_key [ 2 ] ; 149
+conv_key [ 1 ] = ( guint32 ) ( ( identifier << 16 ) | sequence ); 151
+conv_key [ 0 ] = ( guint32 ) cksum; 154
+conv_key [ 0 ] |= 0x00010000; 156
+trans = transaction_start ( pinfo , icmp6_tree , conv_key ); 157
+conv_key [ 0 ] = in_cksum ( cksum_vec , 1 ); 165
+if ( conv_key [ 0 ] == 0 )  166
+conv_key [ 0 ] = 0xffff; 167
+conv_key [ 0 ] |= 0x00010000; 169
+trans = transaction_end ( pinfo , icmp6_tree , conv_key ); 170
+if ( trans )  632
+tap_queue_packet ( icmpv6_tap , pinfo , trans ); 633
+------------------------------
+33 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'phdr'] 9
+static int
+CVE_2012_6058_VULN_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+guint32 phdr [ 2 ] ; 9
+phdr [ 0 ] = g_htonl ( reported_length ); 95
+phdr [ 1 ] = g_htonl ( IP_PROTO_ICMPV6 ); 96
+------------------------------
+34 ../data/NVD/CVE_2012_6058_VULN_dissect_icmpv6.c [u'cksum_vec'] 8
+static int
+CVE_2012_6058_VULN_dissect_icmpv6(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) 2
+vec_t cksum_vec [ 4 ] ; 8
+cksum_vec [ 0 ] . ptr = pinfo -> src . data; 90
+cksum_vec [ 0 ] . len = pinfo -> src . len; 91
+cksum_vec [ 1 ] . ptr = pinfo -> dst . data; 92
+cksum_vec [ 1 ] . len = pinfo -> dst . len; 93
+cksum_vec [ 2 ] . ptr = ( const guint8 * ) & phdr; 94
+cksum_vec [ 2 ] . len = 8; 97
+cksum_vec [ 3 ] . len = reported_length; 98
+cksum_vec [ 3 ] . ptr = tvb_get_ptr ( tvb , 0 , cksum_vec [ 3 ] . len ); 99
+computed_cksum = in_cksum ( cksum_vec , 4 ); 100
+if ( computed_cksum == 0 )  102
+proto_item_append_text ( checksum_item , " [incorrect, should be 0x%04x]" , in_cksum_shouldbe ( cksum , computed_cksum ) ); 108
+expert_add_info_format ( pinfo , checksum_item , PI_CHECKSUM , PI_WARN , "ICMPv6 Checksum Incorrect, should be 0x%04x" , in_cksum_shouldbe ( cksum , computed_cksum ) ); 109
+cksum_vec [ 0 ] . len = sizeof ( tmp ); 163
+cksum_vec [ 0 ] . ptr = ( guint8 * ) tmp; 164
+conv_key [ 0 ] = in_cksum ( cksum_vec , 1 ); 165
+if ( conv_key [ 0 ] == 0 )  166
+conv_key [ 0 ] = 0xffff; 167
+conv_key [ 0 ] |= 0x00010000; 169
+trans = transaction_end ( pinfo , icmp6_tree , conv_key ); 170
+if ( trans )  632
+tap_queue_packet ( icmpv6_tap , pinfo , trans ); 633
+------------------------------
+35 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'contents'] 479
+static int
+CVE_2012_6062_PATCHED_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+unsigned int counter ; 6
+char ascii_name [ 5 ] ; 7
+static const char poc1_app_name_str [ ] = "PoC1" ; 14
+offset += 4; 20
+packet_len -= 4; 21
+for( counter = 0; counter < 4; counter++ ) 24
+ascii_name [ counter ] = tvb_get_guint8 ( tvb , offset + counter ); 25
+ascii_name [ 4 ] = '\0'; 27
+if ( g_ascii_strncasecmp ( ascii_name , poc1_app_name_str , 4 ) == 0 )  32
+packet_len -= 4; 42
+if ( packet_len == 0 )  44
+switch ( rtcp_subtype )  61
+gboolean contents [ 5 ] ; 479
+proto_tree_add_item ( content_tree , hf_rtcp_app_poc1_conn_content [ i ] , tvb , offset , 2 , ENC_BIG_ENDIAN ); 489
+contents [ i ] = items_field & ( 1 << ( 15 - i ) ); 490
+if ( contents [ i ] )  491
+for ( i = 0; i < array_length(contents); ++i ) 507
+if ( contents [ i ] )  508
+proto_tree_add_item ( PoC1_tree , hf_rtcp_app_poc1_conn_sdes_items [ i ] , tvb , offset , 1 , ENC_BIG_ENDIAN ); 517
+------------------------------
+36 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'mux_app_name_str'] 15
+static int
+CVE_2012_6062_PATCHED_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+static const char mux_app_name_str [ ] = "3GPP" ; 15
+if ( g_ascii_strncasecmp ( ascii_name , mux_app_name_str , 4 ) == 0 )  534
+------------------------------
+37 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'poc1_app_name_str'] 14
+static int
+CVE_2012_6062_PATCHED_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+static const char poc1_app_name_str [ ] = "PoC1" ; 14
+if ( g_ascii_strncasecmp ( ascii_name , poc1_app_name_str , 4 ) == 0 )  32
+------------------------------
+38 ../data/NVD/CVE_2012_6062_PATCHED_dissect_rtcp_app.c [u'ascii_name'] 7
+static int
+CVE_2012_6062_PATCHED_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+char ascii_name [ 5 ] ; 7
+ascii_name [ counter ] = tvb_get_guint8 ( tvb , offset + counter ); 25
+ascii_name [ 4 ] = '\0'; 27
+proto_tree_add_string ( tree , hf_rtcp_name_ascii , tvb , offset , 4 , ascii_name ); 28
+if ( g_ascii_strncasecmp ( ascii_name , poc1_app_name_str , 4 ) == 0 )  32
+col_add_fstr ( pinfo -> cinfo , COL_INFO , "(%s) %s" , ascii_name , val_to_str ( rtcp_subtype , rtcp_app_poc1_floor_cnt_type_vals , "unknown (%u)" ) ); 39
+if ( g_ascii_strncasecmp ( ascii_name , mux_app_name_str , 4 ) == 0 )  534
+col_append_fstr ( pinfo -> cinfo , COL_INFO , "( %s ) subtype=%u" , ascii_name , rtcp_subtype ); 537
+if ( dissector_try_string ( rtcp_dissector_table , ascii_name , next_tvb , pinfo , tree ) )  576
+col_append_fstr ( pinfo -> cinfo , COL_INFO , "( %s ) subtype=%u" , ascii_name , rtcp_subtype ); 593
+------------------------------
+39 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'contents'] 479
+static int
+CVE_2012_6062_VULN_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+unsigned int counter ; 6
+char ascii_name [ 5 ] ; 7
+static const char poc1_app_name_str [ ] = "PoC1" ; 14
+offset += 4; 20
+packet_len -= 4; 21
+for( counter = 0; counter < 4; counter++ ) 24
+ascii_name [ counter ] = tvb_get_guint8 ( tvb , offset + counter ); 25
+ascii_name [ 4 ] = '\0'; 27
+if ( g_ascii_strncasecmp ( ascii_name , poc1_app_name_str , 4 ) == 0 )  32
+packet_len -= 4; 42
+if ( packet_len == 0 )  44
+switch ( rtcp_subtype )  61
+gboolean contents [ 5 ] ; 479
+proto_tree_add_item ( content_tree , hf_rtcp_app_poc1_conn_content [ i ] , tvb , offset , 2 , ENC_BIG_ENDIAN ); 489
+contents [ i ] = items_field & ( 1 << ( 15 - i ) ); 490
+if ( contents [ i ] )  491
+for ( i = 0; i < array_length(contents); ++i ) 507
+if ( contents [ i ] )  508
+proto_tree_add_item ( PoC1_tree , hf_rtcp_app_poc1_conn_sdes_items [ i ] , tvb , offset , 1 , ENC_BIG_ENDIAN ); 517
+------------------------------
+40 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'mux_app_name_str'] 15
+static int
+CVE_2012_6062_VULN_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+static const char mux_app_name_str [ ] = "3GPP" ; 15
+if ( g_ascii_strncasecmp ( ascii_name , mux_app_name_str , 4 ) == 0 )  533
+------------------------------
+41 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'poc1_app_name_str'] 14
+static int
+CVE_2012_6062_VULN_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+static const char poc1_app_name_str [ ] = "PoC1" ; 14
+if ( g_ascii_strncasecmp ( ascii_name , poc1_app_name_str , 4 ) == 0 )  32
+------------------------------
+42 ../data/NVD/CVE_2012_6062_VULN_dissect_rtcp_app.c [u'ascii_name'] 7
+static int
+CVE_2012_6062_VULN_dissect_rtcp_app( tvbuff_t *tvb,packet_info *pinfo, int offset, proto_tree *tree,
+unsigned int padding, unsigned int packet_len, guint rtcp_subtype,
+guint32 app_length ) 4
+char ascii_name [ 5 ] ; 7
+ascii_name [ counter ] = tvb_get_guint8 ( tvb , offset + counter ); 25
+ascii_name [ 4 ] = '\0'; 27
+proto_tree_add_string ( tree , hf_rtcp_name_ascii , tvb , offset , 4 , ascii_name ); 28
+if ( g_ascii_strncasecmp ( ascii_name , poc1_app_name_str , 4 ) == 0 )  32
+col_add_fstr ( pinfo -> cinfo , COL_INFO , "(%s) %s" , ascii_name , val_to_str ( rtcp_subtype , rtcp_app_poc1_floor_cnt_type_vals , "unknown (%u)" ) ); 39
+if ( g_ascii_strncasecmp ( ascii_name , mux_app_name_str , 4 ) == 0 )  533
+col_append_fstr ( pinfo -> cinfo , COL_INFO , "( %s ) subtype=%u" , ascii_name , rtcp_subtype ); 536
+if ( dissector_try_string ( rtcp_dissector_table , ascii_name , next_tvb , pinfo , tree ) )  575
+col_append_fstr ( pinfo -> cinfo , COL_INFO , "( %s ) subtype=%u" , ascii_name , rtcp_subtype ); 591
+------------------------------
+43 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'valstr'] 108
+static JSBool
+CVE_2013_0756_PATCHED_obj_toSource(JSContext *cx, unsigned argc, Value *vp) 2
+CallArgs args = CallArgsFromVp ( argc , vp ) ; 4
+RootedObject obj ( cx , ToObject ( cx , args . thisv ( ) ) ) ; 7
+if ( ! obj )  8
+bool outermost = ( cx -> cycleDetectorSet . count ( ) == 0 ) ; 12
+AutoCycleDetector detector ( cx , obj ) ; 14
+if ( ! detector . init ( ) )  15
+if ( detector . foundCycle ( ) )  17
+StringBuffer buf ( cx ) ; 25
+if ( outermost && ! buf . append ( '(' ) )  26
+if ( ! buf . append ( '{' ) )  28
+Value val [ 2 ] ; 31
+JSString * gsop [ 2 ] ; 35
+AutoIdVector idv ( cx ) ; 38
+if ( ! GetPropertyNames ( cx , obj , JSITER_OWNONLY , & idv ) )  39
+bool comma = false ; 42
+for (size_t i = 0; i < idv.length(); ++i) 43
+RootedId id ( cx , idv [ i ] ) ; 44
+RootedObject obj2 ( cx ) ; 45
+RootedShape shape ( cx ) ; 46
+if ( ! JSObject :: lookupGeneric ( cx , obj , id , & obj2 , & shape ) )  47
+int valcnt = 0 ; 51
+if ( shape )  52
+bool doGet = true ; 53
+if ( obj2 -> isNative ( ) )  54
+unsigned attrs = shape -> attributes ( ) ; 55
+if ( attrs & JSPROP_GETTER )  56
+doGet = false; 57
+val [ valcnt ] = shape -> getterValue ( ); 58
+gsop [ valcnt ] = cx -> runtime -> atomState . getAtom; 59
+valcnt ++; 60
+if ( attrs & JSPROP_SETTER )  62
+doGet = false; 63
+val [ valcnt ] = shape -> setterValue ( ); 64
+gsop [ valcnt ] = cx -> runtime -> atomState . setAtom; 65
+valcnt ++; 66
+if ( doGet )  69
+valcnt = 1; 70
+gsop [ 0 ] = NULL; 71
+MutableHandleValue vp = MutableHandleValue :: fromMarkedLocation ( & val [ 0 ] ) ; 72
+if ( ! JSObject :: getGeneric ( cx , obj , obj , id , vp ) )  73
+RawString s = ToString ( cx , IdToValue ( id ) ) ; 79
+if ( ! s )  80
+Rooted < JSLinearString * > idstr ( cx , s -> ensureLinear ( cx ) ) ; 82
+if ( ! idstr )  83
+if ( JSID_IS_ATOM ( id ) ? ! IsIdentifier ( idstr ) : ( ! JSID_IS_INT ( id ) || JSID_TO_INT ( id ) < 0 ) )  90
+s = js_QuoteString ( cx , idstr , jschar ( '\'' ) ); 94
+if ( ! s || ! ( idstr = s -> ensureLinear ( cx ) ) )  95
+for (int j = 0; j < valcnt; j++) 99
+if ( gsop [ j ] && val [ j ] . isUndefined ( ) )  104
+RootedString valstr ( cx , js_ValueToSource ( cx , val [ j ] ) ) ; 108
+if ( ! valstr )  109
+const jschar * vchars = valstr -> getChars ( cx ) ; 111
+if ( ! vchars )  112
+size_t vlength = valstr -> length ( ) ; 114
+if ( gsop [ j ] && IsFunctionObject ( val [ j ] ) )  120
+const jschar * start = vchars ; 121
+const jschar * end = vchars + vlength ; 122
+uint8_t parenChomp = 0 ; 124
+if ( vchars [ 0 ] == '(' )  125
+vchars ++; 126
+parenChomp = 1; 127
+if ( vchars )  131
+vchars = js_strchr_limit ( vchars , ' ' , end ); 132
+if ( vchars )  138
+vchars = js_strchr_limit ( vchars , '(' , end ); 139
+if ( vchars )  141
+if ( * vchars == ' ' )  142
+vchars ++; 143
+vlength = end - vchars - parenChomp; 144
+gsop [ j ] = NULL; 146
+vchars = start; 147
+if ( comma && ! buf . append ( ", " ) )  151
+comma = true; 153
+if ( gsop [ j ] )  155
+if ( ! buf . append ( gsop [ j ] ) || ! buf . append ( ' ' ) )  156
+if ( ! buf . append ( idstr ) )  159
+if ( ! buf . append ( gsop [ j ] ? ' ' : ':' ) )  161
+if ( ! buf . append ( vchars , vlength ) )  164
+------------------------------
+44 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'id'] 44
+static JSBool
+CVE_2013_0756_PATCHED_obj_toSource(JSContext *cx, unsigned argc, Value *vp) 2
+CallArgs args = CallArgsFromVp ( argc , vp ) ; 4
+RootedObject obj ( cx , ToObject ( cx , args . thisv ( ) ) ) ; 7
+if ( ! obj )  8
+bool outermost = ( cx -> cycleDetectorSet . count ( ) == 0 ) ; 12
+AutoCycleDetector detector ( cx , obj ) ; 14
+if ( ! detector . init ( ) )  15
+if ( detector . foundCycle ( ) )  17
+StringBuffer buf ( cx ) ; 25
+if ( outermost && ! buf . append ( '(' ) )  26
+if ( ! buf . append ( '{' ) )  28
+Value val [ 2 ] ; 31
+JSString * gsop [ 2 ] ; 35
+AutoIdVector idv ( cx ) ; 38
+if ( ! GetPropertyNames ( cx , obj , JSITER_OWNONLY , & idv ) )  39
+bool comma = false ; 42
+for (size_t i = 0; i < idv.length(); ++i) 43
+RootedId id ( cx , idv [ i ] ) ; 44
+RootedObject obj2 ( cx ) ; 45
+RootedShape shape ( cx ) ; 46
+if ( ! JSObject :: lookupGeneric ( cx , obj , id , & obj2 , & shape ) )  47
+int valcnt = 0 ; 51
+if ( shape )  52
+bool doGet = true ; 53
+if ( obj2 -> isNative ( ) )  54
+unsigned attrs = shape -> attributes ( ) ; 55
+if ( attrs & JSPROP_GETTER )  56
+doGet = false; 57
+val [ valcnt ] = shape -> getterValue ( ); 58
+gsop [ valcnt ] = cx -> runtime -> atomState . getAtom; 59
+valcnt ++; 60
+if ( attrs & JSPROP_SETTER )  62
+doGet = false; 63
+val [ valcnt ] = shape -> setterValue ( ); 64
+gsop [ valcnt ] = cx -> runtime -> atomState . setAtom; 65
+valcnt ++; 66
+if ( doGet )  69
+valcnt = 1; 70
+gsop [ 0 ] = NULL; 71
+MutableHandleValue vp = MutableHandleValue :: fromMarkedLocation ( & val [ 0 ] ) ; 72
+if ( ! JSObject :: getGeneric ( cx , obj , obj , id , vp ) )  73
+RawString s = ToString ( cx , IdToValue ( id ) ) ; 79
+if ( ! s )  80
+Rooted < JSLinearString * > idstr ( cx , s -> ensureLinear ( cx ) ) ; 82
+if ( ! idstr )  83
+if ( JSID_IS_ATOM ( id ) ? ! IsIdentifier ( idstr ) : ( ! JSID_IS_INT ( id ) || JSID_TO_INT ( id ) < 0 ) )  90
+s = js_QuoteString ( cx , idstr , jschar ( '\'' ) ); 94
+if ( ! s || ! ( idstr = s -> ensureLinear ( cx ) ) )  95
+for (int j = 0; j < valcnt; j++) 99
+if ( gsop [ j ] && val [ j ] . isUndefined ( ) )  104
+RootedString valstr ( cx , js_ValueToSource ( cx , val [ j ] ) ) ; 108
+if ( ! valstr )  109
+const jschar * vchars = valstr -> getChars ( cx ) ; 111
+if ( ! vchars )  112
+size_t vlength = valstr -> length ( ) ; 114
+if ( gsop [ j ] && IsFunctionObject ( val [ j ] ) )  120
+const jschar * start = vchars ; 121
+const jschar * end = vchars + vlength ; 122
+uint8_t parenChomp = 0 ; 124
+if ( vchars [ 0 ] == '(' )  125
+vchars ++; 126
+parenChomp = 1; 127
+if ( vchars )  131
+vchars = js_strchr_limit ( vchars , ' ' , end ); 132
+if ( vchars )  138
+vchars = js_strchr_limit ( vchars , '(' , end ); 139
+if ( vchars )  141
+if ( * vchars == ' ' )  142
+vchars ++; 143
+vlength = end - vchars - parenChomp; 144
+gsop [ j ] = NULL; 146
+vchars = start; 147
+if ( comma && ! buf . append ( ", " ) )  151
+comma = true; 153
+if ( gsop [ j ] )  155
+if ( ! buf . append ( gsop [ j ] ) || ! buf . append ( ' ' ) )  156
+if ( ! buf . append ( idstr ) )  159
+if ( ! buf . append ( gsop [ j ] ? ' ' : ':' ) )  161
+if ( ! buf . append ( vchars , vlength ) )  164
+------------------------------
+45 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'gsop'] 35
+static JSBool
+CVE_2013_0756_PATCHED_obj_toSource(JSContext *cx, unsigned argc, Value *vp) 2
+CallArgs args = CallArgsFromVp ( argc , vp ) ; 4
+RootedObject obj ( cx , ToObject ( cx , args . thisv ( ) ) ) ; 7
+if ( ! obj )  8
+bool outermost = ( cx -> cycleDetectorSet . count ( ) == 0 ) ; 12
+AutoCycleDetector detector ( cx , obj ) ; 14
+if ( ! detector . init ( ) )  15
+if ( detector . foundCycle ( ) )  17
+StringBuffer buf ( cx ) ; 25
+if ( outermost && ! buf . append ( '(' ) )  26
+if ( ! buf . append ( '{' ) )  28
+JSString * gsop [ 2 ] ; 35
+gsop [ valcnt ] = cx -> runtime -> atomState . getAtom; 59
+valcnt ++; 60
+val [ valcnt ] = shape -> setterValue ( ); 64
+gsop [ valcnt ] = cx -> runtime -> atomState . setAtom; 65
+valcnt ++; 66
+gsop [ 0 ] = NULL; 71
+MutableHandleValue vp = MutableHandleValue :: fromMarkedLocation ( & val [ 0 ] ) ; 72
+if ( ! JSObject :: getGeneric ( cx , obj , obj , id , vp ) )  73
+for (int j = 0; j < valcnt; j++) 99
+if ( gsop [ j ] && val [ j ] . isUndefined ( ) )  104
+RootedString valstr ( cx , js_ValueToSource ( cx , val [ j ] ) ) ; 108
+if ( ! valstr )  109
+const jschar * vchars = valstr -> getChars ( cx ) ; 111
+if ( ! vchars )  112
+size_t vlength = valstr -> length ( ) ; 114
+if ( gsop [ j ] && IsFunctionObject ( val [ j ] ) )  120
+const jschar * start = vchars ; 121
+const jschar * end = vchars + vlength ; 122
+if ( vchars [ 0 ] == '(' )  125
+vchars ++; 126
+if ( vchars )  131
+vchars = js_strchr_limit ( vchars , ' ' , end ); 132
+if ( vchars )  138
+vchars = js_strchr_limit ( vchars , '(' , end ); 139
+if ( vchars )  141
+if ( * vchars == ' ' )  142
+vchars ++; 143
+vlength = end - vchars - parenChomp; 144
+gsop [ j ] = NULL; 146
+vchars = start; 147
+if ( gsop [ j ] )  155
+if ( ! buf . append ( gsop [ j ] ) || ! buf . append ( ' ' ) )  156
+if ( ! buf . append ( gsop [ j ] ? ' ' : ':' ) )  161
+if ( ! buf . append ( vchars , vlength ) )  164
+------------------------------
+46 ../data/NVD/CVE_2013_0756_PATCHED_obj_toSource.c [u'val'] 31
+static JSBool
+CVE_2013_0756_PATCHED_obj_toSource(JSContext *cx, unsigned argc, Value *vp) 2
+CallArgs args = CallArgsFromVp ( argc , vp ) ; 4
+RootedObject obj ( cx , ToObject ( cx , args . thisv ( ) ) ) ; 7
+if ( ! obj )  8
+bool outermost = ( cx -> cycleDetectorSet . count ( ) == 0 ) ; 12
+AutoCycleDetector detector ( cx , obj ) ; 14
+if ( ! detector . init ( ) )  15
+if ( detector . foundCycle ( ) )  17
+StringBuffer buf ( cx ) ; 25
+if ( outermost && ! buf . append ( '(' ) )  26
+if ( ! buf . append ( '{' ) )  28
+Value val [ 2 ] ; 31
+PodArrayZero ( val ); 32
+AutoArrayRooter tvr2 ( cx , ArrayLength ( val ) , val ) ; 33
+val [ valcnt ] = shape -> getterValue ( ); 58
+gsop [ valcnt ] = cx -> runtime -> atomState . getAtom; 59
+valcnt ++; 60
+val [ valcnt ] = shape -> setterValue ( ); 64
+gsop [ valcnt ] = cx -> runtime -> atomState . setAtom; 65
+valcnt ++; 66
+gsop [ 0 ] = NULL; 71
+MutableHandleValue vp = MutableHandleValue :: fromMarkedLocation ( & val [ 0 ] ) ; 72
+if ( ! JSObject :: getGeneric ( cx , obj , obj , id , vp ) )  73
+for (int j = 0; j < valcnt; j++) 99
+if ( gsop [ j ] && val [ j ] . isUndefined ( ) )  104
+RootedString valstr ( cx , js_ValueToSource ( cx , val [ j ] ) ) ; 108
+if ( ! valstr )  109
+const jschar * vchars = valstr -> getChars ( cx ) ; 111
+if ( ! vchars )  112
+size_t vlength = valstr -> length ( ) ; 114
+if ( gsop [ j ] && IsFunctionObject ( val [ j ] ) )  120
+const jschar * start = vchars ; 121
+const jschar * end = vchars + vlength ; 122
+if ( vchars [ 0 ] == '(' )  125
+vchars ++; 126
+if ( vchars )  131
+vchars = js_strchr_limit ( vchars , ' ' , end ); 132
+if ( vchars )  138
+vchars = js_strchr_limit ( vchars , '(' , end ); 139
+if ( vchars )  141
+if ( * vchars == ' ' )  142
+vchars ++; 143
+vlength = end - vchars - parenChomp; 144
+vchars = start; 147
+if ( gsop [ j ] )  155
+if ( ! buf . append ( gsop [ j ] ) || ! buf . append ( ' ' ) )  156
+if ( ! buf . append ( gsop [ j ] ? ' ' : ':' ) )  161
+if ( ! buf . append ( vchars , vlength ) )  164
+------------------------------
+47 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'localroot'] 15
+static JSBool
+CVE_2013_0756_VULN_obj_toSource(JSContext *cx, unsigned argc, Value *vp) 2
+Value localroot [ 4 ] ; 15
+PodArrayZero ( localroot ); 16
+AutoArrayRooter tvr ( cx , ArrayLength ( localroot ) , localroot ) ; 17
+val = localroot + 2; 75
+val [ valcnt ] = shape -> getterValue ( ); 104
+gsop [ valcnt ] = cx -> runtime -> atomState . getAtom; 105
+valcnt ++; 106
+val [ valcnt ] = shape -> setterValue ( ); 110
+gsop [ valcnt ] = cx -> runtime -> atomState . setAtom; 111
+valcnt ++; 112
+gsop [ 0 ] = NULL; 117
+MutableHandleValue vp = MutableHandleValue :: fromMarkedLocation ( & val [ 0 ] ) ; 118
+if ( ! JSObject :: getGeneric ( cx , obj , obj , id , vp ) )  119
+for (int j = 0; j < valcnt; j++) 136
+if ( gsop [ j ] && val [ j ] . isUndefined ( ) )  141
+JSString * valstr = js_ValueToSource ( cx , val [ j ] ) ; 145
+if ( ! valstr )  146
+localroot [ j ] . setString ( valstr ); 148
+vchars = valstr -> getChars ( cx ); 149
+if ( ! vchars )  150
+vlength = valstr -> length ( ); 152
+if ( gsop [ j ] && IsFunctionObject ( val [ j ] ) )  158
+const jschar * start = vchars ; 159
+const jschar * end = vchars + vlength ; 160
+if ( vchars [ 0 ] == '(' )  163
+vchars ++; 164
+if ( vchars )  169
+vchars = js_strchr_limit ( vchars , ' ' , end ); 170
+if ( vchars )  176
+vchars = js_strchr_limit ( vchars , '(' , end ); 177
+if ( vchars )  179
+if ( * vchars == ' ' )  180
+vchars ++; 181
+vlength = end - vchars - parenChomp; 182
+gsop [ j ] = NULL; 184
+vchars = start; 185
+if ( gsop [ j ] )  193
+if ( ! buf . append ( gsop [ j ] ) || ! buf . append ( ' ' ) )  194
+if ( ! buf . append ( gsop [ j ] ? ' ' : ':' ) )  199
+if ( ! buf . append ( vchars , vlength ) )  202
+------------------------------
+48 ../data/NVD/CVE_2013_0756_VULN_obj_toSource.c [u'gsop'] 10
+static JSBool
+CVE_2013_0756_VULN_obj_toSource(JSContext *cx, unsigned argc, Value *vp) 2
+JSString * gsop [ 2 ] ; 10
+gsop [ valcnt ] = cx -> runtime -> atomState . getAtom; 105
+valcnt ++; 106
+val [ valcnt ] = shape -> setterValue ( ); 110
+gsop [ valcnt ] = cx -> runtime -> atomState . setAtom; 111
+valcnt ++; 112
+gsop [ 0 ] = NULL; 117
+MutableHandleValue vp = MutableHandleValue :: fromMarkedLocation ( & val [ 0 ] ) ; 118
+if ( ! JSObject :: getGeneric ( cx , obj , obj , id , vp ) )  119
+for (int j = 0; j < valcnt; j++) 136
+if ( gsop [ j ] && val [ j ] . isUndefined ( ) )  141
+JSString * valstr = js_ValueToSource ( cx , val [ j ] ) ; 145
+if ( ! valstr )  146
+localroot [ j ] . setString ( valstr ); 148
+vchars = valstr -> getChars ( cx ); 149
+if ( ! vchars )  150
+vlength = valstr -> length ( ); 152
+if ( gsop [ j ] && IsFunctionObject ( val [ j ] ) )  158
+const jschar * start = vchars ; 159
+const jschar * end = vchars + vlength ; 160
+if ( vchars [ 0 ] == '(' )  163
+vchars ++; 164
+if ( vchars )  169
+vchars = js_strchr_limit ( vchars , ' ' , end ); 170
+if ( vchars )  176
+vchars = js_strchr_limit ( vchars , '(' , end ); 177
+if ( vchars )  179
+if ( * vchars == ' ' )  180
+vchars ++; 181
+vlength = end - vchars - parenChomp; 182
+gsop [ j ] = NULL; 184
+vchars = start; 185
+if ( gsop [ j ] )  193
+if ( ! buf . append ( gsop [ j ] ) || ! buf . append ( ' ' ) )  194
+if ( ! buf . append ( gsop [ j ] ? ' ' : ':' ) )  199
+if ( ! buf . append ( vchars , vlength ) )  202
+------------------------------
+49 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c [u'kjump'] 80
+uint32_t CVE_2013_0772_PATCHED_nsGIFDecoder2::OutputRow() 1
+int drow_start , drow_end ; 3
+drow_start = drow_end = mGIFStruct . irow; 4
+if ( ( unsigned ) drow_start >= mGIFStruct . height )  7
+if ( ! mGIFStruct . interlaced )  77
+static const uint8_t kjump [ 5 ] = { 1 , 8 , 8 , 4 , 2 } ; 80
+mGIFStruct . irow += kjump [ mGIFStruct . ipass ]; 83
+if ( mGIFStruct . irow >= mGIFStruct . height )  84
+mGIFStruct . irow = 8 >> mGIFStruct . ipass; 86
+mGIFStruct . ipass ++; 87
+while ( mGIFStruct . irow >= mGIFStruct . height )  89
+return -- mGIFStruct . rows_remaining ; 92
+------------------------------
+50 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c [u'kjump'] 88
+uint32_t CVE_2013_0772_VULN_nsGIFDecoder2::OutputRow() 1
+int drow_start , drow_end ; 3
+drow_start = drow_end = mGIFStruct . irow; 4
+if ( ( unsigned ) drow_start >= mGIFStruct . height )  7
+if ( ! mGIFStruct . interlaced )  85
+static const uint8_t kjump [ 5 ] = { 1 , 8 , 8 , 4 , 2 } ; 88
+mGIFStruct . irow += kjump [ mGIFStruct . ipass ]; 91
+if ( mGIFStruct . irow >= mGIFStruct . height )  92
+mGIFStruct . irow = 8 >> mGIFStruct . ipass; 94
+mGIFStruct . ipass ++; 95
+while ( mGIFStruct . irow >= mGIFStruct . height )  97
+return -- mGIFStruct . rows_remaining ; 100
+------------------------------
+51 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'borderSizes'] 159
+void
+CVE_2013_0777_PATCHED_nsCSSRendering::PaintBoxShadowOuter(nsPresContext* aPresContext,
+nsRenderingContext& aRenderingContext,
+nsIFrame* aForFrame,
+const nsRect& aFrameArea,
+const nsRect& aDirtyRect) 6
+const nsStyleBorder * styleBorder = aForFrame -> GetStyleBorder ( ) ; 8
+nsCSSShadowArray * shadows = styleBorder -> mBoxShadow ; 9
+if ( ! shadows )  10
+nscoord twipsPerPixel = aPresContext -> DevPixelsToAppUnits ( 1 ) ; 12
+bool hasBorderRadius ; 14
+bool nativeTheme ; 15
+const nsStyleDisplay * styleDisplay = aForFrame -> GetStyleDisplay ( ) ; 19
+nsITheme :: Transparency transparency ; 20
+if ( aForFrame -> IsThemed ( styleDisplay , & transparency ) )  21
+hasBorderRadius = false; 23
+nativeTheme = transparency != nsITheme :: eOpaque; 26
+nativeTheme = false; 28
+nscoord twipsRadii [ 8 ] ; 29
+hasBorderRadius = aForFrame -> GetBorderRadii ( twipsRadii ); 31
+nsRect frameRect = nativeTheme ? aForFrame -> GetVisualOverflowRectRelativeToSelf ( ) + aFrameArea . TopLeft ( ) : aFrameArea ; 37
+bool useSkipGfxRect = true ; 45
+if ( nativeTheme )  46
+useSkipGfxRect = ! aForFrame -> IsLeaf ( ); 52
+nsRect paddingRect = aForFrame -> GetPaddingRect ( ) - aForFrame -> GetPosition ( ) + aFrameArea . TopLeft ( ) ; 53
+skipGfxRect = nsLayoutUtils :: RectToGfxRect ( paddingRect , twipsPerPixel ); 55
+for (uint32_t i = shadows->Length(); i > 0; --i) 62
+nsCSSShadowItem * shadowItem = shadows -> ShadowAt ( i - 1 ) ; 63
+if ( shadowItem -> mInset )  64
+nsRect shadowRect = frameRect ; 67
+nscoord pixelSpreadRadius ; 69
+if ( nativeTheme )  70
+pixelSpreadRadius = shadowItem -> mSpread; 71
+pixelSpreadRadius = 0; 74
+nscoord blurRadius = shadowItem -> mRadius ; 80
+gfxContext * renderContext = aRenderingContext . ThebesContext ( ) ; 91
+nsContextBoxBlur blurringArea ; 92
+gfxContext * shadowContext = blurringArea . Init ( shadowRect , pixelSpreadRadius , blurRadius , twipsPerPixel , renderContext , aDirtyRect , useSkipGfxRect ? & skipGfxRect : nullptr , nativeTheme ? nsContextBoxBlur :: FORCE_MASK : 0 ) ; 98
+if ( ! shadowContext )  103
+if ( nativeTheme )  125
+if ( hasBorderRadius )  155
+gfxFloat borderSizes [ 4 ] ; 159
+borderSizes [ NS_SIDE_LEFT ] = spreadDistance; 161
+borderSizes [ NS_SIDE_TOP ] = spreadDistance; 162
+borderSizes [ NS_SIDE_RIGHT ] = spreadDistance; 163
+borderSizes [ NS_SIDE_BOTTOM ] = spreadDistance; 164
+nsCSSBorderRenderer :: ComputeOuterRadii ( borderRadii , borderSizes , & clipRectRadii ); 166
+------------------------------
+52 ../data/NVD/CVE_2013_0777_PATCHED_nsCSSRendering__PaintBoxShadowOuter.c [u'twipsRadii'] 29
+void
+CVE_2013_0777_PATCHED_nsCSSRendering::PaintBoxShadowOuter(nsPresContext* aPresContext,
+nsRenderingContext& aRenderingContext,
+nsIFrame* aForFrame,
+const nsRect& aFrameArea,
+const nsRect& aDirtyRect) 6
+const nsStyleBorder * styleBorder = aForFrame -> GetStyleBorder ( ) ; 8
+nsCSSShadowArray * shadows = styleBorder -> mBoxShadow ; 9
+if ( ! shadows )  10
+const nsStyleDisplay * styleDisplay = aForFrame -> GetStyleDisplay ( ) ; 19
+nsITheme :: Transparency transparency ; 20
+if ( aForFrame -> IsThemed ( styleDisplay , & transparency ) )  21
+nscoord twipsRadii [ 8 ] ; 29
+hasBorderRadius = aForFrame -> GetBorderRadii ( twipsRadii ); 31
+if ( hasBorderRadius )  32
+ComputePixelRadii ( twipsRadii , twipsPerPixel , & borderRadii ); 33
+if ( hasBorderRadius )  56
+if ( hasBorderRadius )  145
+if ( hasBorderRadius )  155
+------------------------------
+53 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'borderSizes'] 156
+void
+CVE_2013_0777_VULN_nsCSSRendering::PaintBoxShadowOuter(nsPresContext* aPresContext,
+nsRenderingContext& aRenderingContext,
+nsIFrame* aForFrame,
+const nsRect& aFrameArea,
+const nsRect& aDirtyRect) 6
+const nsStyleBorder * styleBorder = aForFrame -> GetStyleBorder ( ) ; 8
+nsCSSShadowArray * shadows = styleBorder -> mBoxShadow ; 9
+if ( ! shadows )  10
+nscoord twipsPerPixel = aPresContext -> DevPixelsToAppUnits ( 1 ) ; 12
+bool hasBorderRadius ; 14
+bool nativeTheme ; 15
+const nsStyleDisplay * styleDisplay = aForFrame -> GetStyleDisplay ( ) ; 19
+nsITheme :: Transparency transparency ; 20
+if ( aForFrame -> IsThemed ( styleDisplay , & transparency ) )  21
+hasBorderRadius = false; 23
+nativeTheme = transparency != nsITheme :: eOpaque; 26
+nativeTheme = false; 28
+nscoord twipsRadii [ 8 ] ; 29
+hasBorderRadius = aForFrame -> GetBorderRadii ( twipsRadii ); 31
+nsRect frameRect = nativeTheme ? aForFrame -> GetVisualOverflowRectRelativeToSelf ( ) + aFrameArea . TopLeft ( ) : aFrameArea ; 37
+bool useSkipGfxRect = true ; 45
+if ( nativeTheme )  46
+useSkipGfxRect = ! aForFrame -> IsLeaf ( ); 52
+nsRect paddingRect = aForFrame -> GetPaddingRect ( ) - aForFrame -> GetPosition ( ) + aFrameArea . TopLeft ( ) ; 53
+skipGfxRect = nsLayoutUtils :: RectToGfxRect ( paddingRect , twipsPerPixel ); 55
+for (uint32_t i = shadows->Length(); i > 0; --i) 62
+nsCSSShadowItem * shadowItem = shadows -> ShadowAt ( i - 1 ) ; 63
+if ( shadowItem -> mInset )  64
+nsRect shadowRect = frameRect ; 67
+nscoord pixelSpreadRadius ; 69
+if ( nativeTheme )  70
+pixelSpreadRadius = shadowItem -> mSpread; 71
+pixelSpreadRadius = 0; 74
+nscoord blurRadius = shadowItem -> mRadius ; 80
+gfxContext * renderContext = aRenderingContext . ThebesContext ( ) ; 91
+nsRefPtr < gfxContext > shadowContext ; 92
+nsContextBoxBlur blurringArea ; 93
+shadowContext = blurringArea . Init ( shadowRect , pixelSpreadRadius , blurRadius , twipsPerPixel , renderContext , aDirtyRect , useSkipGfxRect ? & skipGfxRect : nullptr , nativeTheme ? nsContextBoxBlur :: FORCE_MASK : 0 ); 99
+if ( ! shadowContext )  104
+if ( nativeTheme )  122
+if ( hasBorderRadius )  152
+gfxFloat borderSizes [ 4 ] ; 156
+borderSizes [ NS_SIDE_LEFT ] = spreadDistance; 158
+borderSizes [ NS_SIDE_TOP ] = spreadDistance; 159
+borderSizes [ NS_SIDE_RIGHT ] = spreadDistance; 160
+borderSizes [ NS_SIDE_BOTTOM ] = spreadDistance; 161
+nsCSSBorderRenderer :: ComputeOuterRadii ( borderRadii , borderSizes , & clipRectRadii ); 163
+------------------------------
+54 ../data/NVD/CVE_2013_0777_VULN_nsCSSRendering__PaintBoxShadowOuter.c [u'twipsRadii'] 29
+void
+CVE_2013_0777_VULN_nsCSSRendering::PaintBoxShadowOuter(nsPresContext* aPresContext,
+nsRenderingContext& aRenderingContext,
+nsIFrame* aForFrame,
+const nsRect& aFrameArea,
+const nsRect& aDirtyRect) 6
+const nsStyleBorder * styleBorder = aForFrame -> GetStyleBorder ( ) ; 8
+nsCSSShadowArray * shadows = styleBorder -> mBoxShadow ; 9
+if ( ! shadows )  10
+const nsStyleDisplay * styleDisplay = aForFrame -> GetStyleDisplay ( ) ; 19
+nsITheme :: Transparency transparency ; 20
+if ( aForFrame -> IsThemed ( styleDisplay , & transparency ) )  21
+nscoord twipsRadii [ 8 ] ; 29
+hasBorderRadius = aForFrame -> GetBorderRadii ( twipsRadii ); 31
+if ( hasBorderRadius )  32
+ComputePixelRadii ( twipsRadii , twipsPerPixel , & borderRadii ); 33
+if ( hasBorderRadius )  56
+if ( hasBorderRadius )  142
+if ( hasBorderRadius )  152
+------------------------------
+55 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c [u'fallbackStr'] 9
+NS_IMETHODIMP
+CVE_2013_0782_PATCHED_nsSaveAsCharset::HandleFallBack(uint32_t character, char **outString, int32_t *bufferLength,
+int32_t *currentPos, int32_t estimatedLength) 3
+char fallbackStr [ 256 ] ; 9
+nsresult rv = DoConversionFallBack ( character , fallbackStr , 256 ) ; 10
+if ( NS_SUCCEEDED ( rv ) )  11
+int32_t tempLen = ( int32_t ) PL_strlen ( fallbackStr ) ; 12
+if ( ( tempLen + estimatedLength ) >= ( * bufferLength - * currentPos ) )  15
+int32_t addLength = tempLen + RESERVE_FALLBACK_BYTES ; 16
+char * temp = ( char * ) PR_Realloc ( * outString , * bufferLength + addLength + 1 ) ; 18
+if ( temp )  19
+* bufferLength += addLength; 21
+* outString = temp; 22
+* outString = nullptr; 24
+* bufferLength = 0; 25
+memcpy ( ( * outString + * currentPos ) , fallbackStr , tempLen ); 29
+* currentPos += tempLen; 30
+return rv ; 32
+------------------------------
+56 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__HandleFallBack.c [u'fallbackStr'] 9
+NS_IMETHODIMP
+CVE_2013_0782_VULN_nsSaveAsCharset::HandleFallBack(uint32_t character, char **outString, int32_t *bufferLength,
+int32_t *currentPos, int32_t estimatedLength) 3
+char fallbackStr [ 256 ] ; 9
+nsresult rv = DoConversionFallBack ( character , fallbackStr , 256 ) ; 10
+if ( NS_SUCCEEDED ( rv ) )  11
+int32_t tempLen = ( int32_t ) PL_strlen ( fallbackStr ) ; 12
+if ( ( tempLen + estimatedLength ) >= ( * bufferLength - * currentPos ) )  15
+char * temp = ( char * ) PR_Realloc ( * outString , * bufferLength + tempLen ) ; 16
+if ( temp )  17
+* bufferLength += tempLen; 19
+* outString = temp; 20
+* outString = nullptr; 22
+* bufferLength = 0; 23
+memcpy ( ( * outString + * currentPos ) , fallbackStr , tempLen ); 27
+* currentPos += tempLen; 28
+return rv ; 30
+------------------------------
+57 ../data/NVD/CVE_2013_0799_PATCHED_IsStatusApplying.c [u'kApplying'] 32
+static BOOL
+CVE_2013_0799_PATCHED_IsStatusApplying(LPCWSTR updateDirPath, BOOL &isApplying) 2
+WCHAR updateStatusFilePath [ MAX_PATH + 1 ] = L '\0' 5
+wcsncpy ( updateStatusFilePath , updateDirPath , MAX_PATH ); 6
+nsAutoHandle statusFile ( CreateFileW ( updateStatusFilePath , GENERIC_READ , FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 12
+if ( INVALID_HANDLE_VALUE == statusFile )  18
+char buf [ 32 ] = { 0 } ; 23
+DWORD read ; 24
+if ( ! ReadFile ( statusFile , buf , sizeof ( buf ) , & read , NULL ) )  25
+const char kApplying [ ] = "applying" ; 32
+isApplying = strncmp ( buf , kApplying , sizeof ( kApplying ) - 1 ) == 0; 33
+------------------------------
+58 ../data/NVD/CVE_2013_0799_PATCHED_IsStatusApplying.c [u'buf'] 23
+static BOOL
+CVE_2013_0799_PATCHED_IsStatusApplying(LPCWSTR updateDirPath, BOOL &isApplying) 2
+WCHAR updateStatusFilePath [ MAX_PATH + 1 ] = L '\0' 5
+wcsncpy ( updateStatusFilePath , updateDirPath , MAX_PATH ); 6
+nsAutoHandle statusFile ( CreateFileW ( updateStatusFilePath , GENERIC_READ , FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 12
+if ( INVALID_HANDLE_VALUE == statusFile )  18
+char buf [ 32 ] = { 0 } ; 23
+if ( ! ReadFile ( statusFile , buf , sizeof ( buf ) , & read , NULL ) )  25
+LOG ( ( "updater.exe returned status: %s" , buf ) ); 30
+isApplying = strncmp ( buf , kApplying , sizeof ( kApplying ) - 1 ) == 0; 33
+------------------------------
+59 ../data/NVD/CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand.c [u'updaterIdentity'] 101
+BOOL
+CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand(DWORD argc, LPWSTR *argv) 2
+if ( argc < 3 )  5
+WCHAR installDir [ MAX_PATH + 1 ] = L '\0' 20
+if ( ! GetInstallationDir ( argc , argv , installDir ) )  21
+BOOL isLocal = FALSE ; 33
+if ( ! IsLocalFile ( argv [ 0 ] , isLocal ) || ! isLocal )  34
+nsAutoHandle noWriteLock ( CreateFileW ( argv [ 0 ] , GENERIC_READ , FILE_SHARE_READ , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 45
+if ( INVALID_HANDLE_VALUE == noWriteLock )  47
+WCHAR installDirUpdater [ MAX_PATH + 1 ] = L '\0' 61
+wcsncpy ( installDirUpdater , installDir , MAX_PATH ); 62
+result = FALSE; 65
+BOOL updaterIsCorrect ; 68
+if ( result && ! VerifySameFiles ( argv [ 0 ] , installDirUpdater , updaterIsCorrect ) )  69
+result = FALSE; 73
+if ( result && ! updaterIsCorrect )  76
+result = FALSE; 78
+if ( result )  81
+HMODULE updaterModule = LoadLibraryEx ( argv [ 0 ] , NULL , LOAD_LIBRARY_AS_DATAFILE ) ; 95
+if ( ! updaterModule )  97
+char updaterIdentity [ 64 ] ; 101
+if ( ! LoadStringA ( updaterModule , IDS_UPDATER_IDENTITY , updaterIdentity , sizeof ( updaterIdentity ) ) )  102
+if ( strcmp ( updaterIdentity , UPDATER_IDENTITY_STRING ) )  109
+------------------------------
+60 ../data/NVD/CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand.c [u'noWriteLock'] 45
+BOOL
+CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand(DWORD argc, LPWSTR *argv) 2
+if ( argc < 3 )  5
+WCHAR installDir [ MAX_PATH + 1 ] = L '\0' 20
+if ( ! GetInstallationDir ( argc , argv , installDir ) )  21
+BOOL isLocal = FALSE ; 33
+if ( ! IsLocalFile ( argv [ 0 ] , isLocal ) || ! isLocal )  34
+nsAutoHandle noWriteLock ( CreateFileW ( argv [ 0 ] , GENERIC_READ , FILE_SHARE_READ , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 45
+if ( INVALID_HANDLE_VALUE == noWriteLock )  47
+------------------------------
+61 ../data/NVD/CVE_2013_0799_VULN_IsStatusApplying.c [u'kApplying'] 32
+static BOOL
+CVE_2013_0799_VULN_IsStatusApplying(LPCWSTR updateDirPath, BOOL &isApplying) 2
+WCHAR updateStatusFilePath [ MAX_PATH + 1 ] ; 5
+wcscpy ( updateStatusFilePath , updateDirPath ); 6
+nsAutoHandle statusFile ( CreateFileW ( updateStatusFilePath , GENERIC_READ , FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 12
+if ( INVALID_HANDLE_VALUE == statusFile )  18
+char buf [ 32 ] = { 0 } ; 23
+DWORD read ; 24
+if ( ! ReadFile ( statusFile , buf , sizeof ( buf ) , & read , NULL ) )  25
+const char kApplying [ ] = "applying" ; 32
+isApplying = strncmp ( buf , kApplying , sizeof ( kApplying ) - 1 ) == 0; 33
+------------------------------
+62 ../data/NVD/CVE_2013_0799_VULN_IsStatusApplying.c [u'buf'] 23
+static BOOL
+CVE_2013_0799_VULN_IsStatusApplying(LPCWSTR updateDirPath, BOOL &isApplying) 2
+WCHAR updateStatusFilePath [ MAX_PATH + 1 ] ; 5
+wcscpy ( updateStatusFilePath , updateDirPath ); 6
+nsAutoHandle statusFile ( CreateFileW ( updateStatusFilePath , GENERIC_READ , FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 12
+if ( INVALID_HANDLE_VALUE == statusFile )  18
+char buf [ 32 ] = { 0 } ; 23
+if ( ! ReadFile ( statusFile , buf , sizeof ( buf ) , & read , NULL ) )  25
+LOG ( ( "updater.exe returned status: %s" , buf ) ); 30
+isApplying = strncmp ( buf , kApplying , sizeof ( kApplying ) - 1 ) == 0; 33
+------------------------------
+63 ../data/NVD/CVE_2013_0799_VULN_IsStatusApplying.c [u'updateStatusFilePath'] 5
+static BOOL
+CVE_2013_0799_VULN_IsStatusApplying(LPCWSTR updateDirPath, BOOL &isApplying) 2
+WCHAR updateStatusFilePath [ MAX_PATH + 1 ] ; 5
+wcscpy ( updateStatusFilePath , updateDirPath ); 6
+if ( ! PathAppendSafe ( updateStatusFilePath , L "update.status" ) ) 7
+nsAutoHandle statusFile ( CreateFileW ( updateStatusFilePath , GENERIC_READ , FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 12
+if ( INVALID_HANDLE_VALUE == statusFile )  18
+if ( ! ReadFile ( statusFile , buf , sizeof ( buf ) , & read , NULL ) )  25
+------------------------------
+64 ../data/NVD/CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand.c [u'updaterIdentity'] 101
+BOOL
+CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand(DWORD argc, LPWSTR *argv) 2
+if ( argc < 3 )  5
+WCHAR installDir [ MAX_PATH ] = L '\0' 20
+if ( ! GetInstallationDir ( argc , argv , installDir ) )  21
+BOOL isLocal = FALSE ; 33
+if ( ! IsLocalFile ( argv [ 0 ] , isLocal ) || ! isLocal )  34
+nsAutoHandle noWriteLock ( CreateFileW ( argv [ 0 ] , GENERIC_READ , FILE_SHARE_READ , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 45
+if ( INVALID_HANDLE_VALUE == noWriteLock )  47
+WCHAR installDirUpdater [ MAX_PATH + 1 ] = L '\0' 61
+wcsncpy ( installDirUpdater , installDir , MAX_PATH ); 62
+result = FALSE; 65
+BOOL updaterIsCorrect ; 68
+if ( result && ! VerifySameFiles ( argv [ 0 ] , installDirUpdater , updaterIsCorrect ) )  69
+result = FALSE; 73
+if ( result && ! updaterIsCorrect )  76
+result = FALSE; 78
+if ( result )  81
+HMODULE updaterModule = LoadLibraryEx ( argv [ 0 ] , NULL , LOAD_LIBRARY_AS_DATAFILE ) ; 95
+if ( ! updaterModule )  97
+char updaterIdentity [ 64 ] ; 101
+if ( ! LoadStringA ( updaterModule , IDS_UPDATER_IDENTITY , updaterIdentity , sizeof ( updaterIdentity ) ) )  102
+if ( strcmp ( updaterIdentity , UPDATER_IDENTITY_STRING ) )  109
+------------------------------
+65 ../data/NVD/CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand.c [u'noWriteLock'] 45
+BOOL
+CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand(DWORD argc, LPWSTR *argv) 2
+if ( argc < 3 )  5
+WCHAR installDir [ MAX_PATH ] = L '\0' 20
+if ( ! GetInstallationDir ( argc , argv , installDir ) )  21
+BOOL isLocal = FALSE ; 33
+if ( ! IsLocalFile ( argv [ 0 ] , isLocal ) || ! isLocal )  34
+nsAutoHandle noWriteLock ( CreateFileW ( argv [ 0 ] , GENERIC_READ , FILE_SHARE_READ , NULL , OPEN_EXISTING , 0 , NULL ) ) ; 45
+if ( INVALID_HANDLE_VALUE == noWriteLock )  47
+------------------------------
+66 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'offsets'] 450
+static int CVE_2013_0844_PATCHED_adpcm_decode_frame(AVCodecContext *avctx, void *data,
+int *got_frame_ptr, AVPacket *avpkt) 2
+int buf_size = avpkt -> size ; 5
+ADPCMDecodeContext * c = avctx -> priv_data ; 6
+int nb_samples , coded_samples , ret ; 12
+nb_samples = get_nb_samples ( avctx , & gb , buf_size , & coded_samples ); 16
+if ( nb_samples <= 0 )  17
+c -> frame . nb_samples = nb_samples; 23
+if ( ( ret = avctx -> get_buffer ( avctx , & c -> frame ) ) < 0 )  24
+switch ( avctx -> codec -> id )  40
+int offsets [ 6 ] ; 450
+offsets [ channel ] = ( big_endian ? bytestream2_get_be32 ( & gb ) : bytestream2_get_le32 ( & gb ) ) + ( avctx -> channels + 1 ) * 4; 453
+for (channel=0; channel<avctx->channels; channel++) 457
+bytestream2_seek ( & gb , offsets [ channel ] , SEEK_SET ); 458
+samplesC = samples + channel; 459
+current_sample = c -> status [ channel ] . predictor; 465
+previous_sample = c -> status [ channel ] . prev_sample; 466
+* samplesC = sign_extend ( bytestream2_get_be16 ( & gb ) , 16 ); 476
+samplesC += avctx -> channels; 477
+next_sample += ( current_sample * coeff1 ) + ( previous_sample * coeff2 ); 492
+next_sample = av_clip_int16 ( next_sample >> 8 ); 494
+previous_sample = current_sample; 496
+current_sample = next_sample; 497
+* samplesC = current_sample; 498
+samplesC += avctx -> channels; 499
+c -> status [ channel ] . predictor = current_sample; 511
+c -> status [ channel ] . prev_sample = previous_sample; 512
+c -> frame . nb_samples = count * 28; 516
+for (channel=0; channel<avctx->channels; channel++) 521
+short * s2 , * s = & samples [ channel ] ; 523
+for (n=0; n<4; n++, s+=32*avctx->channels) 524
+coeff [ i ] [ n ] = ea_adpcm_table [ ( val & 0x0F ) + 4 * i ]; 527
+s [ 0 ] = val & ~0x0F; 528
+shift [ n ] = 20 - ( val & 0x0F ); 531
+s [ avctx -> channels ] = val & ~0x0F; 532
+s = & samples [ m * avctx -> channels + channel ]; 536
+for (n=0; n<4; n++, s+=32*avctx->channels) 537
+for (s2=s, i=0; i<8; i+=4, s2+=avctx->channels) 539
+int level = sign_extend ( byte >> ( 4 - i ) , 4 ) << shift [ n ] ; 540
+int pred = s2 [ - 1 * avctx -> channels ] * coeff [ 0 ] [ n ] + s2 [ - 2 * avctx -> channels ] * coeff [ 1 ] [ n ] ; 541
+s2 [ 0 ] = av_clip_int16 ( ( level + pred + 0x80 ) >> 8 ); 543
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  551
+c -> status [ 0 ] . predictor = sign_extend ( bytestream2_get_le16u ( & gb ) , 16 ); 552
+c -> status [ 0 ] . step_index = bytestream2_get_le16u ( & gb ); 553
+if ( c -> status [ 0 ] . step_index > 88u )  560
+av_log ( avctx , AV_LOG_ERROR , "ERROR: step_index = %i\n" , c -> status [ 0 ] . step_index ); 561
+for (n = nb_samples >> (1 - st); n > 0; n--) 566
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  569
+for (n = nb_samples >> (1 - st); n > 0; n--) 582
+if ( ! c -> status [ 0 ] . step_index )  591
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_4 )  599
+for (n = nb_samples >> (1 - st); n > 0; n--) 600
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_3 )  607
+adpcm_swf_decode ( avctx , buf , buf_size , samples ); 632
+for (i = 0; i < 2; i++) 648
+table [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 650
+for (i = 0; i < 2; i++) 653
+for (n = 0; n < 2; n++) 654
+prev [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 655
+samples = ( short * ) c -> frame . data [ 0 ] + ch; 658
+for (i = 0; i < nb_samples / 14; i++) 661
+int factor1 = table [ ch ] [ index * 2 ] ; 665
+int factor2 = table [ ch ] [ index * 2 + 1 ] ; 666
+for (n = 0; n < 14; n++) 669
+if ( n & 1 )  672
+sampledat = ( ( prev [ ch ] [ 0 ] * factor1 + prev [ ch ] [ 1 ] * factor2 ) >> 11 ) + ( sampledat << exp ); 679
+* samples = av_clip_int16 ( sampledat ); 681
+prev [ ch ] [ 1 ] = prev [ ch ] [ 0 ]; 682
+prev [ ch ] [ 0 ] = * samples ++; 683
+samples += st; 687
+* ( AVFrame * ) data = c -> frame; 699
+------------------------------
+67 ../data/NVD/CVE_2013_0844_PATCHED_adpcm_decode_frame.c [u'byte'] 417
+static int CVE_2013_0844_PATCHED_adpcm_decode_frame(AVCodecContext *avctx, void *data,
+int *got_frame_ptr, AVPacket *avpkt) 2
+int buf_size = avpkt -> size ; 5
+ADPCMDecodeContext * c = avctx -> priv_data ; 6
+int count1 , count2 ; 11
+int nb_samples , coded_samples , ret ; 12
+nb_samples = get_nb_samples ( avctx , & gb , buf_size , & coded_samples ); 16
+if ( nb_samples <= 0 )  17
+c -> frame . nb_samples = nb_samples; 23
+if ( ( ret = avctx -> get_buffer ( avctx , & c -> frame ) ) < 0 )  24
+if ( coded_samples )  32
+c -> frame . nb_samples = nb_samples = coded_samples; 35
+switch ( avctx -> codec -> id )  40
+if ( avctx -> channels != 2 )  362
+for (count1 = 0; count1 < nb_samples / 28; count1++) 370
+for (count1 = 0; count1 < nb_samples / 2; count1++) 416
+int byte [ 2 ] ; 417
+byte [ 0 ] = bytestream2_get_byteu ( & gb ); 419
+byte [ 1 ] = bytestream2_get_byteu ( & gb ); 420
+int sample = sign_extend ( byte [ channel ] >> i , 4 ) << shift [ channel ] ; 423
+sample = ( sample + c -> status [ channel ] . sample1 * coeff [ channel ] [ 0 ] + c -> status [ channel ] . sample2 * coeff [ channel ] [ 1 ] + 0x80 ) >> 8; 424
+c -> status [ channel ] . sample2 = c -> status [ channel ] . sample1; 427
+c -> status [ channel ] . sample1 = av_clip_int16 ( sample ); 428
+* samples ++ = c -> status [ channel ] . sample1; 429
+for (channel=0; channel<avctx->channels; channel++) 452
+offsets [ channel ] = ( big_endian ? bytestream2_get_be32 ( & gb ) : bytestream2_get_le32 ( & gb ) ) + ( avctx -> channels + 1 ) * 4; 453
+for (channel=0; channel<avctx->channels; channel++) 457
+bytestream2_seek ( & gb , offsets [ channel ] , SEEK_SET ); 458
+samplesC = samples + channel; 459
+current_sample = c -> status [ channel ] . predictor; 465
+previous_sample = c -> status [ channel ] . prev_sample; 466
+if ( byte == 0xEE )  471
+* samplesC = sign_extend ( bytestream2_get_be16 ( & gb ) , 16 ); 476
+samplesC += avctx -> channels; 477
+coeff1 = ea_adpcm_table [ byte >> 4 ]; 480
+coeff2 = ea_adpcm_table [ ( byte >> 4 ) + 4 ]; 481
+shift = 20 - ( byte & 0x0F ); 482
+next_sample = sign_extend ( byte , 4 ) << shift; 486
+byte = bytestream2_get_byte ( & gb ); 488
+next_sample = sign_extend ( byte >> 4 , 4 ) << shift; 489
+next_sample += ( current_sample * coeff1 ) + ( previous_sample * coeff2 ); 492
+next_sample = av_clip_int16 ( next_sample >> 8 ); 494
+previous_sample = current_sample; 496
+current_sample = next_sample; 497
+* samplesC = current_sample; 498
+samplesC += avctx -> channels; 499
+c -> status [ channel ] . predictor = current_sample; 511
+c -> status [ channel ] . prev_sample = previous_sample; 512
+c -> frame . nb_samples = count * 28; 516
+for (channel=0; channel<avctx->channels; channel++) 521
+int coeff [ 2 ] [ 4 ] , shift [ 4 ] 522
+short * s2 , * s = & samples [ channel ] ; 523
+for (n=0; n<4; n++, s+=32*avctx->channels) 524
+coeff [ i ] [ n ] = ea_adpcm_table [ ( val & 0x0F ) + 4 * i ]; 527
+s [ 0 ] = val & ~0x0F; 528
+shift [ n ] = 20 - ( val & 0x0F ); 531
+s [ avctx -> channels ] = val & ~0x0F; 532
+s = & samples [ m * avctx -> channels + channel ]; 536
+for (n=0; n<4; n++, s+=32*avctx->channels) 537
+for (s2=s, i=0; i<8; i+=4, s2+=avctx->channels) 539
+int level = sign_extend ( byte >> ( 4 - i ) , 4 ) << shift [ n ] ; 540
+int pred = s2 [ - 1 * avctx -> channels ] * coeff [ 0 ] [ n ] + s2 [ - 2 * avctx -> channels ] * coeff [ 1 ] [ n ] ; 541
+s2 [ 0 ] = av_clip_int16 ( ( level + pred + 0x80 ) >> 8 ); 543
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  551
+c -> status [ 0 ] . predictor = sign_extend ( bytestream2_get_le16u ( & gb ) , 16 ); 552
+c -> status [ 0 ] . step_index = bytestream2_get_le16u ( & gb ); 553
+if ( c -> status [ 0 ] . step_index > 88u )  560
+av_log ( avctx , AV_LOG_ERROR , "ERROR: step_index = %i\n" , c -> status [ 0 ] . step_index ); 561
+for (n = nb_samples >> (1 - st); n > 0; n--) 566
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  569
+* samples ++ = adpcm_ima_expand_nibble ( & c -> status [ 0 ] , lo , 3 ); 577
+* samples ++ = adpcm_ima_expand_nibble ( & c -> status [ 0 ] , hi , 3 ); 578
+for (n = nb_samples >> (1 - st); n > 0; n--) 582
+* samples ++ = adpcm_ct_expand_nibble ( & c -> status [ 0 ] , v >> 4 ); 584
+* samples ++ = adpcm_ct_expand_nibble ( & c -> status [ st ] , v & 0x0F ); 585
+if ( ! c -> status [ 0 ] . step_index )  591
+* samples ++ = 128 * ( bytestream2_get_byteu ( & gb ) - 0x80 ); 593
+* samples ++ = 128 * ( bytestream2_get_byteu ( & gb ) - 0x80 ); 595
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_4 )  599
+for (n = nb_samples >> (1 - st); n > 0; n--) 600
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte >> 4 , 4 , 0 ); 602
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ st ] , byte & 0x0F , 4 , 0 ); 604
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_3 )  607
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte >> 5 , 3 , 0 ); 610
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , ( byte >> 2 ) & 0x07 , 3 , 0 ); 612
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte & 0x03 , 2 , 0 ); 614
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte >> 6 , 2 , 2 ); 620
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ st ] , ( byte >> 4 ) & 0x03 , 2 , 2 ); 622
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , ( byte >> 2 ) & 0x03 , 2 , 2 ); 624
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ st ] , byte & 0x03 , 2 , 2 ); 626
+adpcm_swf_decode ( avctx , buf , buf_size , samples ); 632
+* samples ++ = adpcm_yamaha_expand_nibble ( & c -> status [ 0 ] , v & 0x0F ); 638
+* samples ++ = adpcm_yamaha_expand_nibble ( & c -> status [ st ] , v >> 4 ); 639
+for (i = 0; i < 2; i++) 648
+table [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 650
+for (i = 0; i < 2; i++) 653
+for (n = 0; n < 2; n++) 654
+prev [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 655
+samples = ( short * ) c -> frame . data [ 0 ] + ch; 658
+for (i = 0; i < nb_samples / 14; i++) 661
+int index = ( byte >> 4 ) & 7 ; 663
+unsigned int exp = byte & 0x0F ; 664
+int factor1 = table [ ch ] [ index * 2 ] ; 665
+int factor2 = table [ ch ] [ index * 2 + 1 ] ; 666
+for (n = 0; n < 14; n++) 669
+if ( n & 1 )  672
+sampledat = sign_extend ( byte , 4 ); 673
+byte = bytestream2_get_byteu ( & gb ); 675
+sampledat = sign_extend ( byte >> 4 , 4 ); 676
+sampledat = ( ( prev [ ch ] [ 0 ] * factor1 + prev [ ch ] [ 1 ] * factor2 ) >> 11 ) + ( sampledat << exp ); 679
+* samples = av_clip_int16 ( sampledat ); 681
+prev [ ch ] [ 1 ] = prev [ ch ] [ 0 ]; 682
+prev [ ch ] [ 0 ] = * samples ++; 683
+samples += st; 687
+* ( AVFrame * ) data = c -> frame; 699
+------------------------------
+68 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'offsets'] 450
+static int CVE_2013_0844_VULN_adpcm_decode_frame(AVCodecContext *avctx, void *data,
+int *got_frame_ptr, AVPacket *avpkt) 2
+int buf_size = avpkt -> size ; 5
+ADPCMDecodeContext * c = avctx -> priv_data ; 6
+int nb_samples , coded_samples , ret ; 12
+nb_samples = get_nb_samples ( avctx , & gb , buf_size , & coded_samples ); 16
+if ( nb_samples <= 0 )  17
+c -> frame . nb_samples = nb_samples; 23
+if ( ( ret = avctx -> get_buffer ( avctx , & c -> frame ) ) < 0 )  24
+switch ( avctx -> codec -> id )  40
+int offsets [ 6 ] ; 450
+offsets [ channel ] = ( big_endian ? bytestream2_get_be32 ( & gb ) : bytestream2_get_le32 ( & gb ) ) + ( avctx -> channels + 1 ) * 4; 453
+for (channel=0; channel<avctx->channels; channel++) 457
+bytestream2_seek ( & gb , offsets [ channel ] , SEEK_SET ); 458
+samplesC = samples + channel; 459
+current_sample = c -> status [ channel ] . predictor; 465
+previous_sample = c -> status [ channel ] . prev_sample; 466
+* samplesC = sign_extend ( bytestream2_get_be16 ( & gb ) , 16 ); 476
+samplesC += avctx -> channels; 477
+next_sample += ( current_sample * coeff1 ) + ( previous_sample * coeff2 ); 492
+next_sample = av_clip_int16 ( next_sample >> 8 ); 494
+previous_sample = current_sample; 496
+current_sample = next_sample; 497
+* samplesC = current_sample; 498
+samplesC += avctx -> channels; 499
+c -> status [ channel ] . predictor = current_sample; 511
+c -> status [ channel ] . prev_sample = previous_sample; 512
+c -> frame . nb_samples = count * 28; 516
+for (channel=0; channel<avctx->channels; channel++) 521
+short * s2 , * s = & samples [ channel ] ; 523
+for (n=0; n<4; n++, s+=32*avctx->channels) 524
+coeff [ i ] [ n ] = ea_adpcm_table [ ( val & 0x0F ) + 4 * i ]; 527
+s [ 0 ] = val & ~0x0F; 528
+shift [ n ] = 20 - ( val & 0x0F ); 531
+s [ avctx -> channels ] = val & ~0x0F; 532
+s = & samples [ m * avctx -> channels + channel ]; 536
+for (n=0; n<4; n++, s+=32*avctx->channels) 537
+for (s2=s, i=0; i<8; i+=4, s2+=avctx->channels) 539
+int level = sign_extend ( byte >> ( 4 - i ) , 4 ) << shift [ n ] ; 540
+int pred = s2 [ - 1 * avctx -> channels ] * coeff [ 0 ] [ n ] + s2 [ - 2 * avctx -> channels ] * coeff [ 1 ] [ n ] ; 541
+s2 [ 0 ] = av_clip_int16 ( ( level + pred + 0x80 ) >> 8 ); 543
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  551
+c -> status [ 0 ] . predictor = sign_extend ( bytestream2_get_le16u ( & gb ) , 16 ); 552
+c -> status [ 0 ] . step_index = bytestream2_get_le16u ( & gb ); 553
+if ( c -> status [ 0 ] . step_index > 88u )  560
+av_log ( avctx , AV_LOG_ERROR , "ERROR: step_index = %i\n" , c -> status [ 0 ] . step_index ); 561
+for (n = nb_samples >> (1 - st); n > 0; n--) 566
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  569
+for (n = nb_samples >> (1 - st); n > 0; n--) 582
+if ( ! c -> status [ 0 ] . step_index )  591
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_4 )  599
+for (n = nb_samples >> (1 - st); n > 0; n--) 600
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_3 )  607
+adpcm_swf_decode ( avctx , buf , buf_size , samples ); 632
+for (i = 0; i < 2; i++) 648
+table [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 650
+for (i = 0; i < 2; i++) 653
+for (n = 0; n < 2; n++) 654
+prev [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 655
+samples = ( short * ) c -> frame . data [ 0 ] + ch; 658
+for (i = 0; i < nb_samples / 14; i++) 661
+int factor1 = table [ ch ] [ index * 2 ] ; 665
+int factor2 = table [ ch ] [ index * 2 + 1 ] ; 666
+for (n = 0; n < 14; n++) 669
+if ( n & 1 )  672
+sampledat = ( ( prev [ ch ] [ 0 ] * factor1 + prev [ ch ] [ 1 ] * factor2 ) >> 11 ) + ( sampledat << exp ); 679
+* samples = av_clip_int16 ( sampledat ); 681
+prev [ ch ] [ 1 ] = prev [ ch ] [ 0 ]; 682
+prev [ ch ] [ 0 ] = * samples ++; 683
+samples += st; 687
+* ( AVFrame * ) data = c -> frame; 699
+------------------------------
+69 ../data/NVD/CVE_2013_0844_VULN_adpcm_decode_frame.c [u'byte'] 417
+static int CVE_2013_0844_VULN_adpcm_decode_frame(AVCodecContext *avctx, void *data,
+int *got_frame_ptr, AVPacket *avpkt) 2
+int buf_size = avpkt -> size ; 5
+ADPCMDecodeContext * c = avctx -> priv_data ; 6
+int count1 , count2 ; 11
+int nb_samples , coded_samples , ret ; 12
+nb_samples = get_nb_samples ( avctx , & gb , buf_size , & coded_samples ); 16
+if ( nb_samples <= 0 )  17
+c -> frame . nb_samples = nb_samples; 23
+if ( ( ret = avctx -> get_buffer ( avctx , & c -> frame ) ) < 0 )  24
+if ( coded_samples )  32
+c -> frame . nb_samples = nb_samples = coded_samples; 35
+switch ( avctx -> codec -> id )  40
+if ( avctx -> channels != 2 )  362
+for (count1 = 0; count1 < nb_samples / 28; count1++) 370
+for (count1 = 0; count1 < nb_samples / 2; count1++) 416
+int byte [ 2 ] ; 417
+byte [ 0 ] = bytestream2_get_byteu ( & gb ); 419
+byte [ 1 ] = bytestream2_get_byteu ( & gb ); 420
+int sample = sign_extend ( byte [ channel ] >> i , 4 ) << shift [ channel ] ; 423
+sample = ( sample + c -> status [ channel ] . sample1 * coeff [ channel ] [ 0 ] + c -> status [ channel ] . sample2 * coeff [ channel ] [ 1 ] + 0x80 ) >> 8; 424
+c -> status [ channel ] . sample2 = c -> status [ channel ] . sample1; 427
+c -> status [ channel ] . sample1 = av_clip_int16 ( sample ); 428
+* samples ++ = c -> status [ channel ] . sample1; 429
+for (channel=0; channel<avctx->channels; channel++) 452
+offsets [ channel ] = ( big_endian ? bytestream2_get_be32 ( & gb ) : bytestream2_get_le32 ( & gb ) ) + ( avctx -> channels + 1 ) * 4; 453
+for (channel=0; channel<avctx->channels; channel++) 457
+bytestream2_seek ( & gb , offsets [ channel ] , SEEK_SET ); 458
+samplesC = samples + channel; 459
+current_sample = c -> status [ channel ] . predictor; 465
+previous_sample = c -> status [ channel ] . prev_sample; 466
+if ( byte == 0xEE )  471
+* samplesC = sign_extend ( bytestream2_get_be16 ( & gb ) , 16 ); 476
+samplesC += avctx -> channels; 477
+coeff1 = ea_adpcm_table [ byte >> 4 ]; 480
+coeff2 = ea_adpcm_table [ ( byte >> 4 ) + 4 ]; 481
+shift = 20 - ( byte & 0x0F ); 482
+next_sample = sign_extend ( byte , 4 ) << shift; 486
+byte = bytestream2_get_byte ( & gb ); 488
+next_sample = sign_extend ( byte >> 4 , 4 ) << shift; 489
+next_sample += ( current_sample * coeff1 ) + ( previous_sample * coeff2 ); 492
+next_sample = av_clip_int16 ( next_sample >> 8 ); 494
+previous_sample = current_sample; 496
+current_sample = next_sample; 497
+* samplesC = current_sample; 498
+samplesC += avctx -> channels; 499
+c -> status [ channel ] . predictor = current_sample; 511
+c -> status [ channel ] . prev_sample = previous_sample; 512
+c -> frame . nb_samples = count * 28; 516
+for (channel=0; channel<avctx->channels; channel++) 521
+int coeff [ 2 ] [ 4 ] , shift [ 4 ] 522
+short * s2 , * s = & samples [ channel ] ; 523
+for (n=0; n<4; n++, s+=32*avctx->channels) 524
+coeff [ i ] [ n ] = ea_adpcm_table [ ( val & 0x0F ) + 4 * i ]; 527
+s [ 0 ] = val & ~0x0F; 528
+shift [ n ] = 20 - ( val & 0x0F ); 531
+s [ avctx -> channels ] = val & ~0x0F; 532
+s = & samples [ m * avctx -> channels + channel ]; 536
+for (n=0; n<4; n++, s+=32*avctx->channels) 537
+for (s2=s, i=0; i<8; i+=4, s2+=avctx->channels) 539
+int level = sign_extend ( byte >> ( 4 - i ) , 4 ) << shift [ n ] ; 540
+int pred = s2 [ - 1 * avctx -> channels ] * coeff [ 0 ] [ n ] + s2 [ - 2 * avctx -> channels ] * coeff [ 1 ] [ n ] ; 541
+s2 [ 0 ] = av_clip_int16 ( ( level + pred + 0x80 ) >> 8 ); 543
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  551
+c -> status [ 0 ] . predictor = sign_extend ( bytestream2_get_le16u ( & gb ) , 16 ); 552
+c -> status [ 0 ] . step_index = bytestream2_get_le16u ( & gb ); 553
+if ( c -> status [ 0 ] . step_index > 88u )  560
+av_log ( avctx , AV_LOG_ERROR , "ERROR: step_index = %i\n" , c -> status [ 0 ] . step_index ); 561
+for (n = nb_samples >> (1 - st); n > 0; n--) 566
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_IMA_AMV )  569
+* samples ++ = adpcm_ima_expand_nibble ( & c -> status [ 0 ] , lo , 3 ); 577
+* samples ++ = adpcm_ima_expand_nibble ( & c -> status [ 0 ] , hi , 3 ); 578
+for (n = nb_samples >> (1 - st); n > 0; n--) 582
+* samples ++ = adpcm_ct_expand_nibble ( & c -> status [ 0 ] , v >> 4 ); 584
+* samples ++ = adpcm_ct_expand_nibble ( & c -> status [ st ] , v & 0x0F ); 585
+if ( ! c -> status [ 0 ] . step_index )  591
+* samples ++ = 128 * ( bytestream2_get_byteu ( & gb ) - 0x80 ); 593
+* samples ++ = 128 * ( bytestream2_get_byteu ( & gb ) - 0x80 ); 595
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_4 )  599
+for (n = nb_samples >> (1 - st); n > 0; n--) 600
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte >> 4 , 4 , 0 ); 602
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ st ] , byte & 0x0F , 4 , 0 ); 604
+if ( avctx -> codec -> id == AV_CODEC_ID_ADPCM_SBPRO_3 )  607
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte >> 5 , 3 , 0 ); 610
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , ( byte >> 2 ) & 0x07 , 3 , 0 ); 612
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte & 0x03 , 2 , 0 ); 614
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , byte >> 6 , 2 , 2 ); 620
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ st ] , ( byte >> 4 ) & 0x03 , 2 , 2 ); 622
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ 0 ] , ( byte >> 2 ) & 0x03 , 2 , 2 ); 624
+* samples ++ = adpcm_sbpro_expand_nibble ( & c -> status [ st ] , byte & 0x03 , 2 , 2 ); 626
+adpcm_swf_decode ( avctx , buf , buf_size , samples ); 632
+* samples ++ = adpcm_yamaha_expand_nibble ( & c -> status [ 0 ] , v & 0x0F ); 638
+* samples ++ = adpcm_yamaha_expand_nibble ( & c -> status [ st ] , v >> 4 ); 639
+for (i = 0; i < 2; i++) 648
+table [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 650
+for (i = 0; i < 2; i++) 653
+for (n = 0; n < 2; n++) 654
+prev [ i ] [ n ] = sign_extend ( bytestream2_get_be16u ( & gb ) , 16 ); 655
+samples = ( short * ) c -> frame . data [ 0 ] + ch; 658
+for (i = 0; i < nb_samples / 14; i++) 661
+int index = ( byte >> 4 ) & 7 ; 663
+unsigned int exp = byte & 0x0F ; 664
+int factor1 = table [ ch ] [ index * 2 ] ; 665
+int factor2 = table [ ch ] [ index * 2 + 1 ] ; 666
+for (n = 0; n < 14; n++) 669
+if ( n & 1 )  672
+sampledat = sign_extend ( byte , 4 ); 673
+byte = bytestream2_get_byteu ( & gb ); 675
+sampledat = sign_extend ( byte >> 4 , 4 ); 676
+sampledat = ( ( prev [ ch ] [ 0 ] * factor1 + prev [ ch ] [ 1 ] * factor2 ) >> 11 ) + ( sampledat << exp ); 679
+* samples = av_clip_int16 ( sampledat ); 681
+prev [ ch ] [ 1 ] = prev [ ch ] [ 0 ]; 682
+prev [ ch ] [ 0 ] = * samples ++; 683
+samples += st; 687
+* ( AVFrame * ) data = c -> frame; 699
+------------------------------
+70 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'id_list'] 736
+static int CVE_2013_0850_PATCHED_decode_slice_header(H264Context *h, H264Context *h0) 1
+MpegEncContext * const s = & h -> s
+MpegEncContext * const s0 = & h0 -> s 4
+unsigned int first_mb_in_slice ; 5
+unsigned int pps_id ; 6
+int num_ref_idx_active_override_flag ; 7
+unsigned int slice_type , tmp , i , j ; 8
+int last_pic_structure , last_pic_dropable ; 10
+int must_reinit ; 11
+if ( ( s -> avctx -> flags2 & CODEC_FLAG2_FAST ) && ! h -> nal_ref_idc && ! h -> pixel_shift )  14
+s -> me . qpel_put = s -> dsp . put_h264_qpel_pixels_tab; 19
+s -> me . qpel_avg = s -> dsp . avg_h264_qpel_pixels_tab; 20
+first_mb_in_slice = get_ue_golomb_long ( & s -> gb ); 23
+if ( first_mb_in_slice == 0 )  25
+h0 -> current_slice = 0; 30
+if ( ! s0 -> first_field )  31
+s -> current_picture_ptr = NULL; 37
+slice_type = get_ue_golomb_31 ( & s -> gb ); 41
+if ( slice_type > 9 )  42
+if ( slice_type > 4 )  48
+slice_type -= 5; 49
+h -> slice_type_fixed = 0; 52
+slice_type = golomb_to_pict_type [ slice_type ]; 54
+h -> slice_type = slice_type; 59
+h -> slice_type_nos = slice_type & 3; 60
+s -> pict_type = h -> slice_type; 63
+pps_id = get_ue_golomb ( & s -> gb ); 65
+if ( pps_id >= MAX_PPS_COUNT )  66
+if ( ! h0 -> pps_buffers [ pps_id ] )  70
+h -> pps = * h0 -> pps_buffers [ pps_id ]; 76
+if ( ! h0 -> sps_buffers [ h -> pps . sps_id ] )  78
+h -> sps = * h0 -> sps_buffers [ h -> pps . sps_id ]; 84
+s -> avctx -> profile = ff_h264_get_profile ( & h -> sps ); 86
+s -> avctx -> level = h -> sps . level_idc; 87
+s -> avctx -> refs = h -> sps . ref_frame_count; 88
+must_reinit = ( s -> context_initialized && ( 16 * h -> sps . mb_width != s -> avctx -> coded_width || 16 * h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) != s -> avctx -> coded_height || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc || av_cmp_q ( h -> sps . sar , s -> avctx -> sample_aspect_ratio ) ) ); 90
+if ( must_reinit && ( h != h0 || ( s -> avctx -> active_thread_type & FF_THREAD_FRAME ) ) )  97
+s -> mb_width = h -> sps . mb_width; 103
+s -> mb_height = h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ); 104
+h -> b_stride = s -> mb_width * 4; 106
+s -> chroma_y_shift = h -> sps . chroma_format_idc <= 1; 108
+s -> width = 16 * s -> mb_width; 110
+s -> height = 16 * s -> mb_height; 111
+if ( must_reinit )  113
+h -> list_count = 0; 117
+h -> current_slice = 0; 118
+if ( ! s -> context_initialized )  120
+if ( h != h0 )  121
+if ( FFALIGN ( s -> avctx -> width , 16 ) == s -> width && FFALIGN ( s -> avctx -> height , 16 * ( 2 - h -> sps . frame_mbs_only_flag ) ) == s -> height && ! h -> sps . crop_right && ! h -> sps . crop_bottom && ( s -> avctx -> width != s -> width || s -> avctx -> height && s -> height ) )  126
+s -> avctx -> width -= ( 2 >> CHROMA444 ) * FFMIN ( h -> sps . crop_right , ( 8 << CHROMA444 ) - 1 ); 136
+s -> avctx -> height -= ( 1 << s -> chroma_y_shift ) * FFMIN ( h -> sps . crop_bottom , ( 16 >> s -> chroma_y_shift ) - 1 ) * ( 2 - h -> sps . frame_mbs_only_flag ); 137
+s -> avctx -> sample_aspect_ratio = h -> sps . sar; 139
+if ( s -> avctx -> codec -> capabilities & CODEC_CAP_HWACCEL_VDPAU && ( h -> sps . bit_depth_luma != 8 || h -> sps . chroma_format_idc > 1 ) )  142
+if ( s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc )  151
+if ( h -> sps . bit_depth_luma >= 8 && h -> sps . bit_depth_luma <= 14 && h -> sps . bit_depth_luma != 11 && h -> sps . bit_depth_luma != 13 && ( h -> sps . bit_depth_luma != 9 || ! CHROMA422 ) )  153
+s -> avctx -> bits_per_raw_sample = h -> sps . bit_depth_luma; 155
+h -> cur_chroma_format_idc = h -> sps . chroma_format_idc; 156
+h -> pixel_shift = h -> sps . bit_depth_luma > 8; 157
+s -> dsp . dct_bits = h -> sps . bit_depth_luma > 8 ? 32 : 16; 161
+if ( h -> sps . video_signal_type_present_flag )  170
+s -> avctx -> color_range = h -> sps . full_range > 0 ? AVCOL_RANGE_JPEG : AVCOL_RANGE_MPEG; 171
+if ( h -> sps . colour_description_present_flag )  173
+s -> avctx -> color_primaries = h -> sps . color_primaries; 174
+s -> avctx -> color_trc = h -> sps . color_trc; 175
+s -> avctx -> colorspace = h -> sps . colorspace; 176
+switch ( h -> sps . bit_depth_luma )  188
+if ( CHROMA444 )  190
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  191
+s -> avctx -> pix_fmt = PIX_FMT_GBRP9; 192
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P9; 194
+if ( CHROMA422 )  195
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P9; 196
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P9; 198
+if ( CHROMA444 )  201
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  202
+s -> avctx -> pix_fmt = PIX_FMT_GBRP10; 203
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P10; 205
+if ( CHROMA422 )  206
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P10; 207
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P10; 209
+if ( CHROMA444 )  212
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  213
+s -> avctx -> pix_fmt = PIX_FMT_GBRP12; 214
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P12; 216
+if ( CHROMA422 )  217
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P12; 218
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P12; 220
+if ( CHROMA444 )  223
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  224
+s -> avctx -> pix_fmt = PIX_FMT_GBRP14; 225
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P14; 227
+if ( CHROMA422 )  228
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P14; 229
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P14; 231
+if ( CHROMA444 )  234
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ444P : PIX_FMT_YUV444P; 235
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  237
+s -> avctx -> pix_fmt = PIX_FMT_GBR24P; 238
+if ( CHROMA422 )  243
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ422P : PIX_FMT_YUV422P; 244
+s -> avctx -> pix_fmt = s -> avctx -> get_format ( s -> avctx , s -> avctx -> codec -> pix_fmts ? s -> avctx -> codec -> pix_fmts : s -> avctx -> color_range == AVCOL_RANGE_JPEG ? hwaccel_pixfmt_list_h264_jpeg_420 : ff_hwaccel_pixfmt_list_420 ); 247
+s -> avctx -> hwaccel = ff_find_hwaccel ( s -> avctx -> codec -> id , s -> avctx -> pix_fmt ); 261
+if ( ff_MPV_common_init ( s ) < 0 )  264
+s -> first_field = 0; 268
+h -> prev_interlaced_frame = 1; 269
+if ( ff_h264_alloc_tables ( h ) < 0 )  272
+if ( ! HAVE_THREADS || ! ( s -> avctx -> active_thread_type & FF_THREAD_SLICE ) )  278
+if ( context_init ( h ) < 0 )  279
+for (i = 1; i < s->slice_context_count; i++) 284
+H264Context * c ; 285
+c = h -> thread_context [ i ] = av_malloc ( sizeof ( H264Context ) ); 286
+for (i = 0; i < s->slice_context_count; i++) 298
+if ( context_init ( h -> thread_context [ i ] ) < 0 )  299
+if ( h == h0 && h -> dequant_coeff_pps != pps_id )  307
+h -> dequant_coeff_pps = pps_id; 308
+h -> frame_num = get_bits ( & s -> gb , h -> sps . log2_max_frame_num ); 312
+h -> mb_mbaff = 0; 314
+h -> mb_aff_frame = 0; 315
+last_pic_structure = s0 -> picture_structure; 316
+last_pic_dropable = s -> dropable; 317
+s -> dropable = h -> nal_ref_idc == 0; 318
+if ( h -> sps . frame_mbs_only_flag )  319
+s -> picture_structure = PICT_FRAME; 320
+if ( ! h -> sps . direct_8x8_inference_flag && slice_type == AV_PICTURE_TYPE_B )  322
+if ( get_bits1 ( & s -> gb ) )  326
+s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ); 327
+s -> picture_structure = PICT_FRAME; 329
+h -> mb_aff_frame = h -> sps . mb_aff; 330
+h -> mb_field_decoding_flag = s -> picture_structure != PICT_FRAME; 333
+if ( h0 -> current_slice != 0 )  335
+if ( last_pic_structure != s -> picture_structure || last_pic_dropable != s -> dropable )  336
+if ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 )  348
+int unwrap_prev_frame_num = h -> prev_frame_num ; 349
+int max_frame_num = 1 << h -> sps . log2_max_frame_num ; 350
+if ( unwrap_prev_frame_num > h -> frame_num )  352
+unwrap_prev_frame_num -= max_frame_num; 353
+if ( ( h -> frame_num - unwrap_prev_frame_num ) > h -> sps . ref_frame_count )  355
+unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1; 356
+if ( unwrap_prev_frame_num < 0 )  357
+unwrap_prev_frame_num += max_frame_num; 358
+h -> prev_frame_num = unwrap_prev_frame_num; 360
+if ( s0 -> first_field )  369
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  381
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  389
+if ( ! ( ( last_pic_structure == PICT_TOP_FIELD && s -> picture_structure == PICT_BOTTOM_FIELD ) || ( last_pic_structure == PICT_BOTTOM_FIELD && s -> picture_structure == PICT_TOP_FIELD ) ) )  400
+if ( last_pic_dropable != s -> dropable )  410
+s -> picture_structure = last_pic_structure; 414
+s -> dropable = last_pic_dropable; 415
+s0 -> current_picture_ptr -> owner2 = s0; 425
+while ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 && h -> frame_num != ( h -> prev_frame_num + 1 ) % ( 1 << h -> sps . log2_max_frame_num ) )  430
+Picture * prev = h -> short_ref_count ? h -> short_ref [ 0 ] : NULL ; 432
+if ( ff_h264_frame_start ( h ) < 0 )  435
+h -> prev_frame_num ++; 437
+h -> prev_frame_num %= 1 << h -> sps . log2_max_frame_num; 438
+s -> current_picture_ptr -> frame_num = h -> prev_frame_num; 439
+if ( ff_h264_execute_ref_pic_marking ( h , h -> mmco , h -> mmco_index ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  443
+if ( h -> short_ref_count )  452
+if ( prev )  453
+h -> short_ref [ 0 ] -> poc = prev -> poc + 2; 457
+h -> short_ref [ 0 ] -> frame_num = h -> prev_frame_num; 459
+if ( s0 -> first_field )  466
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  472
+s0 -> current_picture_ptr = NULL; 475
+s0 -> first_field = FIELD_PICTURE; 476
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  478
+s0 -> first_field = 1; 484
+s0 -> current_picture_ptr = NULL; 485
+s0 -> first_field = 0; 488
+s0 -> first_field = FIELD_PICTURE; 493
+if ( ! FIELD_PICTURE || s0 -> first_field )  496
+if ( ff_h264_frame_start ( h ) < 0 )  497
+s -> current_picture_ptr -> frame_num = h -> frame_num; 508
+if ( first_mb_in_slice << FIELD_OR_MBAFF_PICTURE >= s -> mb_num || first_mb_in_slice >= s -> mb_num )  511
+s -> resync_mb_x = s -> mb_x = first_mb_in_slice % s -> mb_width; 516
+s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE; 517
+if ( s -> picture_structure == PICT_BOTTOM_FIELD )  518
+s -> resync_mb_y = s -> mb_y = s -> mb_y + 1; 519
+if ( s -> picture_structure == PICT_FRAME )  522
+h -> curr_pic_num = h -> frame_num; 523
+h -> max_pic_num = 1 << h -> sps . log2_max_frame_num; 524
+h -> curr_pic_num = 2 * h -> frame_num + 1; 526
+h -> max_pic_num = 1 << ( h -> sps . log2_max_frame_num + 1 ); 527
+if ( h -> sps . poc_type == 0 )  533
+h -> poc_lsb = get_bits ( & s -> gb , h -> sps . log2_max_poc_lsb ); 534
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  536
+h -> delta_poc_bottom = get_se_golomb ( & s -> gb ); 537
+if ( h -> sps . poc_type == 1 && ! h -> sps . delta_pic_order_always_zero_flag )  540
+h -> delta_poc [ 0 ] = get_se_golomb ( & s -> gb ); 541
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  543
+h -> delta_poc [ 1 ] = get_se_golomb ( & s -> gb ); 544
+if ( h -> pps . redundant_pic_cnt_present )  549
+h -> redundant_pic_count = get_ue_golomb ( & s -> gb ); 550
+h -> ref_count [ 0 ] = h -> pps . ref_count [ 0 ]; 553
+h -> ref_count [ 1 ] = h -> pps . ref_count [ 1 ]; 554
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  556
+unsigned max [ 2 ] ; 557
+max [ 0 ] = max [ 1 ] = s -> picture_structure == PICT_FRAME ? 15 : 31; 558
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  560
+h -> direct_spatial_mv_pred = get_bits1 ( & s -> gb ); 561
+num_ref_idx_active_override_flag = get_bits1 ( & s -> gb ); 562
+if ( num_ref_idx_active_override_flag )  564
+h -> ref_count [ 0 ] = get_ue_golomb ( & s -> gb ) + 1; 565
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  566
+h -> ref_count [ 1 ] = get_ue_golomb ( & s -> gb ) + 1; 567
+h -> ref_count [ 1 ] = 1; 570
+if ( h -> ref_count [ 0 ] - 1 > max [ 0 ] || h -> ref_count [ 1 ] - 1 > max [ 1 ] )  573
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  579
+h -> list_count = 2; 580
+h -> list_count = 1; 582
+h -> ref_count [ 1 ] = h -> ref_count [ 0 ] = h -> list_count = 0; 584
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I && ff_h264_decode_ref_pic_list_reordering ( h ) < 0 )  589
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  595
+s -> last_picture_ptr = & h -> ref_list [ 0 ] [ 0 ]; 596
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  599
+s -> next_picture_ptr = & h -> ref_list [ 1 ] [ 0 ]; 600
+if ( ( h -> pps . weighted_pred && h -> slice_type_nos == AV_PICTURE_TYPE_P ) || ( h -> pps . weighted_bipred_idc == 1 && h -> slice_type_nos == AV_PICTURE_TYPE_B ) )  604
+if ( h -> pps . weighted_bipred_idc == 2 && h -> slice_type_nos == AV_PICTURE_TYPE_B )  608
+h -> use_weight = 0; 612
+for (i = 0; i < 2; i++) 613
+h -> luma_weight_flag [ i ] = 0; 614
+h -> chroma_weight_flag [ i ] = 0; 615
+if ( h -> nal_ref_idc && ff_h264_decode_ref_pic_marking ( h0 , & s -> gb ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  619
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I && h -> pps . cabac )  636
+tmp = get_ue_golomb_31 ( & s -> gb ); 637
+if ( tmp > 2 )  638
+h -> cabac_init_idc = tmp; 642
+h -> last_qscale_diff = 0; 645
+tmp = h -> pps . init_qp + get_se_golomb ( & s -> gb ); 646
+if ( tmp > 51 + 6 * ( h -> sps . bit_depth_luma - 8 ) )  647
+s -> qscale = tmp; 651
+h -> chroma_qp [ 0 ] = get_chroma_qp ( h , 0 , s -> qscale ); 652
+h -> chroma_qp [ 1 ] = get_chroma_qp ( h , 1 , s -> qscale ); 653
+h -> deblocking_filter = 1; 661
+h -> slice_alpha_c0_offset = 52; 662
+h -> slice_beta_offset = 52; 663
+if ( h -> pps . deblocking_filter_parameters_present )  664
+tmp = get_ue_golomb_31 ( & s -> gb ); 665
+if ( tmp > 2 )  666
+h -> deblocking_filter = tmp; 671
+if ( h -> deblocking_filter < 2 )  672
+h -> deblocking_filter ^= 1; 673
+if ( h -> deblocking_filter )  675
+h -> slice_alpha_c0_offset += get_se_golomb ( & s -> gb ) << 1; 676
+h -> slice_beta_offset += get_se_golomb ( & s -> gb ) << 1; 677
+if ( h -> slice_alpha_c0_offset > 104U || h -> slice_beta_offset > 104U )  678
+if ( s -> avctx -> skip_loop_filter >= AVDISCARD_ALL || ( s -> avctx -> skip_loop_filter >= AVDISCARD_NONKEY && h -> slice_type_nos != AV_PICTURE_TYPE_I ) || ( s -> avctx -> skip_loop_filter >= AVDISCARD_BIDIR && h -> slice_type_nos == AV_PICTURE_TYPE_B ) || ( s -> avctx -> skip_loop_filter >= AVDISCARD_NONREF && h -> nal_ref_idc == 0 ) )  688
+h -> deblocking_filter = 0; 695
+if ( h -> deblocking_filter == 1 && h0 -> max_contexts > 1 )  697
+if ( s -> avctx -> flags2 & CODEC_FLAG2_FAST )  698
+h0 -> max_contexts = 1; 703
+if ( ! h0 -> single_decode_warning )  704
+h0 -> single_decode_warning = 1; 707
+if ( h != h0 )  709
+for (j = 0; j < 2; j++) 735
+int id_list [ 16 ] ; 736
+id_list [ i ] = 60; 739
+if ( h -> ref_list [ j ] [ i ] . f . data [ 0 ] )  740
+uint8_t * base = h -> ref_list [ j ] [ i ] . f . base [ 0 ] ; 742
+if ( h -> short_ref [ k ] -> f . base [ 0 ] == base )  744
+id_list [ i ] = k; 745
+if ( h -> long_ref [ k ] && h -> long_ref [ k ] -> f . base [ 0 ] == base )  749
+id_list [ i ] = h -> short_ref_count + k; 750
+ref2frm [ i + 2 ] = 4 * id_list [ i ] + ( h -> ref_list [ j ] [ i ] . f . reference & 3 ); 759
+ref2frm [ 18 + 0 ] = ref2frm [ 18 + 1 ] = - 1; 761
+for (i = 16; i < 48; i++) 763
+ref2frm [ i + 4 ] = 4 * id_list [ ( i - 16 ) >> 1 ] + ( h -> ref_list [ j ] [ i ] . f . reference & 3 ); 764
+------------------------------
+71 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c [u'max'] 557
+static int CVE_2013_0850_PATCHED_decode_slice_header(H264Context *h, H264Context *h0) 1
+MpegEncContext * const s = & h -> s
+MpegEncContext * const s0 = & h0 -> s 4
+unsigned int first_mb_in_slice ; 5
+unsigned int pps_id ; 6
+unsigned int slice_type , tmp , i , j ; 8
+int last_pic_structure , last_pic_dropable ; 10
+int must_reinit ; 11
+if ( ( s -> avctx -> flags2 & CODEC_FLAG2_FAST ) && ! h -> nal_ref_idc && ! h -> pixel_shift )  14
+s -> me . qpel_put = s -> dsp . put_h264_qpel_pixels_tab; 19
+s -> me . qpel_avg = s -> dsp . avg_h264_qpel_pixels_tab; 20
+first_mb_in_slice = get_ue_golomb_long ( & s -> gb ); 23
+if ( first_mb_in_slice == 0 )  25
+h0 -> current_slice = 0; 30
+if ( ! s0 -> first_field )  31
+s -> current_picture_ptr = NULL; 37
+slice_type = get_ue_golomb_31 ( & s -> gb ); 41
+if ( slice_type > 9 )  42
+if ( slice_type > 4 )  48
+slice_type -= 5; 49
+h -> slice_type_fixed = 0; 52
+slice_type = golomb_to_pict_type [ slice_type ]; 54
+h -> slice_type = slice_type; 59
+h -> slice_type_nos = slice_type & 3; 60
+s -> pict_type = h -> slice_type; 63
+pps_id = get_ue_golomb ( & s -> gb ); 65
+if ( pps_id >= MAX_PPS_COUNT )  66
+if ( ! h0 -> pps_buffers [ pps_id ] )  70
+h -> pps = * h0 -> pps_buffers [ pps_id ]; 76
+if ( ! h0 -> sps_buffers [ h -> pps . sps_id ] )  78
+h -> sps = * h0 -> sps_buffers [ h -> pps . sps_id ]; 84
+s -> avctx -> profile = ff_h264_get_profile ( & h -> sps ); 86
+s -> avctx -> level = h -> sps . level_idc; 87
+s -> avctx -> refs = h -> sps . ref_frame_count; 88
+must_reinit = ( s -> context_initialized && ( 16 * h -> sps . mb_width != s -> avctx -> coded_width || 16 * h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) != s -> avctx -> coded_height || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc || av_cmp_q ( h -> sps . sar , s -> avctx -> sample_aspect_ratio ) ) ); 90
+if ( must_reinit && ( h != h0 || ( s -> avctx -> active_thread_type & FF_THREAD_FRAME ) ) )  97
+s -> mb_width = h -> sps . mb_width; 103
+s -> mb_height = h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ); 104
+h -> b_stride = s -> mb_width * 4; 106
+s -> chroma_y_shift = h -> sps . chroma_format_idc <= 1; 108
+s -> width = 16 * s -> mb_width; 110
+s -> height = 16 * s -> mb_height; 111
+if ( must_reinit )  113
+h -> list_count = 0; 117
+h -> current_slice = 0; 118
+if ( ! s -> context_initialized )  120
+if ( h != h0 )  121
+if ( FFALIGN ( s -> avctx -> width , 16 ) == s -> width && FFALIGN ( s -> avctx -> height , 16 * ( 2 - h -> sps . frame_mbs_only_flag ) ) == s -> height && ! h -> sps . crop_right && ! h -> sps . crop_bottom && ( s -> avctx -> width != s -> width || s -> avctx -> height && s -> height ) )  126
+s -> avctx -> width -= ( 2 >> CHROMA444 ) * FFMIN ( h -> sps . crop_right , ( 8 << CHROMA444 ) - 1 ); 136
+s -> avctx -> height -= ( 1 << s -> chroma_y_shift ) * FFMIN ( h -> sps . crop_bottom , ( 16 >> s -> chroma_y_shift ) - 1 ) * ( 2 - h -> sps . frame_mbs_only_flag ); 137
+s -> avctx -> sample_aspect_ratio = h -> sps . sar; 139
+if ( s -> avctx -> codec -> capabilities & CODEC_CAP_HWACCEL_VDPAU && ( h -> sps . bit_depth_luma != 8 || h -> sps . chroma_format_idc > 1 ) )  142
+if ( s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc )  151
+if ( h -> sps . bit_depth_luma >= 8 && h -> sps . bit_depth_luma <= 14 && h -> sps . bit_depth_luma != 11 && h -> sps . bit_depth_luma != 13 && ( h -> sps . bit_depth_luma != 9 || ! CHROMA422 ) )  153
+s -> avctx -> bits_per_raw_sample = h -> sps . bit_depth_luma; 155
+h -> cur_chroma_format_idc = h -> sps . chroma_format_idc; 156
+h -> pixel_shift = h -> sps . bit_depth_luma > 8; 157
+s -> dsp . dct_bits = h -> sps . bit_depth_luma > 8 ? 32 : 16; 161
+if ( h -> sps . video_signal_type_present_flag )  170
+s -> avctx -> color_range = h -> sps . full_range > 0 ? AVCOL_RANGE_JPEG : AVCOL_RANGE_MPEG; 171
+if ( h -> sps . colour_description_present_flag )  173
+s -> avctx -> color_primaries = h -> sps . color_primaries; 174
+s -> avctx -> color_trc = h -> sps . color_trc; 175
+s -> avctx -> colorspace = h -> sps . colorspace; 176
+switch ( h -> sps . bit_depth_luma )  188
+if ( CHROMA444 )  190
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  191
+s -> avctx -> pix_fmt = PIX_FMT_GBRP9; 192
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P9; 194
+if ( CHROMA422 )  195
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P9; 196
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P9; 198
+if ( CHROMA444 )  201
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  202
+s -> avctx -> pix_fmt = PIX_FMT_GBRP10; 203
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P10; 205
+if ( CHROMA422 )  206
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P10; 207
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P10; 209
+if ( CHROMA444 )  212
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  213
+s -> avctx -> pix_fmt = PIX_FMT_GBRP12; 214
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P12; 216
+if ( CHROMA422 )  217
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P12; 218
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P12; 220
+if ( CHROMA444 )  223
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  224
+s -> avctx -> pix_fmt = PIX_FMT_GBRP14; 225
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P14; 227
+if ( CHROMA422 )  228
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P14; 229
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P14; 231
+if ( CHROMA444 )  234
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ444P : PIX_FMT_YUV444P; 235
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  237
+s -> avctx -> pix_fmt = PIX_FMT_GBR24P; 238
+if ( CHROMA422 )  243
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ422P : PIX_FMT_YUV422P; 244
+s -> avctx -> pix_fmt = s -> avctx -> get_format ( s -> avctx , s -> avctx -> codec -> pix_fmts ? s -> avctx -> codec -> pix_fmts : s -> avctx -> color_range == AVCOL_RANGE_JPEG ? hwaccel_pixfmt_list_h264_jpeg_420 : ff_hwaccel_pixfmt_list_420 ); 247
+s -> avctx -> hwaccel = ff_find_hwaccel ( s -> avctx -> codec -> id , s -> avctx -> pix_fmt ); 261
+if ( ff_MPV_common_init ( s ) < 0 )  264
+s -> first_field = 0; 268
+h -> prev_interlaced_frame = 1; 269
+if ( ff_h264_alloc_tables ( h ) < 0 )  272
+if ( ! HAVE_THREADS || ! ( s -> avctx -> active_thread_type & FF_THREAD_SLICE ) )  278
+if ( context_init ( h ) < 0 )  279
+for (i = 1; i < s->slice_context_count; i++) 284
+H264Context * c ; 285
+c = h -> thread_context [ i ] = av_malloc ( sizeof ( H264Context ) ); 286
+for (i = 0; i < s->slice_context_count; i++) 298
+if ( context_init ( h -> thread_context [ i ] ) < 0 )  299
+if ( h == h0 && h -> dequant_coeff_pps != pps_id )  307
+h -> dequant_coeff_pps = pps_id; 308
+h -> frame_num = get_bits ( & s -> gb , h -> sps . log2_max_frame_num ); 312
+h -> mb_mbaff = 0; 314
+h -> mb_aff_frame = 0; 315
+last_pic_structure = s0 -> picture_structure; 316
+last_pic_dropable = s -> dropable; 317
+s -> dropable = h -> nal_ref_idc == 0; 318
+if ( h -> sps . frame_mbs_only_flag )  319
+s -> picture_structure = PICT_FRAME; 320
+if ( ! h -> sps . direct_8x8_inference_flag && slice_type == AV_PICTURE_TYPE_B )  322
+if ( get_bits1 ( & s -> gb ) )  326
+s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ); 327
+s -> picture_structure = PICT_FRAME; 329
+h -> mb_aff_frame = h -> sps . mb_aff; 330
+h -> mb_field_decoding_flag = s -> picture_structure != PICT_FRAME; 333
+if ( h0 -> current_slice != 0 )  335
+if ( last_pic_structure != s -> picture_structure || last_pic_dropable != s -> dropable )  336
+if ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 )  348
+int unwrap_prev_frame_num = h -> prev_frame_num ; 349
+int max_frame_num = 1 << h -> sps . log2_max_frame_num ; 350
+if ( unwrap_prev_frame_num > h -> frame_num )  352
+unwrap_prev_frame_num -= max_frame_num; 353
+if ( ( h -> frame_num - unwrap_prev_frame_num ) > h -> sps . ref_frame_count )  355
+unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1; 356
+if ( unwrap_prev_frame_num < 0 )  357
+unwrap_prev_frame_num += max_frame_num; 358
+h -> prev_frame_num = unwrap_prev_frame_num; 360
+if ( s0 -> first_field )  369
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  381
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  389
+if ( ! ( ( last_pic_structure == PICT_TOP_FIELD && s -> picture_structure == PICT_BOTTOM_FIELD ) || ( last_pic_structure == PICT_BOTTOM_FIELD && s -> picture_structure == PICT_TOP_FIELD ) ) )  400
+if ( last_pic_dropable != s -> dropable )  410
+s -> picture_structure = last_pic_structure; 414
+s -> dropable = last_pic_dropable; 415
+s0 -> current_picture_ptr -> owner2 = s0; 425
+while ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 && h -> frame_num != ( h -> prev_frame_num + 1 ) % ( 1 << h -> sps . log2_max_frame_num ) )  430
+Picture * prev = h -> short_ref_count ? h -> short_ref [ 0 ] : NULL ; 432
+if ( ff_h264_frame_start ( h ) < 0 )  435
+h -> prev_frame_num ++; 437
+h -> prev_frame_num %= 1 << h -> sps . log2_max_frame_num; 438
+s -> current_picture_ptr -> frame_num = h -> prev_frame_num; 439
+if ( ff_h264_execute_ref_pic_marking ( h , h -> mmco , h -> mmco_index ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  443
+if ( h -> short_ref_count )  452
+if ( prev )  453
+h -> short_ref [ 0 ] -> poc = prev -> poc + 2; 457
+h -> short_ref [ 0 ] -> frame_num = h -> prev_frame_num; 459
+if ( s0 -> first_field )  466
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  472
+s0 -> current_picture_ptr = NULL; 475
+s0 -> first_field = FIELD_PICTURE; 476
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  478
+s0 -> first_field = 1; 484
+s0 -> current_picture_ptr = NULL; 485
+s0 -> first_field = 0; 488
+s0 -> first_field = FIELD_PICTURE; 493
+if ( ! FIELD_PICTURE || s0 -> first_field )  496
+if ( ff_h264_frame_start ( h ) < 0 )  497
+s -> current_picture_ptr -> frame_num = h -> frame_num; 508
+if ( first_mb_in_slice << FIELD_OR_MBAFF_PICTURE >= s -> mb_num || first_mb_in_slice >= s -> mb_num )  511
+s -> resync_mb_x = s -> mb_x = first_mb_in_slice % s -> mb_width; 516
+s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE; 517
+if ( s -> picture_structure == PICT_BOTTOM_FIELD )  518
+s -> resync_mb_y = s -> mb_y = s -> mb_y + 1; 519
+if ( s -> picture_structure == PICT_FRAME )  522
+h -> curr_pic_num = h -> frame_num; 523
+h -> max_pic_num = 1 << h -> sps . log2_max_frame_num; 524
+h -> curr_pic_num = 2 * h -> frame_num + 1; 526
+h -> max_pic_num = 1 << ( h -> sps . log2_max_frame_num + 1 ); 527
+if ( h -> sps . poc_type == 0 )  533
+h -> poc_lsb = get_bits ( & s -> gb , h -> sps . log2_max_poc_lsb ); 534
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  536
+h -> delta_poc_bottom = get_se_golomb ( & s -> gb ); 537
+if ( h -> sps . poc_type == 1 && ! h -> sps . delta_pic_order_always_zero_flag )  540
+h -> delta_poc [ 0 ] = get_se_golomb ( & s -> gb ); 541
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  543
+h -> delta_poc [ 1 ] = get_se_golomb ( & s -> gb ); 544
+if ( h -> pps . redundant_pic_cnt_present )  549
+h -> redundant_pic_count = get_ue_golomb ( & s -> gb ); 550
+h -> ref_count [ 0 ] = h -> pps . ref_count [ 0 ]; 553
+h -> ref_count [ 1 ] = h -> pps . ref_count [ 1 ]; 554
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  556
+unsigned max [ 2 ] ; 557
+max [ 0 ] = max [ 1 ] = s -> picture_structure == PICT_FRAME ? 15 : 31; 558
+if ( h -> ref_count [ 0 ] - 1 > max [ 0 ] || h -> ref_count [ 1 ] - 1 > max [ 1 ] )  573
+av_log ( h -> s . avctx , AV_LOG_ERROR , "reference overflow %u > %u or %u > %u\n" , h -> ref_count [ 0 ] - 1 , max [ 0 ] , h -> ref_count [ 1 ] - 1 , max [ 1 ] ); 574
+------------------------------
+72 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'id_list'] 736
+static int CVE_2013_0850_VULN_decode_slice_header(H264Context *h, H264Context *h0) 1
+MpegEncContext * const s = & h -> s
+MpegEncContext * const s0 = & h0 -> s 4
+unsigned int first_mb_in_slice ; 5
+unsigned int pps_id ; 6
+int num_ref_idx_active_override_flag ; 7
+unsigned int slice_type , tmp , i , j ; 8
+int last_pic_structure , last_pic_dropable ; 10
+int must_reinit ; 11
+if ( ( s -> avctx -> flags2 & CODEC_FLAG2_FAST ) && ! h -> nal_ref_idc && ! h -> pixel_shift )  14
+s -> me . qpel_put = s -> dsp . put_h264_qpel_pixels_tab; 19
+s -> me . qpel_avg = s -> dsp . avg_h264_qpel_pixels_tab; 20
+first_mb_in_slice = get_ue_golomb_long ( & s -> gb ); 23
+if ( first_mb_in_slice == 0 )  25
+h0 -> current_slice = 0; 30
+if ( ! s0 -> first_field )  31
+s -> current_picture_ptr = NULL; 37
+slice_type = get_ue_golomb_31 ( & s -> gb ); 41
+if ( slice_type > 9 )  42
+if ( slice_type > 4 )  48
+slice_type -= 5; 49
+h -> slice_type_fixed = 0; 52
+slice_type = golomb_to_pict_type [ slice_type ]; 54
+h -> slice_type = slice_type; 59
+h -> slice_type_nos = slice_type & 3; 60
+s -> pict_type = h -> slice_type; 63
+pps_id = get_ue_golomb ( & s -> gb ); 65
+if ( pps_id >= MAX_PPS_COUNT )  66
+if ( ! h0 -> pps_buffers [ pps_id ] )  70
+h -> pps = * h0 -> pps_buffers [ pps_id ]; 76
+if ( ! h0 -> sps_buffers [ h -> pps . sps_id ] )  78
+h -> sps = * h0 -> sps_buffers [ h -> pps . sps_id ]; 84
+s -> avctx -> profile = ff_h264_get_profile ( & h -> sps ); 86
+s -> avctx -> level = h -> sps . level_idc; 87
+s -> avctx -> refs = h -> sps . ref_frame_count; 88
+must_reinit = ( s -> context_initialized && ( 16 * h -> sps . mb_width != s -> avctx -> coded_width || 16 * h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) != s -> avctx -> coded_height || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc || av_cmp_q ( h -> sps . sar , s -> avctx -> sample_aspect_ratio ) ) ); 90
+if ( must_reinit && ( h != h0 || ( s -> avctx -> active_thread_type & FF_THREAD_FRAME ) ) )  97
+s -> mb_width = h -> sps . mb_width; 103
+s -> mb_height = h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ); 104
+h -> b_stride = s -> mb_width * 4; 106
+s -> chroma_y_shift = h -> sps . chroma_format_idc <= 1; 108
+s -> width = 16 * s -> mb_width; 110
+s -> height = 16 * s -> mb_height; 111
+if ( must_reinit )  113
+h -> list_count = 0; 117
+h -> current_slice = 0; 118
+if ( ! s -> context_initialized )  120
+if ( h != h0 )  121
+if ( FFALIGN ( s -> avctx -> width , 16 ) == s -> width && FFALIGN ( s -> avctx -> height , 16 * ( 2 - h -> sps . frame_mbs_only_flag ) ) == s -> height && ! h -> sps . crop_right && ! h -> sps . crop_bottom && ( s -> avctx -> width != s -> width || s -> avctx -> height && s -> height ) )  126
+s -> avctx -> width -= ( 2 >> CHROMA444 ) * FFMIN ( h -> sps . crop_right , ( 8 << CHROMA444 ) - 1 ); 136
+s -> avctx -> height -= ( 1 << s -> chroma_y_shift ) * FFMIN ( h -> sps . crop_bottom , ( 16 >> s -> chroma_y_shift ) - 1 ) * ( 2 - h -> sps . frame_mbs_only_flag ); 137
+s -> avctx -> sample_aspect_ratio = h -> sps . sar; 139
+if ( s -> avctx -> codec -> capabilities & CODEC_CAP_HWACCEL_VDPAU && ( h -> sps . bit_depth_luma != 8 || h -> sps . chroma_format_idc > 1 ) )  142
+if ( s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc )  151
+if ( h -> sps . bit_depth_luma >= 8 && h -> sps . bit_depth_luma <= 14 && h -> sps . bit_depth_luma != 11 && h -> sps . bit_depth_luma != 13 && ( h -> sps . bit_depth_luma != 9 || ! CHROMA422 ) )  153
+s -> avctx -> bits_per_raw_sample = h -> sps . bit_depth_luma; 155
+h -> cur_chroma_format_idc = h -> sps . chroma_format_idc; 156
+h -> pixel_shift = h -> sps . bit_depth_luma > 8; 157
+s -> dsp . dct_bits = h -> sps . bit_depth_luma > 8 ? 32 : 16; 161
+if ( h -> sps . video_signal_type_present_flag )  170
+s -> avctx -> color_range = h -> sps . full_range > 0 ? AVCOL_RANGE_JPEG : AVCOL_RANGE_MPEG; 171
+if ( h -> sps . colour_description_present_flag )  173
+s -> avctx -> color_primaries = h -> sps . color_primaries; 174
+s -> avctx -> color_trc = h -> sps . color_trc; 175
+s -> avctx -> colorspace = h -> sps . colorspace; 176
+switch ( h -> sps . bit_depth_luma )  188
+if ( CHROMA444 )  190
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  191
+s -> avctx -> pix_fmt = PIX_FMT_GBRP9; 192
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P9; 194
+if ( CHROMA422 )  195
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P9; 196
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P9; 198
+if ( CHROMA444 )  201
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  202
+s -> avctx -> pix_fmt = PIX_FMT_GBRP10; 203
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P10; 205
+if ( CHROMA422 )  206
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P10; 207
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P10; 209
+if ( CHROMA444 )  212
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  213
+s -> avctx -> pix_fmt = PIX_FMT_GBRP12; 214
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P12; 216
+if ( CHROMA422 )  217
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P12; 218
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P12; 220
+if ( CHROMA444 )  223
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  224
+s -> avctx -> pix_fmt = PIX_FMT_GBRP14; 225
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P14; 227
+if ( CHROMA422 )  228
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P14; 229
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P14; 231
+if ( CHROMA444 )  234
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ444P : PIX_FMT_YUV444P; 235
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  237
+s -> avctx -> pix_fmt = PIX_FMT_GBR24P; 238
+if ( CHROMA422 )  243
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ422P : PIX_FMT_YUV422P; 244
+s -> avctx -> pix_fmt = s -> avctx -> get_format ( s -> avctx , s -> avctx -> codec -> pix_fmts ? s -> avctx -> codec -> pix_fmts : s -> avctx -> color_range == AVCOL_RANGE_JPEG ? hwaccel_pixfmt_list_h264_jpeg_420 : ff_hwaccel_pixfmt_list_420 ); 247
+s -> avctx -> hwaccel = ff_find_hwaccel ( s -> avctx -> codec -> id , s -> avctx -> pix_fmt ); 261
+if ( ff_MPV_common_init ( s ) < 0 )  264
+s -> first_field = 0; 268
+h -> prev_interlaced_frame = 1; 269
+if ( ff_h264_alloc_tables ( h ) < 0 )  272
+if ( ! HAVE_THREADS || ! ( s -> avctx -> active_thread_type & FF_THREAD_SLICE ) )  278
+if ( context_init ( h ) < 0 )  279
+for (i = 1; i < s->slice_context_count; i++) 284
+H264Context * c ; 285
+c = h -> thread_context [ i ] = av_malloc ( sizeof ( H264Context ) ); 286
+for (i = 0; i < s->slice_context_count; i++) 298
+if ( context_init ( h -> thread_context [ i ] ) < 0 )  299
+if ( h == h0 && h -> dequant_coeff_pps != pps_id )  307
+h -> dequant_coeff_pps = pps_id; 308
+h -> frame_num = get_bits ( & s -> gb , h -> sps . log2_max_frame_num ); 312
+h -> mb_mbaff = 0; 314
+h -> mb_aff_frame = 0; 315
+last_pic_structure = s0 -> picture_structure; 316
+last_pic_dropable = s -> dropable; 317
+s -> dropable = h -> nal_ref_idc == 0; 318
+if ( h -> sps . frame_mbs_only_flag )  319
+s -> picture_structure = PICT_FRAME; 320
+if ( ! h -> sps . direct_8x8_inference_flag && slice_type == AV_PICTURE_TYPE_B )  322
+if ( get_bits1 ( & s -> gb ) )  326
+s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ); 327
+s -> picture_structure = PICT_FRAME; 329
+h -> mb_aff_frame = h -> sps . mb_aff; 330
+h -> mb_field_decoding_flag = s -> picture_structure != PICT_FRAME; 333
+if ( h0 -> current_slice != 0 )  335
+if ( last_pic_structure != s -> picture_structure || last_pic_dropable != s -> dropable )  336
+if ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 )  348
+int unwrap_prev_frame_num = h -> prev_frame_num ; 349
+int max_frame_num = 1 << h -> sps . log2_max_frame_num ; 350
+if ( unwrap_prev_frame_num > h -> frame_num )  352
+unwrap_prev_frame_num -= max_frame_num; 353
+if ( ( h -> frame_num - unwrap_prev_frame_num ) > h -> sps . ref_frame_count )  355
+unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1; 356
+if ( unwrap_prev_frame_num < 0 )  357
+unwrap_prev_frame_num += max_frame_num; 358
+h -> prev_frame_num = unwrap_prev_frame_num; 360
+if ( s0 -> first_field )  369
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  381
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  389
+if ( ! ( ( last_pic_structure == PICT_TOP_FIELD && s -> picture_structure == PICT_BOTTOM_FIELD ) || ( last_pic_structure == PICT_BOTTOM_FIELD && s -> picture_structure == PICT_TOP_FIELD ) ) )  400
+if ( last_pic_dropable != s -> dropable )  410
+s -> picture_structure = last_pic_structure; 414
+s -> dropable = last_pic_dropable; 415
+s0 -> current_picture_ptr -> owner2 = s0; 425
+while ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 && h -> frame_num != ( h -> prev_frame_num + 1 ) % ( 1 << h -> sps . log2_max_frame_num ) )  430
+Picture * prev = h -> short_ref_count ? h -> short_ref [ 0 ] : NULL ; 432
+if ( ff_h264_frame_start ( h ) < 0 )  435
+h -> prev_frame_num ++; 437
+h -> prev_frame_num %= 1 << h -> sps . log2_max_frame_num; 438
+s -> current_picture_ptr -> frame_num = h -> prev_frame_num; 439
+if ( ff_h264_execute_ref_pic_marking ( h , h -> mmco , h -> mmco_index ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  443
+if ( h -> short_ref_count )  452
+if ( prev )  453
+h -> short_ref [ 0 ] -> poc = prev -> poc + 2; 457
+h -> short_ref [ 0 ] -> frame_num = h -> prev_frame_num; 459
+if ( s0 -> first_field )  466
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  472
+s0 -> current_picture_ptr = NULL; 475
+s0 -> first_field = FIELD_PICTURE; 476
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  478
+s0 -> first_field = 1; 484
+s0 -> current_picture_ptr = NULL; 485
+s0 -> first_field = 0; 488
+s0 -> first_field = FIELD_PICTURE; 493
+if ( ! FIELD_PICTURE || s0 -> first_field )  496
+if ( ff_h264_frame_start ( h ) < 0 )  497
+s -> current_picture_ptr -> frame_num = h -> frame_num; 508
+if ( first_mb_in_slice << FIELD_OR_MBAFF_PICTURE >= s -> mb_num || first_mb_in_slice >= s -> mb_num )  511
+s -> resync_mb_x = s -> mb_x = first_mb_in_slice % s -> mb_width; 516
+s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE; 517
+if ( s -> picture_structure == PICT_BOTTOM_FIELD )  518
+s -> resync_mb_y = s -> mb_y = s -> mb_y + 1; 519
+if ( s -> picture_structure == PICT_FRAME )  522
+h -> curr_pic_num = h -> frame_num; 523
+h -> max_pic_num = 1 << h -> sps . log2_max_frame_num; 524
+h -> curr_pic_num = 2 * h -> frame_num + 1; 526
+h -> max_pic_num = 1 << ( h -> sps . log2_max_frame_num + 1 ); 527
+if ( h -> sps . poc_type == 0 )  533
+h -> poc_lsb = get_bits ( & s -> gb , h -> sps . log2_max_poc_lsb ); 534
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  536
+h -> delta_poc_bottom = get_se_golomb ( & s -> gb ); 537
+if ( h -> sps . poc_type == 1 && ! h -> sps . delta_pic_order_always_zero_flag )  540
+h -> delta_poc [ 0 ] = get_se_golomb ( & s -> gb ); 541
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  543
+h -> delta_poc [ 1 ] = get_se_golomb ( & s -> gb ); 544
+if ( h -> pps . redundant_pic_cnt_present )  549
+h -> redundant_pic_count = get_ue_golomb ( & s -> gb ); 550
+h -> ref_count [ 0 ] = h -> pps . ref_count [ 0 ]; 553
+h -> ref_count [ 1 ] = h -> pps . ref_count [ 1 ]; 554
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  556
+unsigned max [ 2 ] ; 557
+max [ 0 ] = max [ 1 ] = s -> picture_structure == PICT_FRAME ? 15 : 31; 558
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  560
+h -> direct_spatial_mv_pred = get_bits1 ( & s -> gb ); 561
+num_ref_idx_active_override_flag = get_bits1 ( & s -> gb ); 562
+if ( num_ref_idx_active_override_flag )  564
+h -> ref_count [ 0 ] = get_ue_golomb ( & s -> gb ) + 1; 565
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  566
+h -> ref_count [ 1 ] = get_ue_golomb ( & s -> gb ) + 1; 567
+max [ 1 ] = 31; 570
+if ( h -> ref_count [ 0 ] - 1 > max [ 0 ] || h -> ref_count [ 1 ] - 1 > max [ 1 ] )  573
+h -> ref_count [ 0 ] = h -> ref_count [ 1 ] = 1; 575
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  579
+h -> list_count = 2; 580
+h -> list_count = 1; 582
+h -> ref_count [ 1 ] = h -> ref_count [ 0 ] = h -> list_count = 0; 584
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I && ff_h264_decode_ref_pic_list_reordering ( h ) < 0 )  589
+h -> ref_count [ 1 ] = h -> ref_count [ 0 ] = 0; 591
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  595
+s -> last_picture_ptr = & h -> ref_list [ 0 ] [ 0 ]; 596
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  599
+s -> next_picture_ptr = & h -> ref_list [ 1 ] [ 0 ]; 600
+if ( ( h -> pps . weighted_pred && h -> slice_type_nos == AV_PICTURE_TYPE_P ) || ( h -> pps . weighted_bipred_idc == 1 && h -> slice_type_nos == AV_PICTURE_TYPE_B ) )  604
+if ( h -> pps . weighted_bipred_idc == 2 && h -> slice_type_nos == AV_PICTURE_TYPE_B )  608
+h -> use_weight = 0; 612
+for (i = 0; i < 2; i++) 613
+h -> luma_weight_flag [ i ] = 0; 614
+h -> chroma_weight_flag [ i ] = 0; 615
+if ( h -> nal_ref_idc && ff_h264_decode_ref_pic_marking ( h0 , & s -> gb ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  619
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I && h -> pps . cabac )  636
+tmp = get_ue_golomb_31 ( & s -> gb ); 637
+if ( tmp > 2 )  638
+h -> cabac_init_idc = tmp; 642
+h -> last_qscale_diff = 0; 645
+tmp = h -> pps . init_qp + get_se_golomb ( & s -> gb ); 646
+if ( tmp > 51 + 6 * ( h -> sps . bit_depth_luma - 8 ) )  647
+s -> qscale = tmp; 651
+h -> chroma_qp [ 0 ] = get_chroma_qp ( h , 0 , s -> qscale ); 652
+h -> chroma_qp [ 1 ] = get_chroma_qp ( h , 1 , s -> qscale ); 653
+h -> deblocking_filter = 1; 661
+h -> slice_alpha_c0_offset = 52; 662
+h -> slice_beta_offset = 52; 663
+if ( h -> pps . deblocking_filter_parameters_present )  664
+tmp = get_ue_golomb_31 ( & s -> gb ); 665
+if ( tmp > 2 )  666
+h -> deblocking_filter = tmp; 671
+if ( h -> deblocking_filter < 2 )  672
+h -> deblocking_filter ^= 1; 673
+if ( h -> deblocking_filter )  675
+h -> slice_alpha_c0_offset += get_se_golomb ( & s -> gb ) << 1; 676
+h -> slice_beta_offset += get_se_golomb ( & s -> gb ) << 1; 677
+if ( h -> slice_alpha_c0_offset > 104U || h -> slice_beta_offset > 104U )  678
+if ( s -> avctx -> skip_loop_filter >= AVDISCARD_ALL || ( s -> avctx -> skip_loop_filter >= AVDISCARD_NONKEY && h -> slice_type_nos != AV_PICTURE_TYPE_I ) || ( s -> avctx -> skip_loop_filter >= AVDISCARD_BIDIR && h -> slice_type_nos == AV_PICTURE_TYPE_B ) || ( s -> avctx -> skip_loop_filter >= AVDISCARD_NONREF && h -> nal_ref_idc == 0 ) )  688
+h -> deblocking_filter = 0; 695
+if ( h -> deblocking_filter == 1 && h0 -> max_contexts > 1 )  697
+if ( s -> avctx -> flags2 & CODEC_FLAG2_FAST )  698
+h0 -> max_contexts = 1; 703
+if ( ! h0 -> single_decode_warning )  704
+h0 -> single_decode_warning = 1; 707
+if ( h != h0 )  709
+for (j = 0; j < 2; j++) 735
+int id_list [ 16 ] ; 736
+id_list [ i ] = 60; 739
+if ( h -> ref_list [ j ] [ i ] . f . data [ 0 ] )  740
+uint8_t * base = h -> ref_list [ j ] [ i ] . f . base [ 0 ] ; 742
+if ( h -> short_ref [ k ] -> f . base [ 0 ] == base )  744
+id_list [ i ] = k; 745
+if ( h -> long_ref [ k ] && h -> long_ref [ k ] -> f . base [ 0 ] == base )  749
+id_list [ i ] = h -> short_ref_count + k; 750
+for (i = 0; i < 16; i++) 758
+ref2frm [ i + 2 ] = 4 * id_list [ i ] + ( h -> ref_list [ j ] [ i ] . f . reference & 3 ); 759
+ref2frm [ 18 + 0 ] = ref2frm [ 18 + 1 ] = - 1; 761
+for (i = 16; i < 48; i++) 763
+ref2frm [ i + 4 ] = 4 * id_list [ ( i - 16 ) >> 1 ] + ( h -> ref_list [ j ] [ i ] . f . reference & 3 ); 764
+------------------------------
+73 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c [u'max'] 557
+static int CVE_2013_0850_VULN_decode_slice_header(H264Context *h, H264Context *h0) 1
+MpegEncContext * const s = & h -> s
+MpegEncContext * const s0 = & h0 -> s 4
+unsigned int first_mb_in_slice ; 5
+unsigned int pps_id ; 6
+unsigned int slice_type , tmp , i , j ; 8
+int last_pic_structure , last_pic_dropable ; 10
+int must_reinit ; 11
+if ( ( s -> avctx -> flags2 & CODEC_FLAG2_FAST ) && ! h -> nal_ref_idc && ! h -> pixel_shift )  14
+s -> me . qpel_put = s -> dsp . put_h264_qpel_pixels_tab; 19
+s -> me . qpel_avg = s -> dsp . avg_h264_qpel_pixels_tab; 20
+first_mb_in_slice = get_ue_golomb_long ( & s -> gb ); 23
+if ( first_mb_in_slice == 0 )  25
+h0 -> current_slice = 0; 30
+if ( ! s0 -> first_field )  31
+s -> current_picture_ptr = NULL; 37
+slice_type = get_ue_golomb_31 ( & s -> gb ); 41
+if ( slice_type > 9 )  42
+if ( slice_type > 4 )  48
+slice_type -= 5; 49
+h -> slice_type_fixed = 0; 52
+slice_type = golomb_to_pict_type [ slice_type ]; 54
+h -> slice_type = slice_type; 59
+h -> slice_type_nos = slice_type & 3; 60
+s -> pict_type = h -> slice_type; 63
+pps_id = get_ue_golomb ( & s -> gb ); 65
+if ( pps_id >= MAX_PPS_COUNT )  66
+if ( ! h0 -> pps_buffers [ pps_id ] )  70
+h -> pps = * h0 -> pps_buffers [ pps_id ]; 76
+if ( ! h0 -> sps_buffers [ h -> pps . sps_id ] )  78
+h -> sps = * h0 -> sps_buffers [ h -> pps . sps_id ]; 84
+s -> avctx -> profile = ff_h264_get_profile ( & h -> sps ); 86
+s -> avctx -> level = h -> sps . level_idc; 87
+s -> avctx -> refs = h -> sps . ref_frame_count; 88
+must_reinit = ( s -> context_initialized && ( 16 * h -> sps . mb_width != s -> avctx -> coded_width || 16 * h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) != s -> avctx -> coded_height || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc || av_cmp_q ( h -> sps . sar , s -> avctx -> sample_aspect_ratio ) ) ); 90
+if ( must_reinit && ( h != h0 || ( s -> avctx -> active_thread_type & FF_THREAD_FRAME ) ) )  97
+s -> mb_width = h -> sps . mb_width; 103
+s -> mb_height = h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ); 104
+h -> b_stride = s -> mb_width * 4; 106
+s -> chroma_y_shift = h -> sps . chroma_format_idc <= 1; 108
+s -> width = 16 * s -> mb_width; 110
+s -> height = 16 * s -> mb_height; 111
+if ( must_reinit )  113
+h -> list_count = 0; 117
+h -> current_slice = 0; 118
+if ( ! s -> context_initialized )  120
+if ( h != h0 )  121
+if ( FFALIGN ( s -> avctx -> width , 16 ) == s -> width && FFALIGN ( s -> avctx -> height , 16 * ( 2 - h -> sps . frame_mbs_only_flag ) ) == s -> height && ! h -> sps . crop_right && ! h -> sps . crop_bottom && ( s -> avctx -> width != s -> width || s -> avctx -> height && s -> height ) )  126
+s -> avctx -> width -= ( 2 >> CHROMA444 ) * FFMIN ( h -> sps . crop_right , ( 8 << CHROMA444 ) - 1 ); 136
+s -> avctx -> height -= ( 1 << s -> chroma_y_shift ) * FFMIN ( h -> sps . crop_bottom , ( 16 >> s -> chroma_y_shift ) - 1 ) * ( 2 - h -> sps . frame_mbs_only_flag ); 137
+s -> avctx -> sample_aspect_ratio = h -> sps . sar; 139
+if ( s -> avctx -> codec -> capabilities & CODEC_CAP_HWACCEL_VDPAU && ( h -> sps . bit_depth_luma != 8 || h -> sps . chroma_format_idc > 1 ) )  142
+if ( s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc )  151
+if ( h -> sps . bit_depth_luma >= 8 && h -> sps . bit_depth_luma <= 14 && h -> sps . bit_depth_luma != 11 && h -> sps . bit_depth_luma != 13 && ( h -> sps . bit_depth_luma != 9 || ! CHROMA422 ) )  153
+s -> avctx -> bits_per_raw_sample = h -> sps . bit_depth_luma; 155
+h -> cur_chroma_format_idc = h -> sps . chroma_format_idc; 156
+h -> pixel_shift = h -> sps . bit_depth_luma > 8; 157
+s -> dsp . dct_bits = h -> sps . bit_depth_luma > 8 ? 32 : 16; 161
+if ( h -> sps . video_signal_type_present_flag )  170
+s -> avctx -> color_range = h -> sps . full_range > 0 ? AVCOL_RANGE_JPEG : AVCOL_RANGE_MPEG; 171
+if ( h -> sps . colour_description_present_flag )  173
+s -> avctx -> color_primaries = h -> sps . color_primaries; 174
+s -> avctx -> color_trc = h -> sps . color_trc; 175
+s -> avctx -> colorspace = h -> sps . colorspace; 176
+switch ( h -> sps . bit_depth_luma )  188
+if ( CHROMA444 )  190
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  191
+s -> avctx -> pix_fmt = PIX_FMT_GBRP9; 192
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P9; 194
+if ( CHROMA422 )  195
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P9; 196
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P9; 198
+if ( CHROMA444 )  201
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  202
+s -> avctx -> pix_fmt = PIX_FMT_GBRP10; 203
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P10; 205
+if ( CHROMA422 )  206
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P10; 207
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P10; 209
+if ( CHROMA444 )  212
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  213
+s -> avctx -> pix_fmt = PIX_FMT_GBRP12; 214
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P12; 216
+if ( CHROMA422 )  217
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P12; 218
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P12; 220
+if ( CHROMA444 )  223
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  224
+s -> avctx -> pix_fmt = PIX_FMT_GBRP14; 225
+s -> avctx -> pix_fmt = PIX_FMT_YUV444P14; 227
+if ( CHROMA422 )  228
+s -> avctx -> pix_fmt = PIX_FMT_YUV422P14; 229
+s -> avctx -> pix_fmt = PIX_FMT_YUV420P14; 231
+if ( CHROMA444 )  234
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ444P : PIX_FMT_YUV444P; 235
+if ( s -> avctx -> colorspace == AVCOL_SPC_RGB )  237
+s -> avctx -> pix_fmt = PIX_FMT_GBR24P; 238
+if ( CHROMA422 )  243
+s -> avctx -> pix_fmt = s -> avctx -> color_range == AVCOL_RANGE_JPEG ? PIX_FMT_YUVJ422P : PIX_FMT_YUV422P; 244
+s -> avctx -> pix_fmt = s -> avctx -> get_format ( s -> avctx , s -> avctx -> codec -> pix_fmts ? s -> avctx -> codec -> pix_fmts : s -> avctx -> color_range == AVCOL_RANGE_JPEG ? hwaccel_pixfmt_list_h264_jpeg_420 : ff_hwaccel_pixfmt_list_420 ); 247
+s -> avctx -> hwaccel = ff_find_hwaccel ( s -> avctx -> codec -> id , s -> avctx -> pix_fmt ); 261
+if ( ff_MPV_common_init ( s ) < 0 )  264
+s -> first_field = 0; 268
+h -> prev_interlaced_frame = 1; 269
+if ( ff_h264_alloc_tables ( h ) < 0 )  272
+if ( ! HAVE_THREADS || ! ( s -> avctx -> active_thread_type & FF_THREAD_SLICE ) )  278
+if ( context_init ( h ) < 0 )  279
+for (i = 1; i < s->slice_context_count; i++) 284
+H264Context * c ; 285
+c = h -> thread_context [ i ] = av_malloc ( sizeof ( H264Context ) ); 286
+for (i = 0; i < s->slice_context_count; i++) 298
+if ( context_init ( h -> thread_context [ i ] ) < 0 )  299
+if ( h == h0 && h -> dequant_coeff_pps != pps_id )  307
+h -> dequant_coeff_pps = pps_id; 308
+h -> frame_num = get_bits ( & s -> gb , h -> sps . log2_max_frame_num ); 312
+h -> mb_mbaff = 0; 314
+h -> mb_aff_frame = 0; 315
+last_pic_structure = s0 -> picture_structure; 316
+last_pic_dropable = s -> dropable; 317
+s -> dropable = h -> nal_ref_idc == 0; 318
+if ( h -> sps . frame_mbs_only_flag )  319
+s -> picture_structure = PICT_FRAME; 320
+if ( ! h -> sps . direct_8x8_inference_flag && slice_type == AV_PICTURE_TYPE_B )  322
+if ( get_bits1 ( & s -> gb ) )  326
+s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ); 327
+s -> picture_structure = PICT_FRAME; 329
+h -> mb_aff_frame = h -> sps . mb_aff; 330
+h -> mb_field_decoding_flag = s -> picture_structure != PICT_FRAME; 333
+if ( h0 -> current_slice != 0 )  335
+if ( last_pic_structure != s -> picture_structure || last_pic_dropable != s -> dropable )  336
+if ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 )  348
+int unwrap_prev_frame_num = h -> prev_frame_num ; 349
+int max_frame_num = 1 << h -> sps . log2_max_frame_num ; 350
+if ( unwrap_prev_frame_num > h -> frame_num )  352
+unwrap_prev_frame_num -= max_frame_num; 353
+if ( ( h -> frame_num - unwrap_prev_frame_num ) > h -> sps . ref_frame_count )  355
+unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1; 356
+if ( unwrap_prev_frame_num < 0 )  357
+unwrap_prev_frame_num += max_frame_num; 358
+h -> prev_frame_num = unwrap_prev_frame_num; 360
+if ( s0 -> first_field )  369
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  381
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  389
+if ( ! ( ( last_pic_structure == PICT_TOP_FIELD && s -> picture_structure == PICT_BOTTOM_FIELD ) || ( last_pic_structure == PICT_BOTTOM_FIELD && s -> picture_structure == PICT_TOP_FIELD ) ) )  400
+if ( last_pic_dropable != s -> dropable )  410
+s -> picture_structure = last_pic_structure; 414
+s -> dropable = last_pic_dropable; 415
+s0 -> current_picture_ptr -> owner2 = s0; 425
+while ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 && h -> frame_num != ( h -> prev_frame_num + 1 ) % ( 1 << h -> sps . log2_max_frame_num ) )  430
+Picture * prev = h -> short_ref_count ? h -> short_ref [ 0 ] : NULL ; 432
+if ( ff_h264_frame_start ( h ) < 0 )  435
+h -> prev_frame_num ++; 437
+h -> prev_frame_num %= 1 << h -> sps . log2_max_frame_num; 438
+s -> current_picture_ptr -> frame_num = h -> prev_frame_num; 439
+if ( ff_h264_execute_ref_pic_marking ( h , h -> mmco , h -> mmco_index ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  443
+if ( h -> short_ref_count )  452
+if ( prev )  453
+h -> short_ref [ 0 ] -> poc = prev -> poc + 2; 457
+h -> short_ref [ 0 ] -> frame_num = h -> prev_frame_num; 459
+if ( s0 -> first_field )  466
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  472
+s0 -> current_picture_ptr = NULL; 475
+s0 -> first_field = FIELD_PICTURE; 476
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  478
+s0 -> first_field = 1; 484
+s0 -> current_picture_ptr = NULL; 485
+s0 -> first_field = 0; 488
+s0 -> first_field = FIELD_PICTURE; 493
+if ( ! FIELD_PICTURE || s0 -> first_field )  496
+if ( ff_h264_frame_start ( h ) < 0 )  497
+s -> current_picture_ptr -> frame_num = h -> frame_num; 508
+if ( first_mb_in_slice << FIELD_OR_MBAFF_PICTURE >= s -> mb_num || first_mb_in_slice >= s -> mb_num )  511
+s -> resync_mb_x = s -> mb_x = first_mb_in_slice % s -> mb_width; 516
+s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE; 517
+if ( s -> picture_structure == PICT_BOTTOM_FIELD )  518
+s -> resync_mb_y = s -> mb_y = s -> mb_y + 1; 519
+if ( s -> picture_structure == PICT_FRAME )  522
+h -> curr_pic_num = h -> frame_num; 523
+h -> max_pic_num = 1 << h -> sps . log2_max_frame_num; 524
+h -> curr_pic_num = 2 * h -> frame_num + 1; 526
+h -> max_pic_num = 1 << ( h -> sps . log2_max_frame_num + 1 ); 527
+if ( h -> sps . poc_type == 0 )  533
+h -> poc_lsb = get_bits ( & s -> gb , h -> sps . log2_max_poc_lsb ); 534
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  536
+h -> delta_poc_bottom = get_se_golomb ( & s -> gb ); 537
+if ( h -> sps . poc_type == 1 && ! h -> sps . delta_pic_order_always_zero_flag )  540
+h -> delta_poc [ 0 ] = get_se_golomb ( & s -> gb ); 541
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  543
+h -> delta_poc [ 1 ] = get_se_golomb ( & s -> gb ); 544
+if ( h -> pps . redundant_pic_cnt_present )  549
+h -> redundant_pic_count = get_ue_golomb ( & s -> gb ); 550
+h -> ref_count [ 0 ] = h -> pps . ref_count [ 0 ]; 553
+h -> ref_count [ 1 ] = h -> pps . ref_count [ 1 ]; 554
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  556
+unsigned max [ 2 ] ; 557
+max [ 0 ] = max [ 1 ] = s -> picture_structure == PICT_FRAME ? 15 : 31; 558
+max [ 1 ] = 31; 570
+if ( h -> ref_count [ 0 ] - 1 > max [ 0 ] || h -> ref_count [ 1 ] - 1 > max [ 1 ] )  573
+av_log ( h -> s . avctx , AV_LOG_ERROR , "reference overflow %u > %u or %u > %u\n" , h -> ref_count [ 0 ] - 1 , max [ 0 ] , h -> ref_count [ 1 ] - 1 , max [ 1 ] ); 574
+------------------------------
+74 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'id_list'] 637
+static int CVE_2013_0867_PATCHED_decode_slice_header(H264Context *h, H264Context *h0) 1
+MpegEncContext * const s = & h -> s
+MpegEncContext * const s0 = & h0 -> s 4
+unsigned int first_mb_in_slice ; 5
+unsigned int pps_id ; 6
+int num_ref_idx_active_override_flag , ret ; 7
+unsigned int slice_type , tmp , i , j ; 8
+int last_pic_structure , last_pic_droppable ; 10
+int must_reinit ; 11
+int needs_reinit = 0 ; 12
+if ( ( s -> avctx -> flags2 & CODEC_FLAG2_FAST ) && ! h -> nal_ref_idc && ! h -> pixel_shift )  15
+s -> me . qpel_put = s -> dsp . put_h264_qpel_pixels_tab; 20
+s -> me . qpel_avg = s -> dsp . avg_h264_qpel_pixels_tab; 21
+first_mb_in_slice = get_ue_golomb_long ( & s -> gb ); 24
+if ( first_mb_in_slice == 0 )  26
+h0 -> current_slice = 0; 31
+if ( ! s0 -> first_field )  32
+s -> current_picture_ptr = NULL; 38
+slice_type = get_ue_golomb_31 ( & s -> gb ); 42
+if ( slice_type > 9 )  43
+if ( slice_type > 4 )  49
+slice_type -= 5; 50
+h -> slice_type_fixed = 0; 53
+slice_type = golomb_to_pict_type [ slice_type ]; 55
+h -> slice_type = slice_type; 60
+h -> slice_type_nos = slice_type & 3; 61
+s -> pict_type = h -> slice_type; 64
+pps_id = get_ue_golomb ( & s -> gb ); 66
+if ( pps_id >= MAX_PPS_COUNT )  67
+if ( ! h0 -> pps_buffers [ pps_id ] )  71
+h -> pps = * h0 -> pps_buffers [ pps_id ]; 77
+if ( ! h0 -> sps_buffers [ h -> pps . sps_id ] )  79
+SPS * new_sps = h0 -> sps_buffers [ h -> pps . sps_id ] ; 89
+h0 -> sps_buffers [ h -> pps . sps_id ] -> new = 0 91
+if ( h -> sps . chroma_format_idc != new_sps -> chroma_format_idc || h -> sps . bit_depth_luma != new_sps -> bit_depth_luma )  93
+needs_reinit = 1; 95
+h -> current_sps_id = h -> pps . sps_id; 97
+h -> sps = * h0 -> sps_buffers [ h -> pps . sps_id ]; 98
+if ( s -> mb_width != h -> sps . mb_width || s -> mb_height != h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc )  100
+needs_reinit = 1; 105
+if ( ( ret = h264_set_parameter_from_sps ( h ) ) < 0 )  107
+s -> avctx -> profile = ff_h264_get_profile ( & h -> sps ); 111
+s -> avctx -> level = h -> sps . level_idc; 112
+s -> avctx -> refs = h -> sps . ref_frame_count; 113
+must_reinit = ( s -> context_initialized && ( 16 * h -> sps . mb_width != s -> avctx -> coded_width || 16 * h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) != s -> avctx -> coded_height || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc || av_cmp_q ( h -> sps . sar , s -> avctx -> sample_aspect_ratio ) ) ); 115
+if ( h0 -> s . avctx -> pix_fmt != get_pixel_format ( h0 ) )  121
+must_reinit = 1; 122
+s -> mb_width = h -> sps . mb_width; 124
+s -> mb_height = h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ); 125
+h -> b_stride = s -> mb_width * 4; 127
+s -> chroma_y_shift = h -> sps . chroma_format_idc <= 1; 129
+s -> width = 16 * s -> mb_width; 131
+s -> height = 16 * s -> mb_height; 132
+if ( h -> sps . video_signal_type_present_flag )  134
+s -> avctx -> color_range = h -> sps . full_range > 0 ? AVCOL_RANGE_JPEG : AVCOL_RANGE_MPEG; 135
+if ( h -> sps . colour_description_present_flag )  137
+if ( s -> avctx -> colorspace != h -> sps . colorspace )  138
+needs_reinit = 1; 139
+s -> avctx -> color_primaries = h -> sps . color_primaries; 140
+s -> avctx -> color_trc = h -> sps . color_trc; 141
+s -> avctx -> colorspace = h -> sps . colorspace; 142
+if ( s -> context_initialized && ( needs_reinit || must_reinit ) )  146
+if ( h != h0 )  151
+if ( ( ret = get_pixel_format ( h ) ) < 0 )  159
+s -> avctx -> pix_fmt = ret; 161
+if ( ( ret = h264_slice_header_init ( h , 1 ) ) < 0 )  166
+h -> context_reinitialized = 1; 171
+if ( ! s -> context_initialized )  173
+if ( h != h0 )  174
+if ( ( ret = get_pixel_format ( h ) ) < 0 )  180
+s -> avctx -> pix_fmt = ret; 182
+if ( ( ret = h264_slice_header_init ( h , 0 ) ) < 0 )  184
+if ( h == h0 && h -> dequant_coeff_pps != pps_id )  191
+h -> dequant_coeff_pps = pps_id; 192
+h -> frame_num = get_bits ( & s -> gb , h -> sps . log2_max_frame_num ); 196
+h -> mb_mbaff = 0; 198
+h -> mb_aff_frame = 0; 199
+last_pic_structure = s0 -> picture_structure; 200
+last_pic_droppable = s0 -> droppable; 201
+s -> droppable = h -> nal_ref_idc == 0; 202
+if ( h -> sps . frame_mbs_only_flag )  203
+s -> picture_structure = PICT_FRAME; 204
+if ( ! h -> sps . direct_8x8_inference_flag && slice_type == AV_PICTURE_TYPE_B )  206
+if ( get_bits1 ( & s -> gb ) )  210
+s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ); 211
+s -> picture_structure = PICT_FRAME; 213
+h -> mb_aff_frame = h -> sps . mb_aff; 214
+h -> mb_field_decoding_flag = s -> picture_structure != PICT_FRAME; 217
+if ( h0 -> current_slice != 0 )  219
+if ( last_pic_structure != s -> picture_structure || last_pic_droppable != s -> droppable )  220
+if ( ! s0 -> current_picture_ptr )  228
+if ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 )  237
+int unwrap_prev_frame_num = h -> prev_frame_num ; 238
+int max_frame_num = 1 << h -> sps . log2_max_frame_num ; 239
+if ( unwrap_prev_frame_num > h -> frame_num )  241
+unwrap_prev_frame_num -= max_frame_num; 242
+if ( ( h -> frame_num - unwrap_prev_frame_num ) > h -> sps . ref_frame_count )  244
+unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1; 245
+if ( unwrap_prev_frame_num < 0 )  246
+unwrap_prev_frame_num += max_frame_num; 247
+h -> prev_frame_num = unwrap_prev_frame_num; 249
+if ( s0 -> first_field )  258
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  270
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  278
+if ( ! ( ( last_pic_structure == PICT_TOP_FIELD && s -> picture_structure == PICT_BOTTOM_FIELD ) || ( last_pic_structure == PICT_BOTTOM_FIELD && s -> picture_structure == PICT_TOP_FIELD ) ) )  289
+if ( last_pic_droppable != s -> droppable )  299
+s -> picture_structure = last_pic_structure; 303
+s -> droppable = last_pic_droppable; 304
+s0 -> current_picture_ptr -> owner2 = s0; 314
+while ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 && ! s0 -> first_field && h -> frame_num != ( h -> prev_frame_num + 1 ) % ( 1 << h -> sps . log2_max_frame_num ) )  319
+Picture * prev = h -> short_ref_count ? h -> short_ref [ 0 ] : NULL ; 321
+if ( ff_h264_frame_start ( h ) < 0 )  324
+h -> prev_frame_num ++; 326
+h -> prev_frame_num %= 1 << h -> sps . log2_max_frame_num; 327
+s -> current_picture_ptr -> frame_num = h -> prev_frame_num; 328
+if ( ( ret = ff_generate_sliding_window_mmcos ( h , 1 ) ) < 0 && s -> avctx -> err_recognition & AV_EF_EXPLODE )  331
+if ( ff_h264_execute_ref_pic_marking ( h , h -> mmco , h -> mmco_index ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  334
+if ( h -> short_ref_count )  343
+if ( prev )  344
+h -> short_ref [ 0 ] -> poc = prev -> poc + 2; 348
+h -> short_ref [ 0 ] -> frame_num = h -> prev_frame_num; 350
+if ( s0 -> first_field )  357
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  363
+s0 -> current_picture_ptr = NULL; 366
+s0 -> first_field = FIELD_PICTURE; 367
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  369
+s0 -> first_field = 1; 375
+s0 -> current_picture_ptr = NULL; 376
+s0 -> first_field = 0; 379
+s0 -> first_field = FIELD_PICTURE; 384
+if ( ! FIELD_PICTURE || s0 -> first_field )  387
+if ( ff_h264_frame_start ( h ) < 0 )  388
+if ( h != h0 && ( ret = clone_slice ( h , h0 ) ) < 0 )  396
+s -> current_picture_ptr -> frame_num = h -> frame_num; 399
+if ( first_mb_in_slice << FIELD_OR_MBAFF_PICTURE >= s -> mb_num || first_mb_in_slice >= s -> mb_num )  402
+s -> resync_mb_x = s -> mb_x = first_mb_in_slice % s -> mb_width; 407
+s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE; 408
+if ( s -> picture_structure == PICT_BOTTOM_FIELD )  409
+s -> resync_mb_y = s -> mb_y = s -> mb_y + 1; 410
+if ( s -> picture_structure == PICT_FRAME )  413
+h -> curr_pic_num = h -> frame_num; 414
+h -> max_pic_num = 1 << h -> sps . log2_max_frame_num; 415
+h -> curr_pic_num = 2 * h -> frame_num + 1; 417
+h -> max_pic_num = 1 << ( h -> sps . log2_max_frame_num + 1 ); 418
+if ( h -> sps . poc_type == 0 )  424
+h -> poc_lsb = get_bits ( & s -> gb , h -> sps . log2_max_poc_lsb ); 425
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  427
+h -> delta_poc_bottom = get_se_golomb ( & s -> gb ); 428
+if ( h -> sps . poc_type == 1 && ! h -> sps . delta_pic_order_always_zero_flag )  431
+h -> delta_poc [ 0 ] = get_se_golomb ( & s -> gb ); 432
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  434
+h -> delta_poc [ 1 ] = get_se_golomb ( & s -> gb ); 435
+if ( h -> pps . redundant_pic_cnt_present )  440
+h -> redundant_pic_count = get_ue_golomb ( & s -> gb ); 441
+h -> ref_count [ 0 ] = h -> pps . ref_count [ 0 ]; 444
+h -> ref_count [ 1 ] = h -> pps . ref_count [ 1 ]; 445
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  447
+unsigned max [ 2 ] ; 448
+max [ 0 ] = max [ 1 ] = s -> picture_structure == PICT_FRAME ? 15 : 31; 449
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  451
+h -> direct_spatial_mv_pred = get_bits1 ( & s -> gb ); 452
+num_ref_idx_active_override_flag = get_bits1 ( & s -> gb ); 453
+if ( num_ref_idx_active_override_flag )  455
+h -> ref_count [ 0 ] = get_ue_golomb ( & s -> gb ) + 1; 456
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  457
+h -> ref_count [ 1 ] = get_ue_golomb ( & s -> gb ) + 1; 458
+h -> ref_count [ 1 ] = 1; 461
+if ( h -> ref_count [ 0 ] - 1 > max [ 0 ] || h -> ref_count [ 1 ] - 1 > max [ 1 ] )  464
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  470
+h -> list_count = 2; 471
+h -> list_count = 1; 473
+h -> ref_count [ 1 ] = h -> ref_count [ 0 ] = h -> list_count = 0; 475
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I && ff_h264_decode_ref_pic_list_reordering ( h ) < 0 )  480
+h -> ref_count [ 1 ] = h -> ref_count [ 0 ] = 0; 482
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  486
+s -> last_picture_ptr = & h -> ref_list [ 0 ] [ 0 ]; 487
+s -> last_picture_ptr -> owner2 = s; 488
+if ( h -> slice_type_nos == AV_PICTURE_TYPE_B )  491
+s -> next_picture_ptr = & h -> ref_list [ 1 ] [ 0 ]; 492
+s -> next_picture_ptr -> owner2 = s; 493
+if ( ( h -> pps . weighted_pred && h -> slice_type_nos == AV_PICTURE_TYPE_P ) || ( h -> pps . weighted_bipred_idc == 1 && h -> slice_type_nos == AV_PICTURE_TYPE_B ) )  497
+if ( h -> pps . weighted_bipred_idc == 2 && h -> slice_type_nos == AV_PICTURE_TYPE_B )  501
+h -> use_weight = 0; 505
+for (i = 0; i < 2; i++) 506
+h -> luma_weight_flag [ i ] = 0; 507
+h -> chroma_weight_flag [ i ] = 0; 508
+if ( h -> nal_ref_idc && ff_h264_decode_ref_pic_marking ( h0 , & s -> gb , ! ( s -> avctx -> active_thread_type & FF_THREAD_FRAME ) || h0 -> current_slice == 0 ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  517
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I && h -> pps . cabac )  537
+tmp = get_ue_golomb_31 ( & s -> gb ); 538
+if ( tmp > 2 )  539
+h -> cabac_init_idc = tmp; 543
+h -> last_qscale_diff = 0; 546
+tmp = h -> pps . init_qp + get_se_golomb ( & s -> gb ); 547
+if ( tmp > 51 + 6 * ( h -> sps . bit_depth_luma - 8 ) )  548
+s -> qscale = tmp; 552
+h -> chroma_qp [ 0 ] = get_chroma_qp ( h , 0 , s -> qscale ); 553
+h -> chroma_qp [ 1 ] = get_chroma_qp ( h , 1 , s -> qscale ); 554
+h -> deblocking_filter = 1; 562
+h -> slice_alpha_c0_offset = 52; 563
+h -> slice_beta_offset = 52; 564
+if ( h -> pps . deblocking_filter_parameters_present )  565
+tmp = get_ue_golomb_31 ( & s -> gb ); 566
+if ( tmp > 2 )  567
+h -> deblocking_filter = tmp; 572
+if ( h -> deblocking_filter < 2 )  573
+h -> deblocking_filter ^= 1; 574
+if ( h -> deblocking_filter )  576
+h -> slice_alpha_c0_offset += get_se_golomb ( & s -> gb ) << 1; 577
+h -> slice_beta_offset += get_se_golomb ( & s -> gb ) << 1; 578
+if ( h -> slice_alpha_c0_offset > 104U || h -> slice_beta_offset > 104U )  579
+if ( s -> avctx -> skip_loop_filter >= AVDISCARD_ALL || ( s -> avctx -> skip_loop_filter >= AVDISCARD_NONKEY && h -> slice_type_nos != AV_PICTURE_TYPE_I ) || ( s -> avctx -> skip_loop_filter >= AVDISCARD_BIDIR && h -> slice_type_nos == AV_PICTURE_TYPE_B ) || ( s -> avctx -> skip_loop_filter >= AVDISCARD_NONREF && h -> nal_ref_idc == 0 ) )  589
+h -> deblocking_filter = 0; 596
+if ( h -> deblocking_filter == 1 && h0 -> max_contexts > 1 )  598
+if ( s -> avctx -> flags2 & CODEC_FLAG2_FAST )  599
+h0 -> max_contexts = 1; 604
+if ( ! h0 -> single_decode_warning )  605
+h0 -> single_decode_warning = 1; 608
+if ( h != h0 )  610
+for (j = 0; j < 2; j++) 636
+int id_list [ 16 ] ; 637
+id_list [ i ] = 60; 640
+if ( h -> ref_list [ j ] [ i ] . f . data [ 0 ] )  641
+uint8_t * base = h -> ref_list [ j ] [ i ] . f . base [ 0 ] ; 643
+if ( h -> short_ref [ k ] -> f . base [ 0 ] == base )  645
+id_list [ i ] = k; 646
+if ( h -> long_ref [ k ] && h -> long_ref [ k ] -> f . base [ 0 ] == base )  650
+id_list [ i ] = h -> short_ref_count + k; 651
+for (i = 0; i < 16; i++) 659
+ref2frm [ i + 2 ] = 4 * id_list [ i ] + ( h -> ref_list [ j ] [ i ] . f . reference & 3 ); 660
+ref2frm [ 18 + 0 ] = ref2frm [ 18 + 1 ] = - 1; 662
+for (i = 16; i < 48; i++) 664
+ref2frm [ i + 4 ] = 4 * id_list [ ( i - 16 ) >> 1 ] + ( h -> ref_list [ j ] [ i ] . f . reference & 3 ); 665
+------------------------------
+75 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c [u'max'] 448
+static int CVE_2013_0867_PATCHED_decode_slice_header(H264Context *h, H264Context *h0) 1
+MpegEncContext * const s = & h -> s
+MpegEncContext * const s0 = & h0 -> s 4
+unsigned int first_mb_in_slice ; 5
+unsigned int pps_id ; 6
+int num_ref_idx_active_override_flag , ret ; 7
+unsigned int slice_type , tmp , i , j ; 8
+int last_pic_structure , last_pic_droppable ; 10
+int must_reinit ; 11
+int needs_reinit = 0 ; 12
+if ( ( s -> avctx -> flags2 & CODEC_FLAG2_FAST ) && ! h -> nal_ref_idc && ! h -> pixel_shift )  15
+s -> me . qpel_put = s -> dsp . put_h264_qpel_pixels_tab; 20
+s -> me . qpel_avg = s -> dsp . avg_h264_qpel_pixels_tab; 21
+first_mb_in_slice = get_ue_golomb_long ( & s -> gb ); 24
+if ( first_mb_in_slice == 0 )  26
+h0 -> current_slice = 0; 31
+if ( ! s0 -> first_field )  32
+s -> current_picture_ptr = NULL; 38
+slice_type = get_ue_golomb_31 ( & s -> gb ); 42
+if ( slice_type > 9 )  43
+if ( slice_type > 4 )  49
+slice_type -= 5; 50
+h -> slice_type_fixed = 0; 53
+slice_type = golomb_to_pict_type [ slice_type ]; 55
+h -> slice_type = slice_type; 60
+h -> slice_type_nos = slice_type & 3; 61
+s -> pict_type = h -> slice_type; 64
+pps_id = get_ue_golomb ( & s -> gb ); 66
+if ( pps_id >= MAX_PPS_COUNT )  67
+if ( ! h0 -> pps_buffers [ pps_id ] )  71
+h -> pps = * h0 -> pps_buffers [ pps_id ]; 77
+if ( ! h0 -> sps_buffers [ h -> pps . sps_id ] )  79
+SPS * new_sps = h0 -> sps_buffers [ h -> pps . sps_id ] ; 89
+h0 -> sps_buffers [ h -> pps . sps_id ] -> new = 0 91
+if ( h -> sps . chroma_format_idc != new_sps -> chroma_format_idc || h -> sps . bit_depth_luma != new_sps -> bit_depth_luma )  93
+needs_reinit = 1; 95
+h -> current_sps_id = h -> pps . sps_id; 97
+h -> sps = * h0 -> sps_buffers [ h -> pps . sps_id ]; 98
+if ( s -> mb_width != h -> sps . mb_width || s -> mb_height != h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc )  100
+needs_reinit = 1; 105
+if ( ( ret = h264_set_parameter_from_sps ( h ) ) < 0 )  107
+s -> avctx -> profile = ff_h264_get_profile ( & h -> sps ); 111
+s -> avctx -> level = h -> sps . level_idc; 112
+s -> avctx -> refs = h -> sps . ref_frame_count; 113
+must_reinit = ( s -> context_initialized && ( 16 * h -> sps . mb_width != s -> avctx -> coded_width || 16 * h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ) != s -> avctx -> coded_height || s -> avctx -> bits_per_raw_sample != h -> sps . bit_depth_luma || h -> cur_chroma_format_idc != h -> sps . chroma_format_idc || av_cmp_q ( h -> sps . sar , s -> avctx -> sample_aspect_ratio ) ) ); 115
+if ( h0 -> s . avctx -> pix_fmt != get_pixel_format ( h0 ) )  121
+must_reinit = 1; 122
+s -> mb_width = h -> sps . mb_width; 124
+s -> mb_height = h -> sps . mb_height * ( 2 - h -> sps . frame_mbs_only_flag ); 125
+h -> b_stride = s -> mb_width * 4; 127
+s -> chroma_y_shift = h -> sps . chroma_format_idc <= 1; 129
+s -> width = 16 * s -> mb_width; 131
+s -> height = 16 * s -> mb_height; 132
+if ( h -> sps . video_signal_type_present_flag )  134
+s -> avctx -> color_range = h -> sps . full_range > 0 ? AVCOL_RANGE_JPEG : AVCOL_RANGE_MPEG; 135
+if ( h -> sps . colour_description_present_flag )  137
+if ( s -> avctx -> colorspace != h -> sps . colorspace )  138
+needs_reinit = 1; 139
+s -> avctx -> color_primaries = h -> sps . color_primaries; 140
+s -> avctx -> color_trc = h -> sps . color_trc; 141
+s -> avctx -> colorspace = h -> sps . colorspace; 142
+if ( s -> context_initialized && ( needs_reinit || must_reinit ) )  146
+if ( h != h0 )  151
+if ( ( ret = get_pixel_format ( h ) ) < 0 )  159
+s -> avctx -> pix_fmt = ret; 161
+if ( ( ret = h264_slice_header_init ( h , 1 ) ) < 0 )  166
+h -> context_reinitialized = 1; 171
+if ( ! s -> context_initialized )  173
+if ( h != h0 )  174
+if ( ( ret = get_pixel_format ( h ) ) < 0 )  180
+s -> avctx -> pix_fmt = ret; 182
+if ( ( ret = h264_slice_header_init ( h , 0 ) ) < 0 )  184
+if ( h == h0 && h -> dequant_coeff_pps != pps_id )  191
+h -> dequant_coeff_pps = pps_id; 192
+h -> frame_num = get_bits ( & s -> gb , h -> sps . log2_max_frame_num ); 196
+h -> mb_mbaff = 0; 198
+h -> mb_aff_frame = 0; 199
+last_pic_structure = s0 -> picture_structure; 200
+last_pic_droppable = s0 -> droppable; 201
+s -> droppable = h -> nal_ref_idc == 0; 202
+if ( h -> sps . frame_mbs_only_flag )  203
+s -> picture_structure = PICT_FRAME; 204
+if ( ! h -> sps . direct_8x8_inference_flag && slice_type == AV_PICTURE_TYPE_B )  206
+if ( get_bits1 ( & s -> gb ) )  210
+s -> picture_structure = PICT_TOP_FIELD + get_bits1 ( & s -> gb ); 211
+s -> picture_structure = PICT_FRAME; 213
+h -> mb_aff_frame = h -> sps . mb_aff; 214
+h -> mb_field_decoding_flag = s -> picture_structure != PICT_FRAME; 217
+if ( h0 -> current_slice != 0 )  219
+if ( last_pic_structure != s -> picture_structure || last_pic_droppable != s -> droppable )  220
+if ( ! s0 -> current_picture_ptr )  228
+if ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 )  237
+int unwrap_prev_frame_num = h -> prev_frame_num ; 238
+int max_frame_num = 1 << h -> sps . log2_max_frame_num ; 239
+if ( unwrap_prev_frame_num > h -> frame_num )  241
+unwrap_prev_frame_num -= max_frame_num; 242
+if ( ( h -> frame_num - unwrap_prev_frame_num ) > h -> sps . ref_frame_count )  244
+unwrap_prev_frame_num = ( h -> frame_num - h -> sps . ref_frame_count ) - 1; 245
+if ( unwrap_prev_frame_num < 0 )  246
+unwrap_prev_frame_num += max_frame_num; 247
+h -> prev_frame_num = unwrap_prev_frame_num; 249
+if ( s0 -> first_field )  258
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  270
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  278
+if ( ! ( ( last_pic_structure == PICT_TOP_FIELD && s -> picture_structure == PICT_BOTTOM_FIELD ) || ( last_pic_structure == PICT_BOTTOM_FIELD && s -> picture_structure == PICT_TOP_FIELD ) ) )  289
+if ( last_pic_droppable != s -> droppable )  299
+s -> picture_structure = last_pic_structure; 303
+s -> droppable = last_pic_droppable; 304
+s0 -> current_picture_ptr -> owner2 = s0; 314
+while ( h -> frame_num != h -> prev_frame_num && h -> prev_frame_num >= 0 && ! s0 -> first_field && h -> frame_num != ( h -> prev_frame_num + 1 ) % ( 1 << h -> sps . log2_max_frame_num ) )  319
+Picture * prev = h -> short_ref_count ? h -> short_ref [ 0 ] : NULL ; 321
+if ( ff_h264_frame_start ( h ) < 0 )  324
+h -> prev_frame_num ++; 326
+h -> prev_frame_num %= 1 << h -> sps . log2_max_frame_num; 327
+s -> current_picture_ptr -> frame_num = h -> prev_frame_num; 328
+if ( ( ret = ff_generate_sliding_window_mmcos ( h , 1 ) ) < 0 && s -> avctx -> err_recognition & AV_EF_EXPLODE )  331
+if ( ff_h264_execute_ref_pic_marking ( h , h -> mmco , h -> mmco_index ) < 0 && ( s -> avctx -> err_recognition & AV_EF_EXPLODE ) )  334
+if ( h -> short_ref_count )  343
+if ( prev )  344
+h -> short_ref [ 0 ] -> poc = prev -> poc + 2; 348
+h -> short_ref [ 0 ] -> frame_num = h -> prev_frame_num; 350
+if ( s0 -> first_field )  357
+if ( ! FIELD_PICTURE || s -> picture_structure == last_pic_structure )  363
+s0 -> current_picture_ptr = NULL; 366
+s0 -> first_field = FIELD_PICTURE; 367
+if ( s0 -> current_picture_ptr -> frame_num != h -> frame_num )  369
+s0 -> first_field = 1; 375
+s0 -> current_picture_ptr = NULL; 376
+s0 -> first_field = 0; 379
+s0 -> first_field = FIELD_PICTURE; 384
+if ( ! FIELD_PICTURE || s0 -> first_field )  387
+if ( ff_h264_frame_start ( h ) < 0 )  388
+if ( h != h0 && ( ret = clone_slice ( h , h0 ) ) < 0 )  396
+s -> current_picture_ptr -> frame_num = h -> frame_num; 399
+if ( first_mb_in_slice << FIELD_OR_MBAFF_PICTURE >= s -> mb_num || first_mb_in_slice >= s -> mb_num )  402
+s -> resync_mb_x = s -> mb_x = first_mb_in_slice % s -> mb_width; 407
+s -> resync_mb_y = s -> mb_y = ( first_mb_in_slice / s -> mb_width ) << FIELD_OR_MBAFF_PICTURE; 408
+if ( s -> picture_structure == PICT_BOTTOM_FIELD )  409
+s -> resync_mb_y = s -> mb_y = s -> mb_y + 1; 410
+if ( s -> picture_structure == PICT_FRAME )  413
+h -> curr_pic_num = h -> frame_num; 414
+h -> max_pic_num = 1 << h -> sps . log2_max_frame_num; 415
+h -> curr_pic_num = 2 * h -> frame_num + 1; 417
+h -> max_pic_num = 1 << ( h -> sps . log2_max_frame_num + 1 ); 418
+if ( h -> sps . poc_type == 0 )  424
+h -> poc_lsb = get_bits ( & s -> gb , h -> sps . log2_max_poc_lsb ); 425
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  427
+h -> delta_poc_bottom = get_se_golomb ( & s -> gb ); 428
+if ( h -> sps . poc_type == 1 && ! h -> sps . delta_pic_order_always_zero_flag )  431
+h -> delta_poc [ 0 ] = get_se_golomb ( & s -> gb ); 432
+if ( h -> pps . pic_order_present == 1 && s -> picture_structure == PICT_FRAME )  434
+h -> delta_poc [ 1 ] = get_se_golomb ( & s -> gb ); 435
+if ( h -> pps . redundant_pic_cnt_present )  440
+h -> redundant_pic_count = get_ue_golomb ( & s -> gb ); 441
+h -> ref_count [ 0 ] = h -> pps . ref_count [ 0 ]; 444
+h -> ref_count [ 1 ] = h -> pps . ref_count [ 1 ]; 445
+if ( h -> slice_type_nos != AV_PICTURE_TYPE_I )  447
+unsigned max [ 2 ] ; 448
+max [ 0 ] = max [ 1 ] = s -> picture_structure == PICT_FRAME ? 15 : 31; 449
+if ( h -> ref_count [ 0 ] - 1 > max [ 0 ] || h -> ref_count [ 1 ] - 1 > max [ 1 ] )  464
+av_log ( h -> s . avctx , AV_LOG_ERROR , "reference overflow %u > %u or %u > %u\n" , h -> ref_count [ 0 ] - 1 , max [ 0 ] , h -> ref_count [ 1 ] - 1 , max [ 1 ] ); 465
+------------------------------
+76 ../data/NVD/CVE_2013_0311_PATCHED_translate_desc.c [u'iov'] 2
+static int CVE_2013_0311_PATCHED_translate_desc(struct vhost_dev *dev, u64 addr, u32 len,
+struct iovec iov[], int iov_size) 2
+_iov = iov + ret; 24
+_iov -> iov_len = min ( ( u64 ) len - s , size ); 26
+_iov -> iov_base = ( void __user * ) ( unsigned long ) ( reg -> userspace_addr + addr - reg -> guest_phys_addr ); 27
+------------------------------
+77 ../data/NVD/CVE_2013_0311_VULN_translate_desc.c [u'iov'] 2
+static int CVE_2013_0311_VULN_translate_desc(struct vhost_dev *dev, u64 addr, u32 len,
+struct iovec iov[], int iov_size) 2
+_iov = iov + ret; 24
+_iov -> iov_len = min ( ( u64 ) len , size ); 26
+_iov -> iov_base = ( void __user * ) ( unsigned long ) ( reg -> userspace_addr + addr - reg -> guest_phys_addr ); 27
+------------------------------
+78 ../data/NVD/CVE_2013_0799_VULN_GetInstallationDir.c [u'aResultDir'] 2
+static BOOL
+CVE_2013_0799_VULN_GetInstallationDir(int argcTmp, LPWSTR *argvTmp, WCHAR aResultDir[MAX_PATH]) 2
+wcscpy ( aResultDir , argvTmp [ 2 ] ); 7
+WCHAR * backSlash = wcsrchr ( aResultDir , L '\\' ) 8
+bool replaceRequest = ( argcTmp >= 4 && wcsstr ( argvTmp [ 3 ] , L "/replace" ) ) 14
+if ( backgroundUpdate || replaceRequest )  15
+return PathRemoveFileSpecW ( aResultDir ) ; 16
+------------------------------

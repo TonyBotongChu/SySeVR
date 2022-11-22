@@ -1,0 +1,602 @@
+(dp0
+S'3 ../data/NVD/CVE_2012_6617_VULN_prepare_sdp_description.c snprintf 20'
+p1
+I0
+sS'37 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 111'
+p2
+I0
+sS'170 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 229'
+p3
+I0
+sS'183 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 240'
+p4
+I0
+sS'121 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 510'
+p5
+I0
+sS'192 ../data/NVD/CVE_2012_6538_VULN_copy_to_user_auth.c strcpy 12'
+p6
+I0
+sS'169 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 234'
+p7
+I0
+sS'82 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c memcpy 232'
+p8
+I0
+sS'50 ../data/NVD/CVE_2012_5532_VULN_main.c strerror 82'
+p9
+I0
+sS'19 ../data/NVD/CVE_2013_0848_PATCHED_decode_init.c memset 6'
+p10
+I0
+sS'158 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 259'
+p11
+I0
+sS'173 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 116'
+p12
+I0
+sS'194 ../data/NVD/CVE_2013_0797_VULN_AutoLoadSystemDependencies.c LoadLibraryW 28'
+p13
+I0
+sS'66 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c strlen 82'
+p14
+I0
+sS'132 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 467'
+p15
+I0
+sS'83 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c memcpy 230'
+p16
+I0
+sS'25 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 283'
+p17
+I0
+sS'21 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c memset 288'
+p18
+I0
+sS'154 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c strcpy 43'
+p19
+I0
+sS'175 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 256'
+p20
+I0
+sS'181 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 244'
+p21
+I0
+sS'124 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 467'
+p22
+I0
+sS'92 ../data/NVD/CVE_2012_6547_PATCHED___tun_chr_ioctl.c memcpy 129'
+p23
+I0
+sS'22 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c memset 288'
+p24
+I0
+sS'47 ../data/NVD/CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand.c wcsncpy 62'
+p25
+I0
+sS'76 ../data/NVD/CVE_2013_0799_VULN_GetInstallationDir.c wcscpy 7'
+p26
+I0
+sS'144 ../data/NVD/CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand.c LoadLibraryEx 95'
+p27
+I0
+sS'156 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 263'
+p28
+I0
+sS'101 ../data/NVD/CVE_2013_0856_VULN_lpc_prediction.c memcpy 15'
+p29
+I0
+sS'145 ../data/NVD/CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand.c LoadLibraryEx 95'
+p30
+I0
+sS'39 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 64'
+p31
+I0
+sS'17 ../data/NVD/CVE_2012_6618_PATCHED_av_probe_input_buffer.c memset 50'
+p32
+I0
+sS'5 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c memset 224'
+p33
+I0
+sS'117 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c assert 63'
+p34
+I0
+sS'178 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 249'
+p35
+I0
+sS'94 ../data/NVD/CVE_2013_0772_PATCHED_nsGIFDecoder2__OutputRow.c memcpy 66'
+p36
+I0
+sS'197 ../data/NVD/CVE_2013_0797_VULN_AutoLoadSystemDependencies.c wcslen 19'
+p37
+I0
+sS'113 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c assert 37'
+p38
+I0
+sS'46 ../data/NVD/CVE_2013_0799_PATCHED_IsStatusApplying.c wcsncpy 6'
+p39
+I0
+sS'24 ../data/NVD/CVE_2013_0851_VULN_decode_frame.c memset 55'
+p40
+I0
+sS'153 ../data/NVD/CVE_2012_5532_VULN_main.c socket 31'
+p41
+I0
+sS'172 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 225'
+p42
+I0
+sS'100 ../data/NVD/CVE_2013_0856_PATCHED_lpc_prediction.c memcpy 15'
+p43
+I0
+sS'98 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c memcpy 287'
+p44
+I0
+sS'102 ../data/NVD/CVE_2012_5532_PATCHED_main.c close 84'
+p45
+I0
+sS'38 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 82'
+p46
+I0
+sS'16 ../data/NVD/CVE_2012_6547_PATCHED___tun_chr_ioctl.c memset 17'
+p47
+I0
+sS'140 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c assert 260'
+p48
+I0
+sS'188 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 223'
+p49
+I0
+sS'30 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 64'
+p50
+I0
+sS'107 ../data/NVD/CVE_2012_5532_VULN_main.c close 45'
+p51
+I0
+sS'54 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c fprintf 168'
+p52
+I0
+sS'142 ../data/NVD/CVE_2012_5532_PATCHED_main.c malloc 114'
+p53
+I0
+sS'159 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 258'
+p54
+I0
+sS'104 ../data/NVD/CVE_2012_5532_PATCHED_main.c close 45'
+p55
+I0
+sS'128 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 520'
+p56
+I0
+sS'86 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c memcpy 36'
+p57
+I0
+sS'45 ../data/NVD/CVE_2013_0797_VULN_AutoLoadSystemDependencies.c wcsncpy 20'
+p58
+I0
+sS'35 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 277'
+p59
+I0
+sS'196 ../data/NVD/CVE_2013_0797_PATCHED_AutoLoadSystemDependencies.c wcslen 12'
+p60
+I0
+sS'27 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 117'
+p61
+I0
+sS'157 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 262'
+p62
+I0
+sS'108 ../data/NVD/CVE_2012_4530_PATCHED_load_script.c strchr 22'
+p63
+I0
+sS'90 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c memcpy 31'
+p64
+I0
+sS'161 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 254'
+p65
+I0
+sS'122 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 469'
+p66
+I0
+sS'160 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 255'
+p67
+I0
+sS'69 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c strlen 45'
+p68
+I0
+sS'147 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c strcmp 19'
+p69
+I0
+sS'41 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 33'
+p70
+I0
+sS'152 ../data/NVD/CVE_2012_5532_PATCHED_main.c socket 31'
+p71
+I0
+sS'125 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 372'
+p72
+I0
+sS'43 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 20'
+p73
+I0
+sS'179 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 248'
+p74
+I0
+sS'131 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 468'
+p75
+I0
+sS'150 ../data/NVD/CVE_2013_0799_PATCHED_ProcessSoftwareUpdateCommand.c strcmp 109'
+p76
+I0
+sS'14 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c memset 14'
+p77
+I0
+sS'88 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c memcpy 21'
+p78
+I0
+sS'112 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c assert 67'
+p79
+I0
+sS'143 ../data/NVD/CVE_2012_5532_VULN_main.c malloc 108'
+p80
+I0
+sS'52 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c fprintf 304'
+p81
+I0
+sS'74 ../data/NVD/CVE_2012_5532_VULN_main.c free 141'
+p82
+I0
+sS'87 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c memcpy 30'
+p83
+I0
+sS'12 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c memset 187'
+p84
+I0
+sS'85 ../data/NVD/CVE_2012_6538_VULN_copy_to_user_auth.c memcpy 13'
+p85
+I0
+sS'136 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c assert 360'
+p86
+I0
+sS'6 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c memset 217'
+p87
+I0
+sS'40 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 44'
+p88
+I0
+sS'33 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 27'
+p89
+I0
+sS'118 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c assert 33'
+p90
+I0
+sS'68 ../data/NVD/CVE_2012_5532_VULN_main.c strlen 108'
+p91
+I0
+sS'13 ../data/NVD/CVE_2012_6542_PATCHED_llc_ui_getname.c memset 9'
+p92
+I0
+sS'78 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c memcpy 234'
+p93
+I0
+sS'18 ../data/NVD/CVE_2012_6618_VULN_av_probe_input_buffer.c memset 50'
+p94
+I0
+sS'48 ../data/NVD/CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand.c wcsncpy 62'
+p95
+I0
+sS'79 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c memcpy 232'
+p96
+I0
+sS'106 ../data/NVD/CVE_2012_5532_VULN_main.c close 65'
+p97
+I0
+sS'146 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c strcmp 109'
+p98
+I0
+sS'10 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c memset 217'
+p99
+I0
+sS'67 ../data/NVD/CVE_2012_5532_PATCHED_main.c strlen 114'
+p100
+I0
+sS'165 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 246'
+p101
+I0
+sS'9 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c memset 224'
+p102
+I0
+sS'103 ../data/NVD/CVE_2012_5532_PATCHED_main.c close 65'
+p103
+I0
+sS'29 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 82'
+p104
+I0
+sS'56 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c fprintf 157'
+p105
+I0
+sS'193 ../data/NVD/CVE_2013_0797_PATCHED_AutoLoadSystemDependencies.c LoadLibraryW 32'
+p106
+I0
+sS'59 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c fprintf 169'
+p107
+I0
+sS'105 ../data/NVD/CVE_2012_5532_VULN_main.c close 84'
+p108
+I0
+sS'200 ../data/NVD/CVE_2012_5532_VULN_main.c recvfrom 78'
+p109
+I0
+sS'81 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c memcpy 234'
+p110
+I0
+sS'166 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 243'
+p111
+I0
+sS'91 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c memcpy 22'
+p112
+I0
+sS'134 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 371'
+p113
+I0
+sS'84 ../data/NVD/CVE_2012_6538_PATCHED_copy_to_user_auth.c memcpy 13'
+p114
+I0
+sS'119 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c assert 14'
+p115
+I0
+sS'73 ../data/NVD/CVE_2012_5532_VULN_main.c free 160'
+p116
+I0
+sS'70 ../data/NVD/CVE_2012_6617_VULN_prepare_sdp_description.c strlen 43'
+p117
+I0
+sS'141 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c assert 259'
+p118
+I0
+sS'110 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c assert 164'
+p119
+I0
+sS'186 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 233'
+p120
+I0
+sS'34 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 20'
+p121
+I0
+sS'57 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c fprintf 342'
+p122
+I0
+sS'138 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c assert 358'
+p123
+I0
+sS'167 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 242'
+p124
+I0
+sS'11 ../data/NVD/CVE_2012_4298_VULN_vwr_read_rec_data_ethernet.c memset 206'
+p125
+I0
+sS'114 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c assert 14'
+p126
+I0
+sS'151 ../data/NVD/CVE_2013_0799_VULN_ProcessSoftwareUpdateCommand.c strcmp 109'
+p127
+I0
+sS'176 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 253'
+p128
+I0
+sS'133 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 372'
+p129
+I0
+sS'97 ../data/NVD/CVE_2013_0782_VULN_nsSaveAsCharset__HandleFallBack.c memcpy 27'
+p130
+I0
+sS'60 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c fprintf 168'
+p131
+I0
+sS'137 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c assert 359'
+p132
+I0
+sS'191 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 110'
+p133
+I0
+sS'71 ../data/NVD/CVE_2012_5532_PATCHED_main.c free 166'
+p134
+I0
+sS'4 ../data/NVD/CVE_2012_6617_VULN_prepare_sdp_description.c snprintf 16'
+p135
+I0
+sS'44 ../data/NVD/CVE_2013_0797_PATCHED_AutoLoadSystemDependencies.c wcsncpy 24'
+p136
+I0
+sS'42 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 27'
+p137
+I0
+sS'148 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c strcmp 107'
+p138
+I0
+sS'99 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c memcpy 287'
+p139
+I0
+sS'198 ../data/NVD/CVE_2013_0797_VULN_AutoLoadSystemDependencies.c wcslen 8'
+p140
+I0
+sS'75 ../data/NVD/CVE_2012_6538_PATCHED_copy_to_user_auth.c strncpy 12'
+p141
+I0
+sS'174 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 257'
+p142
+I0
+sS'177 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 252'
+p143
+I0
+sS'185 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 236'
+p144
+I0
+sS'31 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 44'
+p145
+I0
+sS'77 ../data/NVD/CVE_2013_0799_VULN_IsStatusApplying.c wcscpy 6'
+p146
+I0
+sS'123 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 468'
+p147
+I0
+sS'187 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 228'
+p148
+I0
+sS'89 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c memcpy 37'
+p149
+I0
+sS'65 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c strlen 231'
+p150
+I0
+sS'61 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c fprintf 162'
+p151
+I0
+sS'195 ../data/NVD/CVE_2013_0797_PATCHED_AutoLoadSystemDependencies.c wcslen 23'
+p152
+I0
+sS'1 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c snprintf 22'
+p153
+I0
+sS'164 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 247'
+p154
+I0
+sS'96 ../data/NVD/CVE_2013_0782_PATCHED_nsSaveAsCharset__HandleFallBack.c memcpy 29'
+p155
+I0
+sS'171 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 228'
+p156
+I0
+sS'189 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 222'
+p157
+I0
+sS'15 ../data/NVD/CVE_2012_6542_VULN_llc_ui_getname.c memset 9'
+p158
+I0
+sS'55 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c fprintf 162'
+p159
+I0
+sS'155 ../data/NVD/CVE_2012_4530_VULN_load_script.c strcpy 43'
+p160
+I0
+sS'163 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 250'
+p161
+I0
+sS'58 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c fprintf 304'
+p162
+I0
+sS'8 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c memset 187'
+p163
+I0
+sS'139 ../data/NVD/CVE_2013_0867_PATCHED_decode_slice_header.c assert 261'
+p164
+I0
+sS'32 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 33'
+p165
+I0
+sS'80 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c memcpy 230'
+p166
+I0
+sS'120 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 520'
+p167
+I0
+sS'184 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 237'
+p168
+I0
+sS'62 ../data/NVD/CVE_2012_6061_VULN_dissect_wtp_common.c fprintf 157'
+p169
+I0
+sS'126 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 371'
+p170
+I0
+sS'190 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 219'
+p171
+I0
+sS'162 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 251'
+p172
+I0
+sS'135 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 370'
+p173
+I0
+sS'49 ../data/NVD/CVE_2012_5532_PATCHED_main.c strerror 82'
+p174
+I0
+sS'199 ../data/NVD/CVE_2012_5532_PATCHED_main.c recvfrom 78'
+p175
+I0
+sS'28 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 89'
+p176
+I0
+sS'36 ../data/NVD/CVE_2012_5532_VULN_main.c syslog 114'
+p177
+I0
+sS'63 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c strlen 236'
+p178
+I0
+sS'95 ../data/NVD/CVE_2013_0772_VULN_nsGIFDecoder2__OutputRow.c memcpy 74'
+p179
+I0
+sS'129 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 510'
+p180
+I0
+sS'7 ../data/NVD/CVE_2012_4298_PATCHED_vwr_read_rec_data_ethernet.c memset 206'
+p181
+I0
+sS'182 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 241'
+p182
+I0
+sS'53 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c fprintf 169'
+p183
+I0
+sS'130 ../data/NVD/CVE_2013_0850_VULN_decode_slice_header.c assert 469'
+p184
+I0
+sS'127 ../data/NVD/CVE_2013_0850_PATCHED_decode_slice_header.c assert 370'
+p185
+I0
+sS'2 ../data/NVD/CVE_2012_6617_PATCHED_prepare_sdp_description.c snprintf 18'
+p186
+I0
+sS'168 ../data/NVD/CVE_2012_5532_PATCHED_main.c strcpy 239'
+p187
+I0
+sS'72 ../data/NVD/CVE_2012_5532_PATCHED_main.c free 147'
+p188
+I0
+sS'149 ../data/NVD/CVE_2012_5237_VULN_dissect_hsrp.c strcmp 19'
+p189
+I0
+sS'115 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c assert 160'
+p190
+I0
+sS'51 ../data/NVD/CVE_2012_6061_PATCHED_dissect_wtp_common.c fprintf 342'
+p191
+I0
+sS'93 ../data/NVD/CVE_2012_6547_VULN___tun_chr_ioctl.c memcpy 127'
+p192
+I0
+sS'26 ../data/NVD/CVE_2012_5532_PATCHED_main.c syslog 120'
+p193
+I0
+sS'116 ../data/NVD/CVE_2013_0792_VULN_qcms_transform_create.c assert 135'
+p194
+I0
+sS'23 ../data/NVD/CVE_2013_0851_PATCHED_decode_frame.c memset 55'
+p195
+I0
+sS'111 ../data/NVD/CVE_2013_0792_PATCHED_qcms_transform_create.c assert 139'
+p196
+I0
+sS'109 ../data/NVD/CVE_2012_4530_VULN_load_script.c strchr 22'
+p197
+I0
+sS'64 ../data/NVD/CVE_2012_5237_PATCHED_dissect_hsrp.c strlen 82'
+p198
+I0
+sS'20 ../data/NVD/CVE_2013_0848_VULN_decode_init.c memset 6'
+p199
+I0
+sS'180 ../data/NVD/CVE_2012_5532_VULN_main.c strcpy 245'
+p200
+I0
+s.
